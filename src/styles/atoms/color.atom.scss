@@ -1,0 +1,12 @@
+/* colors */
+
+$textColors: (
+  Primary: #209e91,
+  PrimaryKey: #666666
+);
+
+@each $name, $color in $textColors {
+  .textColor#{$name} {
+    color: #{$color};
+  }
+}
