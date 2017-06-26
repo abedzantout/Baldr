@@ -1,0 +1,23 @@
+/* Border styles */
+
+//mixin for border color,width,style, and sides. All parameters are optional. All parameters have default values.
+@mixin border($color: black,$width: 1px,$style: solid,$sides...) {
+  @if (length($sides) == 0) {
+    border: #{$width} #{$style} #{$color};
+  } @else {
+    @each $side in $sides {
+      @if ($side == all) {
+        border: #{$width} #{$style} #{$color};
+      } @else {
+        border-#{$side}: #{$width} #{$style} #{$color};
+      }
+    }
+  }
+}
+
+//mixin for specifying border radii, a map with all 4 corners and their radii is required.
+@mixin border-radius($map) {
+  @each $corner, $radius in $map {
+    border-#{$corner}-radius: #{$radius};
+  }
+}

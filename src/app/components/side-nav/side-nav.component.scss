@@ -1,5 +1,6 @@
 @import "../../styles/main.styles";
 
+
 .sideNav{
   @extend %width-400px;
 }
@@ -10,11 +11,17 @@
 }
 
 a{
-  @extend %textColorPrimary;
+  @extend %text-color-Primary;
+}
+
+.card{
+  @include border(#000000,0px,none,top,right,left);
+  @include border(white, 1px, solid, bottom);
 }
 
 .card-header{
   @extend %bg-color-primary;
+  @include border-radius((top-right:5px,top-left:0px,bottom-right:5px,bottom-left:0px));
 }
 
 #accordion{

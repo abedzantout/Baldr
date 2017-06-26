@@ -1,21 +1,20 @@
 /* margins */
 
-@mixin margin-perc($value,$sides...){
-  @if (length($sides) == 0){
+@mixin margin-perc($value,$sides...) {
+  @if (length($sides) == 0) {
     margin: #{$value};
-  }
-
-  @each $side in $sides{
-    @if($side == all){
-      margin: #{$value};
-    }
-    @else{
-      margin-#{$side}: #{$value};
+  } @else {
+    @each $side in $sides {
+      @if ($side == all) {
+        margin: #{$value};
+      } @else {
+        margin-#{$side}: #{$value};
+      }
     }
   }
 }
 
-%margin-top-200px{
+%margin-top-200px {
   margin-top: 200px;
 }
 
