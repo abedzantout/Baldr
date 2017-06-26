@@ -6,7 +6,7 @@ $textColors: (
 );
 
 @each $name, $color in $textColors {
-  .textColor#{$name} {
+  %textColor#{$name} {
     color: #{$color};
   }
 }

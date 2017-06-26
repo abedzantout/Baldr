@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { testComponent } from './pages/test.component';
+import { sideNavComponent } from './components/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    testComponent
+    sideNavComponent
   ],
   imports: [
     BrowserModule,
