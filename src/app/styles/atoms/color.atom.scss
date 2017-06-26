@@ -2,7 +2,8 @@
 
 $textColors: (
   Primary: #209e91,
-  PrimaryKey: #666666
+  PrimaryKey: #666666,
+  hover: #222222
 );
 
 @each $name, $color in $textColors {

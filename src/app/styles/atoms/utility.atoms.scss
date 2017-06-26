@@ -3,3 +3,8 @@
 %position-fixed{position: fixed};
 %overflow-scroll{overflow: auto};
 %height-allPage{position: fixed; height:100%;}
+%center-horizontal{
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+}

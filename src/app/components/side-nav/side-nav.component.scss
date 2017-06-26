@@ -1,8 +1,7 @@
 @import "../../styles/main.styles";
 
-
 .sideNav{
-  @extend %width-400px;
+  @extend %width-300px;
   @include border(rgba(0,0,0,0.25),1px,solid,right);
   @extend %position-fixed;
   @extend %overflow-scroll;
@@ -11,11 +10,19 @@
 .logo{
   @extend %width-200px;
   @include margin-perc(15%,top);
-  @include margin-perc(20%,left);
+  @extend %center-horizontal;
 }
 
 a{
   @extend %text-color-Primary;
+}
+.sub-section-link{
+  @include margin-perc(10%);
+  width:100%;
+  @extend %text-color-hover;
+}
+.sub-section-link a:hover{
+  @extend %text-color-PrimaryKey;
 }
 
 .card{
