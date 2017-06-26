@@ -1,11 +1,17 @@
 /* margins */
 
-@mixin margin-perc($amount,$side: all){
-  @if ($side == all){
-    margin: #{$amount};
+@mixin margin-perc($value,$sides...){
+  @if (length($sides) == 0){
+    margin: #{$value};
   }
-  @else{
-    margin-#{$side}: #{$amount};
+
+  @each $side in $sides{
+    @if($side == all){
+      margin: #{$value};
+    }
+    @else{
+      margin-#{$side}: #{$value};
+    }
   }
 }
 

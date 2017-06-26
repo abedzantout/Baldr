@@ -9,6 +9,14 @@
   @include margin-perc(20%,left);
 }
 
+a{
+  @extend %textColorPrimary;
+}
+
+.card-header{
+  @extend %bg-color-primary;
+}
+
 #accordion{
   @include margin-perc(20%,top);
 }

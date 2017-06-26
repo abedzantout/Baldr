@@ -1,5 +1,20 @@
 /* Padding styles */
 
+@mixin padding-perc($value,$sides...){
+  @if (length($sides) == 0){
+    padding: #{$value};
+  }
+
+  @each $side in $sides{
+    @if($side == all){
+      padding: #{$value};
+    }
+    @else{
+      padding-#{$side}: #{$value};
+    }
+  }
+}
+
 %padding-10px{padding: 10px;}
 %padding-top-10px{padding-top: 10px;}
 %padding-right-10px{padding-right: 10px;}
