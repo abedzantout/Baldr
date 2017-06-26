@@ -1,0 +1,16 @@
+/* margins */
+
+@mixin margin-perc($amount,$side: all){
+  @if ($side == all){
+    margin: #{$amount};
+  }
+  @else{
+    margin-#{$side}: #{$amount};
+  }
+}
+
+%margin-top-200px{
+  margin-top: 200px;
+}
+
+

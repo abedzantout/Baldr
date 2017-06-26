@@ -1,1 +1,16 @@
 @import "../../styles/main.styles";
+
+.sideNav{
+  @extend %width-400px;
+}
+.logo{
+  @extend %width-200px;
+  @include margin-perc(20%,top);
+  @include margin-perc(20%,left);
+}
+
+#accordion{
+  @include margin-perc(20%,top);
+}
+
+
