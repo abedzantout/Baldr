@@ -9,6 +9,22 @@ a{
 h1{
   @extend %text-color-PrimaryKey;
 }
-p{
-  @include margin-perc(20%,right);
+.intro-text{
+  @include margin-perc(5%,right,top);
+}
+
+.goals-container{
+  @include margin-perc(10%,top);
+  @extend %text-color-PrimaryKey;
+}
+
+.goal-header{
+  text-align: center;
+  @extend %text-color-Primary;
+}
+
+.goals-icons{
+  @extend %center-horizontal;
+  width:20%;
+  @include margin-perc(5%,top,bottom);
 }
