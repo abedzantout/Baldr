@@ -10,3 +10,7 @@
 
 
 @import 'molecules/accSideNav';
+
+.row{
+  @include margin-perc(1%,right);
+}

@@ -1,5 +1,14 @@
 @import "../../../styles/main.styles";
 
 body{
-  @include margin-perc(30%,left);
+  @include margin-perc(5%, top);
+}
+a{
+  @extend %text-color-Primary;
+}
+h1{
+  @extend %text-color-PrimaryKey;
+}
+p{
+  @include margin-perc(20%,right);
 }
