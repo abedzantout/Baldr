@@ -21,8 +21,12 @@ a{
   width:100%;
   @extend %text-color-hover;
 }
-.sub-section-link a:hover{
+.sub-section-link a {
+  @extend %text-color-hover;
+}
+a:hover{
   @extend %text-color-PrimaryKey;
+  text-decoration: none;
 }
 
 .card{
