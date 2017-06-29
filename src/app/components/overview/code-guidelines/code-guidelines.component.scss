@@ -1,14 +1,5 @@
 @import "../../../styles/main.styles";
 
-body{
-  @include margin-perc(5%, top,right,left);
-  @include padding-perc(5%,bottom);
-}
-
-h1{
-  @extend %text-color-primary;
-}
-
 h3{
   @extend %text-color-primary;
   @include margin-perc(5%,top);

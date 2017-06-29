@@ -1,13 +1,7 @@
 @import "../../../styles/main.styles";
 
-body{
-  @include margin-perc(5%, top);
-}
 a{
   @extend %text-color-primary;
-}
-h1{
-  @extend %text-color-key;
 }
 .intro-text{
   @include margin-perc(5%,right,top);

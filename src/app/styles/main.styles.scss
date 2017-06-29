@@ -27,7 +27,17 @@
 @import 'atoms/tab-nav.atom';
 
 
-//TODO: place this segment in its proper module.
+//TODO: place these segments in its proper module.
 .row{
   @include margin-perc(1%,right);
 }
+
+h1{
+  @extend %text-color-primary;
+}
+
+.wrapper{
+  @include margin-perc(5%, top,right,left);
+  @include padding-perc(5%,bottom);
+}
+
