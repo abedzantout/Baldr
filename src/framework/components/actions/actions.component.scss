@@ -1,0 +1,36 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+:host {
+
+  display: flex;
+  align-items: center;
+
+  /deep/ nga-action {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	&:first-child {
+	  border-left: none !important;
+	}
+
+	i.control-icon {
+	  &:hover {
+		cursor: pointer;
+	  }
+	}
+
+	&.disabled {
+	  opacity: 0.5;
+	  cursor: not-allowed;
+
+	  a, i {
+		cursor: not-allowed !important;
+	  }
+	}
+  }
+}

@@ -1,52 +1,127 @@
-//core imports
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+import { List } from 'immutable';
 
-//routing modules
-import { RoutingModule } from './app-routing.module';
+import { NgaMenuItem, NgaSearchModule, NgaThemeModule } from '../framework/';
+import { NgaCardModule } from '../framework/components/card/card.module';
+import { NgaLayoutModule } from '../framework/components/layout/layout.module';
+import { NgaMenuModule } from '../framework/components/menu/menu.module';
+import { NgaRouteTabsetModule } from '../framework/components/route-tabset/route-tabset.module';
+import { NgaSidebarModule } from '../framework/components/sidebar/sidebar.module';
+import { NgaTabsetModule } from '../framework/components/tabset/tabset.module';
+import { NgaUserModule } from '../framework/components/user/user.module';
+import { NgaActionsModule } from '../framework/components/actions/actions.module';
 
-//components
-import { AppComponent } from './app.component';
-import { sideNavComponent } from './components/side-nav/side-nav.component';
-import { IntroductionComponent } from './components/overview/Introduction/introduction.component';
-import { codeGuidelinesComponent } from './components/overview/code-guidelines/code-guidelines.component';
-import { buttonsPageComponent } from './components/components-page/buttons/buttons.component';
-import { FormElementsComponent } from './components/components-page/form-elements/form-elements.component';
-import { GridComponent } from './components/components-page/grid/grid.component';
-import { ListsComponent } from './components/components-page/lists/lists.component';
-import { ColorSchemeComponent } from './components/design/color-scheme/color-scheme.component';
-import { TypographyComponent } from './components/design/typography/typography.component';
-import { BorderComponent } from './components/design/border/border.component';
-import { BoxShadowComponent } from './components/design/box-shadow/box-shadow.component';
-import { LayoutComponent } from './components/design/layout/layout.component';
-import { IconsComponent } from './components/design/icons/icons.component';
+import { NgaAppComponent } from './app.component';
+import { NgaLayoutTestComponent } from './layout-test/layout-test.component';
+import { NgaLayoutHeaderTestComponent } from './layout-test/layout-header-test.component';
+import { NgaLayoutFooterTestComponent } from './layout-test/layout-footer-test.component';
+import { NgaThemeChangeTestComponent } from './layout-test/theme-change-test.component';
+import { NgaTabsetTestComponent } from './tabset-test/tabset-test.component';
+import {
+  NgaRouteTabsetTestChild1Component, NgaRouteTabsetTestChild2Component, NgaRouteTabsetTestComponent
+} from './route-tabset-test/route-tabset-test.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    sideNavComponent,
-    IntroductionComponent,
-    codeGuidelinesComponent,
-    buttonsPageComponent,
-    FormElementsComponent,
-    GridComponent,
-    ListsComponent,
-    ColorSchemeComponent,
-    TypographyComponent,
-    BorderComponent,
-    BoxShadowComponent,
-    LayoutComponent,
-    IconsComponent
-  ],
+import { NgaSidebarTestComponent } from './sidebar-test/sidebar-test.component';
+import { NgaSidebarTestOneComponent } from './sidebar-test/sidebar-test-one.component';
+import { NgaSidebarTestTwoComponent } from './sidebar-test/sidebar-test-two.component';
+import { NgaSidebarTestThreeComponent } from './sidebar-test/sidebar-test-three.component';
+import {
+  NgaMenuItem1Component, NgaMenuItem2Component, NgaMenuItem31Component, NgaMenuItem32Component,
+  NgaMenuItem331Component, NgaMenuItem332Component, NgaMenuItem33Component, NgaMenuItem3Component,
+  NgaMenuItem4Component, NgaMenuTestComponent
+} from './menu-test/menu-test.component';
+import { NgaUserTestComponent } from './user-test/user-test.component';
+import { NgaDynamicToAddComponent, NgaThemeDynamicTestComponent } from './layout-test/theme-dynamic-test.component';
+import { NgaActionsTestComponent } from './actions-test/actions-test.component';
+import { NgaBootstrapTestComponent } from './bootstrap-test/bootstrap-test.component';
+
+import { routes } from './app.routes';
+
+import { NgaSearchTestComponent } from './search-test/search-test.component';
+import { NgaFormsTestComponent } from './forms-test/forms-test.component';
+
+import { CardComponent } from './card/card.component';
+import { SpinnerTest } from 'app/spinner-test/spinner-test.component';
+
+const NGA_TEST_COMPONENTS = [
+  NgaAppComponent,
+  CardComponent,
+  NgaLayoutTestComponent,
+  NgaLayoutHeaderTestComponent,
+  NgaLayoutFooterTestComponent,
+  NgaTabsetTestComponent,
+  NgaSidebarTestComponent,
+  NgaSidebarTestOneComponent,
+  NgaSidebarTestTwoComponent,
+  NgaSidebarTestThreeComponent,
+  NgaRouteTabsetTestComponent,
+  NgaRouteTabsetTestChild1Component,
+  NgaRouteTabsetTestChild2Component,
+  NgaMenuTestComponent,
+  NgaMenuItem1Component,
+  NgaMenuItem2Component,
+  NgaMenuItem3Component,
+  NgaMenuItem31Component,
+  NgaMenuItem32Component,
+  NgaMenuItem33Component,
+  NgaMenuItem331Component,
+  NgaMenuItem332Component,
+  NgaMenuItem4Component,
+  NgaUserTestComponent,
+  NgaThemeChangeTestComponent,
+  NgaSearchTestComponent,
+  NgaBootstrapTestComponent,
+  NgaDynamicToAddComponent,
+  NgaThemeDynamicTestComponent,
+  NgaActionsTestComponent,
+  NgaFormsTestComponent,
+  SpinnerTest,
+];
+
+@NgModule( {
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RoutingModule
+    RouterModule.forRoot( routes, { useHash: true } ),
+    NgaThemeModule.forRoot( { name: 'default' } ),
+    NgaCardModule,
+    NgaLayoutModule,
+    NgaMenuModule.forRoot( {
+      items: List<NgaMenuItem>( [{
+        title: 'Menu #4',
+        link: '/menu/4',
+        icon: 'ion ion-ionic',
+      }, {
+        title: 'Menu #5',
+        icon: 'ion ion-ionic',
+      }] ),
+    } ),
+    NgaRouteTabsetModule,
+    NgaSidebarModule.forRoot(),
+    NgaTabsetModule,
+    NgaUserModule,
+    NgaSearchModule,
+    NgaActionsModule,
+  ],
+  declarations: [
+    ...NGA_TEST_COMPONENTS,
+  ],
+  entryComponents: [
+    NgaDynamicToAddComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+  bootstrap: [NgaAppComponent],
+} )
+export class AppModule {
+}

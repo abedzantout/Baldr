@@ -6,12 +6,15 @@
 
 import { Component } from '@angular/core';
 
-import 'style-loader!./app.themes.scss';
-
 @Component( {
-  selector: 'nga-app-root',
+  selector: 'nga-layout-footer-test',
   template: `
-    <router-outlet></router-outlet>`,
+      <nga-layout>
+          <nga-layout-footer fixed>
+              &copy; MonopolyKings 2017
+          </nga-layout-footer>
+      </nga-layout>
+  `,
 } )
-export class NgaAppComponent {
+export class NgaLayoutFooterTestComponent {
 }

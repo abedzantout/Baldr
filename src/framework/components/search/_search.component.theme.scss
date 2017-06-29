@@ -1,0 +1,108 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+@mixin nga-search-theme() {
+
+  nga-search-field {
+
+	.search {
+	  background: nga-theme(search-bg);
+
+	  button {
+		color: nga-theme(search-btn-close-fg);
+	  }
+
+	  span {
+		color: nga-theme(search-info);
+	  }
+
+	  input {
+		color: nga-theme(search-text);
+		border-bottom: 4px solid nga-theme(search-dash);
+
+		&::placeholder {
+		  color: nga-theme(search-placeholder);
+		}
+
+		&::-ms-clear {
+		  display: none;
+		}
+	  }
+	}
+
+	&.rotate-layout {
+	  .wrapper {
+		opacity: 0;
+		background: nga-theme(search-bg);
+	  }
+
+	}
+
+	&.modal-zoomin {
+	  .search::before,
+	  .search::after {
+		border: 1.5rem solid nga-theme(search-bg-secondary);
+	  }
+
+	}
+
+	&.modal-half {
+	  .form-wrapper {
+		background: nga-theme(search-bg);
+	  }
+	  .search::before {
+		background: nga-theme(search-bg-secondary);
+	  }
+	}
+
+	&.modal-drop {
+	  .form-content::after {
+		background: nga-theme(search-dash);
+	  }
+	  .search::before {
+		background: nga-theme(search-bg);
+	  }
+	}
+
+	&.curtain {
+	  .search::after {
+		background: nga-theme(search-bg);
+	  }
+	  .search {
+		background: nga-theme(search-bg);
+	  }
+	}
+
+	&.column-curtain {
+	  .wrapper {
+		&::before {
+		  background: nga-theme(search-bg);
+		}
+		&::after {
+		  background: transparent;
+		}
+	  }
+	  &.show {
+		.wrapper::after {
+		  background: nga-theme(search-bg-secondary);
+		}
+	  }
+	}
+
+	&.simple-search {
+	  input {
+		border-bottom: 1px solid nga-theme(search-dash);
+	  }
+	}
+  }
+
+  nga-search {
+	button {
+	  color: nga-theme(search-btn-open-fg);
+	}
+  }
+
+}

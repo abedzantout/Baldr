@@ -1,0 +1,28 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+@mixin nga-charts-d3-theme() {
+  .ngx-charts {
+	.pie-label {
+	  fill: nga-theme(d3-fg);
+	}
+
+	.grid-line-path {
+	  stroke: nga-theme(d3-fg);
+	}
+
+	text {
+	  fill: nga-theme(d3-fg);
+	}
+
+  }
+
+  .chart-legend {
+	.legend-labels {
+	  background: nga-theme(d3-legend-bg);
+	}
+  }
+}

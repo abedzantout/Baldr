@@ -1,0 +1,504 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+@mixin btn-hero() {
+  .btn.btn-hero-primary {
+	@include btn-hero-primary();
+  }
+
+  .btn.btn-hero-warning {
+	@include btn-hero-warning();
+  }
+
+  .btn.btn-hero-success {
+	@include btn-hero-success();
+  }
+
+  .btn.btn-hero-info {
+	@include btn-hero-info();
+  }
+
+  .btn.btn-hero-danger {
+	@include btn-hero-danger();
+  }
+
+  .btn.btn-hero-secondary {
+	@include btn-hero-secondary();
+  }
+}
+
+@mixin btn-hero-primary() {
+  @include btn-hero-primary-gradient();
+  @include btn-hero-primary-bevel-glow-shadow();
+  @include btn-hero-text();
+  @include btn-hero-primary-focus();
+  @include btn-hero-primary-hover();
+  @include btn-hero-primary-active();
+  @include btn-hero-primary-border();
+}
+
+@mixin btn-hero-warning() {
+  @include btn-hero-warning-gradient();
+  @include btn-hero-warning-bevel-glow-shadow();
+  @include btn-hero-text();
+  @include btn-hero-warning-focus();
+  @include btn-hero-warning-hover();
+  @include btn-hero-warning-active();
+  @include btn-hero-warning-border();
+}
+
+@mixin btn-hero-success() {
+  @include btn-hero-success-gradient();
+  @include btn-hero-success-bevel-glow-shadow();
+  @include btn-hero-text();
+  @include btn-hero-success-focus();
+  @include btn-hero-success-hover();
+  @include btn-hero-success-active();
+  @include btn-hero-success-border();
+}
+
+@mixin btn-hero-info() {
+  @include btn-hero-info-gradient();
+  @include btn-hero-info-bevel-glow-shadow();
+  @include btn-hero-text();
+  @include btn-hero-info-focus();
+  @include btn-hero-info-hover();
+  @include btn-hero-info-active();
+  @include btn-hero-info-border();
+}
+
+@mixin btn-hero-danger() {
+  @include btn-hero-danger-gradient();
+  @include btn-hero-danger-bevel-glow-shadow();
+  @include btn-hero-text();
+  @include btn-hero-danger-focus();
+  @include btn-hero-danger-hover();
+  @include btn-hero-danger-active();
+  @include btn-hero-danger-border();
+}
+
+@mixin btn-hero-secondary() {
+  @include btn-hero-secondary-bg();
+  @include btn-hero-secondary-bevel-glow-shadow();
+  @include btn-hero-text();
+  @include btn-hero-secondary-focus();
+  @include btn-hero-secondary-hover();
+  @include btn-hero-secondary-active();
+  @include btn-hero-secondary-border();
+}
+
+@function btn-hero-gradient-left($color, $degrees: 20deg) {
+  @return adjust-hue($color, $degrees);
+}
+
+// Functions for box-shadow
+@function btn-hero-bevel($color) {
+  @return 0 3px 0 0 shade($color, 14%);
+}
+
+@function btn-hero-glow($color) {
+  @return 0 2px 12px 0 $color;
+}
+
+@function btn-hero-shadow() {
+  @return 0 4px 10px 0 nga-theme(btn-hero-shadow);
+}
+
+// Left colors
+@function btn-hero-primary-left-color() {
+  @return btn-hero-gradient-left(nga-theme(btn-primary-bg));
+}
+
+@function btn-hero-warning-left-color() {
+  @return btn-hero-gradient-left(nga-theme(btn-warning-bg));
+}
+
+@function btn-hero-success-left-color() {
+  @return btn-hero-gradient-left(nga-theme(btn-success-bg));
+}
+
+@function btn-hero-info-left-color() {
+  @return btn-hero-gradient-left(nga-theme(btn-info-bg), -20deg);
+}
+
+@function btn-hero-danger-left-color() {
+  @return btn-hero-gradient-left(nga-theme(btn-danger-bg), -20deg);
+}
+
+@function btn-hero-secondary-left-color() {
+  @return btn-hero-gradient-left(nga-theme(btn-secondary-border));
+}
+
+// Middle colors
+@function btn-hero-primary-middle-color() {
+  @return mix(btn-hero-primary-left-color(), nga-theme(btn-primary-bg));
+}
+
+@function btn-hero-warning-middle-color() {
+  @return mix(btn-hero-warning-left-color(), nga-theme(btn-warning-bg));
+}
+
+@function btn-hero-success-middle-color() {
+  @return mix(btn-hero-success-left-color(), nga-theme(btn-success-bg));
+}
+
+@function btn-hero-info-middle-color() {
+  @return mix(btn-hero-info-left-color(), nga-theme(btn-info-bg));
+}
+
+@function btn-hero-danger-middle-color() {
+  @return mix(btn-hero-danger-left-color(), nga-theme(btn-danger-bg));
+}
+
+@function btn-hero-secondary-middle-color() {
+  @return mix(btn-hero-secondary-left-color(), nga-theme(btn-secondary-border));
+}
+
+// End functions
+
+// Help mixins
+@mixin btn-hero-text() {
+  text-shadow: 0 1px 3px nga-theme(btn-hero-text-shadow);
+}
+
+@mixin btn-hero-hover($color-left, $color-right) {
+  $color-left: tint($color-left, 14%);
+  $color-right: tint($color-right, 14%);
+
+  &:hover,
+  .hover {
+	@include nga-right-gradient($color-left, $color-right);
+  }
+}
+
+@mixin btn-hero-focus($color-left, $color-right) {
+  $color-left: shade($color-left, 14%);
+  $color-right: shade($color-right, 14%);
+
+  &:focus,
+  .focus {
+	@include nga-right-gradient($color-left, $color-right);
+
+	box-shadow: none;
+	border-color: transparent;
+  }
+}
+
+@mixin btn-hero-active($color-left, $color-right) {
+  $color-left: shade($color-left, 14%);
+  $color-right: shade($color-right, 14%);
+
+  &:active,
+  .active {
+	@include nga-right-gradient($color-left, $color-right);
+
+	box-shadow: none;
+	border-color: transparent;
+  }
+}
+
+// End help mixins
+
+// Gradient
+@mixin btn-hero-primary-gradient() {
+  $color-right: nga-theme(btn-primary-bg);
+  $color-left: btn-hero-primary-left-color();
+
+  @include nga-right-gradient($color-left, $color-right);
+}
+
+@mixin btn-hero-warning-gradient() {
+  $color-right: nga-theme(btn-warning-bg);
+  $color-left: btn-hero-warning-left-color();
+
+  @include nga-right-gradient($color-left, $color-right);
+}
+
+@mixin btn-hero-success-gradient() {
+  $color-right: nga-theme(btn-success-bg);
+  $color-left: btn-hero-success-left-color();
+
+  @include nga-right-gradient($color-left, $color-right);
+}
+
+@mixin btn-hero-info-gradient() {
+  $color-right: nga-theme(btn-info-bg);
+  $color-left: btn-hero-info-left-color();
+
+  @include nga-right-gradient($color-left, $color-right);
+}
+
+@mixin btn-hero-danger-gradient() {
+  $color-right: nga-theme(btn-danger-bg);
+  $color-left: btn-hero-danger-left-color();
+
+  @include nga-right-gradient($color-left, $color-right);
+}
+
+@mixin btn-hero-secondary-bg() {
+  background-color: nga-theme(btn-secondary-bg);
+}
+
+// Bevel
+@function btn-hero-primary-bevel() {
+  @return btn-hero-bevel(btn-hero-primary-middle-color());
+}
+
+@function btn-hero-warning-bevel() {
+  @return btn-hero-bevel(btn-hero-warning-middle-color());
+}
+
+@function btn-hero-success-bevel() {
+  @return btn-hero-bevel(btn-hero-success-middle-color());
+}
+
+@function btn-hero-info-bevel() {
+  @return btn-hero-bevel(btn-hero-info-middle-color());
+}
+
+@function btn-hero-danger-bevel() {
+  @return btn-hero-bevel(btn-hero-danger-middle-color());
+}
+
+@function btn-hero-secondary-bevel() {
+  @return btn-hero-bevel(btn-hero-secondary-middle-color());
+}
+
+// Glow
+@function btn-hero-primary-glow() {
+  @return btn-hero-glow(btn-hero-primary-middle-color());
+}
+
+@function btn-hero-warning-glow() {
+  @return btn-hero-glow(btn-hero-warning-middle-color());
+}
+
+@function btn-hero-success-glow() {
+  @return btn-hero-glow(btn-hero-success-middle-color());
+}
+
+@function btn-hero-info-glow() {
+  @return btn-hero-glow(btn-hero-info-middle-color());
+}
+
+@function btn-hero-danger-glow() {
+  @return btn-hero-glow(btn-hero-danger-middle-color());
+}
+
+@function btn-hero-secondary-glow() {
+  @return btn-hero-glow(btn-hero-secondary-middle-color());
+}
+
+// Bevel-glow-shadow
+@mixin btn-hero-primary-bevel-glow-shadow() {
+  $bevel: btn-hero-primary-bevel();
+  $glow: btn-hero-primary-glow();
+  $shadow: btn-hero-shadow();
+
+  box-shadow: $bevel, $glow, $shadow;
+}
+
+@mixin btn-hero-warning-bevel-glow-shadow() {
+  $bevel: btn-hero-warning-bevel();
+  $glow: btn-hero-warning-glow();
+  $shadow: btn-hero-shadow();
+
+  box-shadow: $bevel, $glow, $shadow;
+}
+
+@mixin btn-hero-success-bevel-glow-shadow() {
+  $bevel: btn-hero-success-bevel();
+  $glow: btn-hero-success-glow();
+  $shadow: btn-hero-shadow();
+
+  box-shadow: $bevel, $glow, $shadow;
+}
+
+@mixin btn-hero-info-bevel-glow-shadow() {
+  $bevel: btn-hero-info-bevel();
+  $glow: btn-hero-info-glow();
+  $shadow: btn-hero-shadow();
+
+  box-shadow: $bevel, $glow, $shadow;
+}
+
+@mixin btn-hero-danger-bevel-glow-shadow() {
+  $bevel: btn-hero-danger-bevel();
+  $glow: btn-hero-danger-glow();
+  $shadow: btn-hero-shadow();
+
+  box-shadow: $bevel, $glow, $shadow;
+}
+
+@mixin btn-hero-secondary-bevel-glow-shadow() {
+  $bevel: btn-hero-secondary-bevel();
+  $glow: btn-hero-secondary-glow();
+  $shadow: btn-hero-shadow();
+
+  box-shadow: $bevel, $glow, $shadow;
+}
+
+// Border
+@mixin btn-hero-primary-border() {
+  border: none;
+}
+
+@mixin btn-hero-warning-border() {
+  border: none;
+}
+
+@mixin btn-hero-success-border() {
+  border: none;
+}
+
+@mixin btn-hero-info-border() {
+  border: none;
+}
+
+@mixin btn-hero-danger-border() {
+  border: none;
+}
+
+@mixin btn-hero-secondary-border() {
+  border: 2px solid nga-theme(btn-secondary-border);
+}
+
+// Hover
+@mixin btn-hero-primary-hover() {
+  $color-right: nga-theme(btn-primary-bg);
+  $color-left: btn-hero-primary-left-color();
+
+  @include btn-hero-hover($color-left, $color-right);
+}
+
+@mixin btn-hero-warning-hover() {
+  $color-right: nga-theme(btn-warning-bg);
+  $color-left: btn-hero-warning-left-color();
+
+  @include btn-hero-hover($color-left, $color-right);
+}
+
+@mixin btn-hero-success-hover() {
+  $color-right: nga-theme(btn-success-bg);
+  $color-left: btn-hero-success-left-color();
+
+  @include btn-hero-hover($color-left, $color-right);
+}
+
+@mixin btn-hero-info-hover() {
+  $color-right: nga-theme(btn-info-bg);
+  $color-left: btn-hero-info-left-color();
+
+  @include btn-hero-hover($color-left, $color-right);
+}
+
+@mixin btn-hero-danger-hover() {
+  $color-right: nga-theme(btn-danger-bg);
+  $color-left: btn-hero-danger-left-color();
+
+  @include btn-hero-hover($color-left, $color-right);
+}
+
+@mixin btn-hero-secondary-hover() {
+  &:hover,
+  .hover {
+	background-color: rgba(nga-theme(btn-secondary-border), 0.14);
+  }
+}
+
+// Focus
+@mixin btn-hero-primary-focus() {
+  $color-right: nga-theme(btn-primary-bg);
+  $color-left: btn-hero-primary-left-color();
+
+  @include btn-hero-focus($color-left, $color-right);
+}
+
+@mixin btn-hero-warning-focus() {
+  $color-right: nga-theme(btn-warning-bg);
+  $color-left: btn-hero-warning-left-color();
+
+  @include btn-hero-focus($color-left, $color-right);
+}
+
+@mixin btn-hero-success-focus() {
+  $color-right: nga-theme(btn-success-bg);
+  $color-left: btn-hero-success-left-color();
+
+  @include btn-hero-focus($color-left, $color-right);
+}
+
+@mixin btn-hero-info-focus() {
+  $color-right: nga-theme(btn-info-bg);
+  $color-left: btn-hero-info-left-color();
+
+  @include btn-hero-focus($color-left, $color-right);
+}
+
+@mixin btn-hero-danger-focus() {
+  $color-right: nga-theme(btn-danger-bg);
+  $color-left: btn-hero-danger-left-color();
+
+  @include btn-hero-focus($color-left, $color-right);
+}
+
+@mixin btn-hero-secondary-focus() {
+  $color: nga-theme(btn-secondary-border);
+
+  &:focus,
+  .focus {
+	border-color: shade($color, 14%);
+	box-shadow: none;
+	background: none;
+  }
+}
+
+// Active
+@mixin btn-hero-primary-active() {
+  $color-right: nga-theme(btn-primary-bg);
+  $color-left: btn-hero-primary-left-color();
+
+  @include btn-hero-active($color-left, $color-right);
+}
+
+@mixin btn-hero-warning-active() {
+  $color-right: nga-theme(btn-warning-bg);
+  $color-left: btn-hero-warning-left-color();
+
+  @include btn-hero-active($color-left, $color-right);
+}
+
+@mixin btn-hero-success-active() {
+  $color-right: nga-theme(btn-success-bg);
+  $color-left: btn-hero-success-left-color();
+
+  @include btn-hero-active($color-left, $color-right);
+}
+
+@mixin btn-hero-info-active() {
+  $color-right: nga-theme(btn-info-bg);
+  $color-left: btn-hero-info-left-color();
+
+  @include btn-hero-active($color-left, $color-right);
+}
+
+@mixin btn-hero-danger-active() {
+  $color-right: nga-theme(btn-danger-bg);
+  $color-left: btn-hero-danger-left-color();
+
+  @include btn-hero-active($color-left, $color-right);
+}
+
+@mixin btn-hero-secondary-active() {
+  $color: nga-theme(btn-secondary-border);
+
+  &:active,
+  .active {
+	border-color: shade($color, 14%);
+	box-shadow: none;
+	background: none;
+  }
+}

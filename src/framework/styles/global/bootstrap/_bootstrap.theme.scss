@@ -1,0 +1,21 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+@import '~bootstrap/scss/bootstrap';
+@import './buttons';
+@import './button-group';
+@import './dropdowns';
+@import './pagination';
+@import './icon-buttons';
+@import './forms';
+
+@mixin nga-bootstrap-theme() {
+  @include nga-b-buttons-theme();
+  @include nga-b-button-group-theme();
+  @include nga-b-dropdowns-theme();
+  @include nga-b-pagination-theme();
+  @include nga-b-icon-buttons-theme();
+  @include nga-b-forms-theme();
+}

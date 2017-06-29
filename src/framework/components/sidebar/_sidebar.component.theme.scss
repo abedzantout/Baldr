@@ -1,0 +1,69 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+@mixin nga-sidebar-theme() {
+
+  nga-sidebar {
+
+	font-size: nga-theme(sidebar-font-size);
+	line-height: nga-theme(sidebar-line-height);
+
+	@include nga-scrollbars(nga-theme(scrollbar-width), nga-theme(card-scrollbar-fg), nga-theme(card-scrollbar-bg));
+
+	> .scrollable {
+	  height: nga-theme(sidebar-height);
+	  position: fixed;
+	  width: nga-theme(sidebar-width);
+	  background: nga-theme(sidebar-bg);
+	  box-shadow: nga-theme(sidebar-shadow);
+
+	  > .main-container {
+		padding: nga-theme(sidebar-padding);
+	  }
+	}
+
+	width: nga-theme(sidebar-width);
+	background: nga-theme(sidebar-bg);
+	color: nga-theme(sidebar-fg);
+
+	&.collapsed {
+	  width: 0;
+	  padding: 0;
+	  > .scrollable {
+		width: 0;
+		padding: 0;
+	  }
+	}
+
+	&.compacted {
+	  width: nga-theme(sidebar-width-compact);
+	  > .scrollable {
+		width: nga-theme(sidebar-width-compact);
+	  }
+	}
+
+	&.expanded {
+	  width: nga-theme(sidebar-width);
+	  > .scrollable {
+		width: nga-theme(sidebar-width);
+	  }
+	}
+
+	nga-sidebar-header {
+	  padding: nga-theme(sidebar-padding);
+	  height: nga-theme(sidebar-header-height);
+	}
+
+	nga-sidebar-footer {
+	  padding: nga-theme(sidebar-padding);
+	  height: nga-theme(sidebar-footer-height);
+	}
+
+	nga-menu {
+	  margin: 0 -#{nga-theme(sidebar-padding)};
+	}
+  }
+}
