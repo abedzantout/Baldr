@@ -1,4 +1,6 @@
-/* Border styles */
+/* Single Purpose Class collection for borders and their radii. */
+
+//TODO: I wont know the number of classes or their values until at least some of the wireframes are done.
 
 //mixin for border color,width,style, and sides. All parameters are optional. All parameters have default values.
 @mixin border($color: black,$width: 1px,$style: solid,$sides...) {

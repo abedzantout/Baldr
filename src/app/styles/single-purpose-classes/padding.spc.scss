@@ -1,0 +1,30 @@
+/* Single Purpose Class collection for padding values. */
+
+//TODO: I wont know the number of classes or their values until at least some of the wireframes are done.
+
+%padding-xl{}
+
+%padding-l{}
+
+%padding-m{}
+
+%padding-s{}
+
+%padding-xs{}
+
+//this is a function for quicker and more robust styling.
+//TODO: make the first param be a class name instead of just a value to make the user choose only from the above classes.
+@mixin padding-perc($value,$sides...){
+  @if (length($sides) == 0){
+    padding: #{$value};
+  }
+  @each $side in $sides{
+    @if($side == all){
+      padding: #{$value};
+    }
+    @else{
+      padding-#{$side}: #{$value};
+    }
+  }
+}
+

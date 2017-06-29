@@ -1,0 +1,21 @@
+/* Single Purpose Class collection for background colors. */
+
+
+//background colors used for the layout components. Menus, containers, sidenavs etc...
+%layout-gray{background-color: #222222;}
+
+%primary-gray{background-color: #666666;}
+
+%highlight-gray{background-color: #e5e5e5;}
+
+%content-white{background-color: #ffffff;}
+
+//background colors used for action buttons and prompts
+%action-primary{background-color: #209e91;}
+
+%action-selected{} //TODO:get color for this class.
+
+%action-danger{} //TODO:get color for this class.
+
+%action-secondary{} //TODO:get color for this class.
+

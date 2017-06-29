@@ -15,21 +15,21 @@
 }
 
 a {
-  @extend %text-color-Primary;
+  @extend %text-color-primary;
 }
 
 .sub-section-link {
   @include margin-perc(10%);
   width: 100%;
-  @extend %text-color-hover;
+  @extend %text-color-highlight;
 }
 
 .sub-section-link a {
-  @extend %text-color-hover;
+  @extend %text-color-highlight;
 }
 
 a:hover {
-  @extend %text-color-PrimaryKey;
+  @extend %text-color-key;
   text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ a:hover {
 }
 
 .card-header {
-  @extend %list-item-hovered;
+  @extend %highlight-gray;
   @include border-radius((top-right:0px, top-left:0px, bottom-right:0px, bottom-left:0px));
   background-color: #ffffff;
 }

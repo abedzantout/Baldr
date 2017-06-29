@@ -4,10 +4,10 @@ body{
   @include margin-perc(5%, top);
 }
 a{
-  @extend %text-color-Primary;
+  @extend %text-color-primary;
 }
 h1{
-  @extend %text-color-PrimaryKey;
+  @extend %text-color-key;
 }
 .intro-text{
   @include margin-perc(5%,right,top);
@@ -15,12 +15,12 @@ h1{
 
 .goals-container{
   @include margin-perc(10%,top);
-  @extend %text-color-PrimaryKey;
+  @extend %text-color-key;
 }
 
 .goal-header{
   text-align: center;
-  @extend %text-color-Primary;
+  @extend %text-color-primary;
 }
 
 .goals-icons{

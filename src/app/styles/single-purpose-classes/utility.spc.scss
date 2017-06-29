@@ -1,10 +1,13 @@
-/* utility styles */
+/* Single Purpose Class collection for general utility use. */
 
-//TODO: add atom for text decoration.
+//TODO: I wont know the number of classes or their values until at least some of the wireframes are done.
 
 %position-fixed{position: fixed};
+
 %overflow-scroll{overflow: auto};
+
 %height-allPage{position: fixed; height:100%;}
+
 %center-horizontal{
   display:block;
   margin-right:auto;
