@@ -1,7 +1,7 @@
 /**
  * Created by Lenovo on 27-Jun-17.
  */
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { IntroductionComponent } from './components/overview/Introduction/introduction.component';
@@ -18,26 +18,26 @@ import { LayoutComponent } from './components/design/layout/layout.component';
 import { IconsComponent } from './components/design/icons/icons.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'introduction',pathMatch:'full'},
-  {path:'introduction',component: IntroductionComponent},
-  {path:'code-guidelines',component: codeGuidelinesComponent},
-  {path:'buttons',component: buttonsPageComponent},
-  {path:'form-elements',component: FormElementsComponent},
-  {path:'grid',component: GridComponent},
-  {path:'lists',component: ListsComponent},
-  {path:'color-scheme',component: ColorSchemeComponent},
-  {path:'typography',component: TypographyComponent},
-  {path:'borders',component: BorderComponent},
-  {path:'box-shadows',component: BoxShadowComponent},
-  {path:'layout',component: LayoutComponent},
-  {path:'icons',component: IconsComponent}
+  { path: '', redirectTo: 'introduction', pathMatch: 'full' },
+  { path: 'introduction', component: IntroductionComponent },
+  { path: 'code-guidelines', component: codeGuidelinesComponent },
+  { path: 'buttons', component: buttonsPageComponent },
+  { path: 'form-elements', component: FormElementsComponent },
+  { path: 'grid', component: GridComponent },
+  { path: 'lists', component: ListsComponent },
+  { path: 'color-scheme', component: ColorSchemeComponent },
+  { path: 'typography', component: TypographyComponent },
+  { path: 'borders', component: BorderComponent },
+  { path: 'box-shadows', component: BoxShadowComponent },
+  { path: 'layout', component: LayoutComponent },
+  { path: 'icons', component: IconsComponent }
 ];
 
-@NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
-})
+@NgModule( {
+  imports: [RouterModule.forRoot( routes )],
+  exports: [RouterModule]
+} )
 
-export class RoutingModule{
+export class RoutingModule {
 
 }

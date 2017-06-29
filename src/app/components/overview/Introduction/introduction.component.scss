@@ -1,24 +1,25 @@
 @import "../../../styles/main.styles";
 
-a{
+a {
   @extend %text-color-primary;
 }
-.intro-text{
-  @include margin-perc(5%,right,top);
+
+.intro-text {
+  @include margin-perc(5%, right, top);
 }
 
-.goals-container{
-  @include margin-perc(10%,top);
+.goals-container {
+  @include margin-perc(10%, top);
   @extend %text-color-key;
 }
 
-.goal-header{
+.goal-header {
   text-align: center;
   @extend %text-color-primary;
 }
 
-.goals-icons{
+.goals-icons {
   @extend %center-horizontal;
-  width:20%;
-  @include margin-perc(5%,top,bottom);
+  width: 20%;
+  @include margin-perc(5%, top, bottom);
 }
