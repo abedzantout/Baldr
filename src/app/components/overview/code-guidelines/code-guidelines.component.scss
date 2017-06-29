@@ -4,11 +4,28 @@ body{
   @include margin-perc(5%, top,right,left);
   @include padding-perc(5%,bottom);
 }
+
 h1{
   @extend %text-color-primary;
 }
-.intro-text{
-  @include margin-perc(5%,right,top);
+
+h3{
+  @extend %text-color-primary;
+  @include margin-perc(5%,top);
+}
+
+.main-text{
+  @include margin-perc(5%,top);
+  @extend %text-color-key;
+}
+
+.section-text{
+  @include margin-perc(5%,top,bottom);
+  @extend %text-color-key;
+}
+
+.important-text{
+  @extend %text-color-primary;
 }
 
 .code-section{
@@ -18,4 +35,6 @@ h1{
 
 code{
   white-space: pre-wrap;
+  font-family: monospace;
+  @extend %bg-color-content-white;
 }
