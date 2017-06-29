@@ -1,11 +1,21 @@
 @import "../../../styles/main.styles";
 
 body{
-  @include margin-perc(5%, top);
+  @include margin-perc(5%, top,right,left);
+  @include padding-perc(5%,bottom);
 }
 h1{
   @extend %text-color-primary;
 }
 .intro-text{
   @include margin-perc(5%,right,top);
+}
+
+.code-section{
+  @include padding-perc(2%);
+  @include border(rgba(0,0,0,0.25),1px,solid);
+}
+
+code{
+  white-space: pre-wrap;
 }

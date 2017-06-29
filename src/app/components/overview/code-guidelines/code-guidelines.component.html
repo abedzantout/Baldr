@@ -4,14 +4,30 @@
   <p class="intro-text">
     The bulk of our Style-guide's code consists of single-purpose classes which, as their name suggests, are classes
     that declare a single value for a single property. This division of concerns helps keep the code modular and easy
-    to maintain. The main benefit of using single-purpose classes is that when an engineer will know exactly how
+    to maintain. The main benefit of using single-purpose classes is that an engineer will know exactly how
     each class affects the markup and will be able to quickly develop or alter views without affecting others.
   </p>
   <p class="intro-text">
-    Our style-guide follows the Atomic Design structure. The majority of the code base consists of single purpose classes
-    which are used to create may different atoms such as buttons and inputs. These many different atoms can be further combined
-    together to form molecules which are components that put the atoms to good use. These components should be used in development
+    Our style-guide follows the Atomic Design structure. The majority of the code base consists of single purpose
+    classes
+    which are used to create may different atoms such as buttons and inputs. These many different atoms can be further
+    combined
+    together to form molecules which are components that put the atoms to good use. These components should be used in
+    development
     to keep the platform's design consistent.
   </p>
+
+  <div class="code-section">
+    <code>
+      /* Do */
+      @import 'border.spc.scss';
+      @import 'button.atom.scss';
+
+      /* Don't */
+      @import 'borders.scss';
+      @import 'buttons.scss';
+    </code>
+  </div>
+
 </div>
 </body>
