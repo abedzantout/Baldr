@@ -52,6 +52,7 @@ export class NgaSpinnerService {
   }
   
   private getSpinnerElement() {
+    
     return document.getElementById( this.selector );
   }
 }

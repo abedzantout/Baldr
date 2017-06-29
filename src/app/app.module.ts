@@ -51,6 +51,7 @@ import { NgaSearchTestComponent } from './search-test/search-test.component';
 import { NgaFormsTestComponent } from './forms-test/forms-test.component';
 
 import { CardComponent } from './card/card.component';
+import { SpinnerTest } from 'app/spinner-test/spinner-test.component';
 
 const NGA_TEST_COMPONENTS = [
   NgaAppComponent,
@@ -84,6 +85,7 @@ const NGA_TEST_COMPONENTS = [
   NgaThemeDynamicTestComponent,
   NgaActionsTestComponent,
   NgaFormsTestComponent,
+  SpinnerTest,
 ];
 
 @NgModule( {
