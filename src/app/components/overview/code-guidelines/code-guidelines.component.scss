@@ -1,1 +1,11 @@
 @import "../../../styles/main.styles";
+
+body{
+  @include margin-perc(5%, top);
+}
+h1{
+  @extend %text-color-PrimaryKey;
+}
+.intro-text{
+  @include margin-perc(5%,right,top);
+}
