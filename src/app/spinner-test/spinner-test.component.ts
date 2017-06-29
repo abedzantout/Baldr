@@ -7,7 +7,7 @@
 import { Component } from '@angular/core';
 import { NgaSpinnerService } from '../../framework/services/spinner.service';
 
-//TODO: create spinner
+//TODO: fix spinner
 @Component( {
   selector: 'nga-spinner-test',
   template: `
@@ -19,6 +19,7 @@ import { NgaSpinnerService } from '../../framework/services/spinner.service';
     <div id="nga-global-spinner">
     </div>
   `,
+  styleUrls:['./spinner-test.component.scss']
 } )
 export class SpinnerTest {
   constructor( private spinnerService: NgaSpinnerService ) {
