@@ -1,0 +1,88 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+:host {
+
+  .layout {
+	display: flex;
+	flex-direction: column;
+  }
+
+  /deep/ nga-layout-header {
+	display: block;
+
+	nav {
+	  align-items: center;
+	  display: flex;
+	}
+
+	&.fixed {
+	  position: fixed;
+	  left: 0;
+	  right: 0;
+	  z-index: 100;
+	}
+  }
+
+  .layout-container {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+
+	/deep/ nga-sidebar {
+	  order: 0;
+
+	  &.right {
+		order: 2;
+	  }
+
+	  .fixed {
+		position: fixed;
+		width: 100%;
+		overflow-y: auto;
+		height: 100%;
+	  }
+	}
+
+	.content {
+	  display: flex;
+	  flex: 1;
+	  flex-direction: column;
+
+	  &.center {
+		max-width: 100%;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+	  }
+
+	  .columns {
+		display: flex;
+		flex-direction: row;
+		flex: 1;
+
+		/deep/ nga-layout-column {
+		  order: 2;
+		  flex: 1 0;
+
+		  &.left {
+			order: 1;
+		  }
+		}
+	  }
+
+	  /deep/ nga-layout-footer {
+		display: block;
+		margin-top: auto;
+
+		nav {
+		  justify-content: center;
+		  display: flex;
+		}
+	  }
+	}
+  }
+}

@@ -1,0 +1,77 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+@mixin nga-layout-theme() {
+  .layout {
+	font-size: nga-theme(layout-font-size);
+	line-height: nga-theme(layout-line-height);
+	color: nga-theme(layout-fg);
+	background: nga-theme(layout-bg);
+	min-height: nga-theme(layout-min-height);
+
+	nga-layout-header {
+	  font-family: nga-theme(header-font-family);
+	  font-size: nga-theme(header-font-size);
+	  line-height: nga-theme(header-line-height);
+
+	  box-shadow: nga-theme(header-shadow);
+	  nav {
+		height: nga-theme(header-height);
+		padding: nga-theme(header-padding);
+		background: nga-theme(header-bg);
+		color: nga-theme(header-fg);
+
+		a {
+		  color: nga-theme(header-fg);
+
+		  @include hover-focus-active {
+			color: nga-theme(header-fg);
+		  }
+		}
+	  }
+
+	  &.fixed ~ .layout-container {
+		padding-top: nga-theme(header-height);
+	  }
+	}
+
+	.layout-container {
+	  .content {
+
+		nga-layout-footer {
+		  box-shadow: nga-theme(footer-shadow);
+
+		  nav {
+			height: nga-theme(footer-height);
+			padding: nga-theme(footer-padding);
+			background: nga-theme(footer-bg);
+			color: nga-theme(footer-fg);
+			border-top: 1px solid nga-theme(footer-separator);
+
+			a {
+			  color: nga-theme(header-fg);
+
+			  @include hover-focus-active {
+				color: nga-theme(header-fg);
+			  }
+			}
+		  }
+		}
+
+		&.center {
+		  width: nga-theme(layout-content-width);
+		  flex: 0 1 nga-theme(layout-content-width);
+		}
+
+		.columns {
+		  nga-layout-column {
+			padding: nga-theme(layout-padding);
+		  }
+		}
+	  }
+	}
+  }
+}

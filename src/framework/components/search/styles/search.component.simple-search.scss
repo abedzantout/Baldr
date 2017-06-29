@@ -1,0 +1,30 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+:host.simple-search {
+  .wrapper {
+	opacity: 0;
+
+	button, span {
+	  display: none;
+	}
+  }
+
+  &.show {
+	.wrapper {
+	  opacity: 1;
+
+	  .search {
+		background: none;
+
+		input {
+		  margin-left: 1rem;
+		  width: 15rem;
+		}
+	  }
+	}
+  }
+}

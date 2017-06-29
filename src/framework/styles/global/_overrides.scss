@@ -1,0 +1,21 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+@import './fonts';
+@import 'bootstrap/bootstrap.theme';
+@import 'charts/d3.theme';
+@import 'components/tree.theme';
+@import 'components/toaster.theme';
+@import 'maps/leaflet.theme';
+@import 'tables/smart-table.theme';
+
+@mixin nga-theme-overrides() {
+  @include nga-bootstrap-theme();
+  @include nga-charts-d3-theme();
+  @include nga-components-tree-theme();
+  @include nga-maps-leaflet-theme();
+  @include nga-tables-smart-table-theme();
+  @include nga-components-toaster-theme();
+}

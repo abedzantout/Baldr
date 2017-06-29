@@ -1,0 +1,148 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+// TODO: refactor these styles
+@mixin nga-tables-smart-table-theme() {
+
+  ng2-smart-table {
+	th,
+	td {
+	  border: 1px solid nga-theme(smart-table-border-color) !important;
+	  line-height: 35px;
+	  vertical-align: middle;
+	}
+
+	table tr td {
+	  padding: 0 8px;
+	}
+
+	color: nga-theme(smart-table-fg);
+
+	input {
+	  line-height: 1.5 !important;
+	}
+
+	ng2-smart-table-cell {
+	  color: nga-theme(smart-table-fg);
+	  line-height: 35px;
+	}
+
+	tbody {
+	  tr {
+		color: nga-theme(smart-table-fg);
+	  }
+
+	  tr:hover {
+		background: nga-theme(smart-table-bg);
+	  }
+	}
+
+	a.ng2-smart-sort-link {
+	  font-size: 14px !important;
+	  color: nga-theme(smart-table-fg);
+	  font-weight: nga-theme(smart-table-font-weight-bolder);
+
+	  &.sort {
+		font-weight: nga-theme(smart-table-font-weight-bolder) !important;
+
+		&::after {
+		  border-bottom-color: nga-theme(smart-table-border-color) !important;
+		}
+	  }
+	}
+
+	.ng2-smart-actions {
+	  width: 70px;
+	  text-align: center;
+
+	  .actions {
+		float: none;
+		text-align: center;
+	  }
+	}
+
+	.ng2-smart-actions-title-add {
+	  text-align: center;
+	}
+
+	a.ng2-smart-action,
+	.ng2-smart-title {
+	  font-size: 14px !important;
+	  color: nga-theme(smart-table-fg);
+	  padding: 0 5px;
+	  display: inline-block;
+
+	  &.ng2-smart-action-add-add {
+		font-size: 25px !important;
+	  }
+	}
+
+	nav.ng2-smart-pagination-nav {
+	  display: flex;
+	  justify-content: center;
+	  margin-top: 16px;
+
+	  .ng2-smart-pagination {
+		display: flex;
+
+		.page-item.disabled .page-link, .page-item.disabled .page-link:focus, .page-item.disabled .page-link:hover {
+		  background: nga-theme(smart-table-bg);
+		  color: nga-theme(smart-table-fg);
+		}
+	  }
+
+	  .pagination > li > a, .pagination > li > span {
+		background: transparent;
+	  }
+
+	  .pagination > li:first-child > a, .pagination > li:first-child > span {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	  }
+
+	  .pagination > li:last-child > a, .pagination > li:last-child > span {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	  }
+
+	  .pagination > li > a,
+	  .pagination > li > span {
+		color: nga-theme(smart-table-fg);
+		border-color: nga-theme(smart-table-border-color);
+	  }
+
+	  .pagination > li:first-of-type > a,
+	  .pagination > li:first-of-type > span {
+		border-top-left-radius: nga-theme(smart-table-border-radius);
+		border-bottom-left-radius: nga-theme(smart-table-border-radius);
+	  }
+
+	  .pagination > li:last-of-type > a,
+	  .pagination > li:last-of-type > span {
+		border-top-right-radius: nga-theme(smart-table-border-radius);
+		border-bottom-right-radius: nga-theme(smart-table-border-radius);
+	  }
+
+	  .pagination > .active > a,
+	  .pagination > .active > span,
+	  .pagination > .active > a:hover,
+	  .pagination > .active > span:hover,
+	  .pagination > .active > a:focus,
+	  .pagination > .active > span:focus {
+		background-color: rgba(0, 0, 0, 0.3) !important;
+		border-color: nga-theme(smart-table-border-color) !important;
+	  }
+
+	  .pagination > li > a:hover,
+	  .pagination > li > span:hover,
+	  .pagination > li > a:focus,
+	  .pagination > li > span:focus {
+		background-color: rgba(0, 0, 0, 0.2);
+		color: nga-theme(smart-table-fg);
+	  }
+	}
+  }
+}

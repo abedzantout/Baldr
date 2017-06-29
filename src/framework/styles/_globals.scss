@@ -1,0 +1,18 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+@import 'global/components';
+@import 'global/overrides';
+
+@mixin nga-theme-global() {
+  @include nga-theme-components();
+  @include nga-theme-overrides();
+}
+
+@mixin nga-install() {
+  @include nga-install-global() {
+	@content;
+  }
+}
