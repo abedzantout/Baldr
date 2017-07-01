@@ -13,49 +13,68 @@ $nga-themes: () !global;
 $nga-themes-non-processed: () !global;
 $nga-enabled-themes: () !global;
 
+//This function gets the map for the specified theme. Each item in the map is a property-value combination.
 @function nga-theme($key) {
   @return map-get($theme, $key);
 }
 
+/*
+This function is a robust function used to get the values for each key in a map.
+It checks first if the $value param passed is a string. Then checks if a key for this value does exist.If it does, then
+it returns the value.
+If the $value param is not a string (is a mixin) then we return that value.
+ */
 @function nga-get-value($theme, $key, $value) {
   @if (type-of($value) == 'string') {
-	$tmp: map-get($theme, $value);
+    $tmp: map-get($theme, $value);
 
-	@if ($tmp != null) {
-	  @return nga-get-value($theme, $value, $tmp);
-	}
+    @if ($tmp != null) {
+      @return nga-get-value($theme, $value, $tmp);
+    }
   }
 
   @return map-get($theme, $key);
 }
 
+/*This function is used to register a new theme and process it's values.
+  @params: $theme: the map of theme we want to register.
+           $name: name of the new theme.
+           $default: name of the theme we wanna merge ours with.
+ */
 @function nga-register-theme($theme, $name, $default: null) {
 
   @if ($default != null) {
-
-	$theme: map-merge(map-get($nga-themes-non-processed, $default), $theme);
-	$nga-themes-non-processed: map-set($nga-themes-non-processed, $name, $theme) !global;
+    /* Since not all the themes are complete. We merge the incomplete ones with the most comprehensive one.
+    for example, cosmic only has around 50 attributes while default has around. So the attributes that exist
+    in both themes will be updated, and the attributes missing from one theme will be added to it.*/
+    $theme: map-merge(map-get($nga-themes-non-processed, $default), $theme);
+    $nga-themes-non-processed: map-set($nga-themes-non-processed, $name, $theme) !global;
   } @else {
-	$nga-themes-non-processed: map-set($nga-themes-non-processed, $name, $theme) !global;
+    $nga-themes-non-processed: map-set($nga-themes-non-processed, $name, $theme) !global;
+    //creates a new key-value combination within the scope of this function.
   }
 
   $theme-parsed: ();
   @each $key, $value in $theme {
-	$theme-parsed: map-set($theme-parsed, $key, nga-get-value($theme, $key, $value));
+    $theme-parsed: map-set($theme-parsed, $key, nga-get-value($theme, $key, $value));
+    //we process each combination. Some values are mixins not strings, so we need to process those.
   }
 
   @return map-set($nga-themes, $name, $theme-parsed);
 }
 
+
+/*This function checks if we have themes in $nga-enabled-themes and merges them in a map with $nga-themes.
+  Then returns this map. */
 @function get-enabled-themes() {
   $themes-to-install: ();
 
   @if (length($nga-enabled-themes) > 0) {
-	@each $theme-name in $nga-enabled-themes {
-	  $themes-to-install: map-set($themes-to-install, $theme-name, map-get($nga-themes, $theme-name));
-	}
+    @each $theme-name in $nga-enabled-themes {
+      $themes-to-install: map-set($themes-to-install, $theme-name, map-get($nga-themes, $theme-name));
+    }
   } @else {
-	$themes-to-install: $nga-themes;
+    $themes-to-install: $nga-themes;
   }
 
   @return $themes-to-install;
@@ -67,10 +86,10 @@ $nga-enabled-themes: () !global;
   $themes-to-install: get-enabled-themes();
 
   @each $theme-name, $theme in $themes-to-install {
-	:host-context(.nga-theme-#{$theme-name}) {
-	  $theme: $theme !global;
-	  @content;
-	}
+    :host-context(.nga-theme-#{$theme-name}) {
+      $theme: $theme !global;
+      @content;
+    }
   }
 }
 
@@ -80,21 +99,24 @@ $nga-enabled-themes: () !global;
   $themes-to-install: get-enabled-themes();
 
   @each $theme-name, $theme in $themes-to-install {
-	:host .nga-theme-#{$theme-name} {
-	  $theme: $theme !global;
-	  @content;
-	}
+    :host .nga-theme-#{$theme-name} {
+      $theme: $theme !global;
+      @content;
+    }
   }
 }
 
+/*
+This mixin creates a new class with the theme name for each theme.
+ */
 @mixin nga-install-global() {
   $themes-to-install: get-enabled-themes();
 
   @each $theme-name, $theme in $themes-to-install {
-	.nga-theme-#{$theme-name} {
-	  $theme: $theme !global;
+    .nga-theme-#{$theme-name} {
+      $theme: $theme !global;
 
-	  @content;
-	}
+      @content;
+    }
   }
 }
