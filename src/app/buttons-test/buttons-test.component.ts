@@ -9,9 +9,9 @@ import {Component} from '@angular/core';
   selector: 'buttons-test',
   template: `<nga-layout>
               <nga-layout-column>
-                <button class='btn btn-primary'>button</button>
-                <button class='btn btn-secondary'>button</button>
-                <button class='btn btn-danger'>button</button>  
+              <button class="btn btn-primary">button</button>
+              <button class="btn btn-secondary">button</button>
+              <button class="btn btn-action">button</button>
               </nga-layout-column>
              </nga-layout>`
 })
