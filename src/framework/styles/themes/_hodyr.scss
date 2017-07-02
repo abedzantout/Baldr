@@ -7,7 +7,14 @@
 @import '../core/mixins';
 
 $theme: (
-  color-primary: #209e91
+  color-primary: #209e91,
+  color-secondary: #1978cc,
+  color-danger: #c50400,
+  btn-primary-bg: color-primary,
+  btn-border-radius: 0px,
+  btn-secondary-bg: color-secondary,
+  btn-secondary-border: color-secondary,
+  btn-danger-bg: color-danger,
 );
 
 //register the theme
