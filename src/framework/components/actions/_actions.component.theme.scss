@@ -7,54 +7,54 @@
 @mixin nga-actions-theme() {
   nga-actions {
 
-	font-size: nga-theme(actions-font-size);
-	line-height: nga-theme(actions-line-height);
+    font-size: nga-theme(actions-font-size);
+    line-height: nga-theme(actions-line-height);
 
-	nga-action {
-	  height: nga-theme(actions-size-small);
-	  padding: 0 nga-theme(actions-padding);
+    nga-action {
+      height: nga-theme(actions-size-small);
+      padding: 0 nga-theme(actions-padding);
 
-	  i.control-icon {
-		color: nga-theme(actions-fg);
-		font-size: nga-theme(actions-size-small);
-	  }
-	  border-left: 1px solid rgba(nga-theme(actions-separator), 0.3);
-	  background: transparent;
-	}
+      i.control-icon {
+        color: nga-theme(actions-fg);
+        font-size: nga-theme(actions-size-small);
+      }
+      border-left: 1px solid rgba(nga-theme(actions-separator), 0.3);
+      background: transparent;
+    }
 
-	&.inverse {
-	  nga-action {
-		i.control-icon {
-		  color: nga-theme(actions-bg);
-		}
-		border-left: 1px solid rgba(nga-theme(actions-separator), 0.3);
-	  }
-	}
+    &.inverse {
+      nga-action {
+        i.control-icon {
+          color: nga-theme(actions-bg);
+        }
+        border-left: 1px solid rgba(nga-theme(actions-separator), 0.3);
+      }
+    }
 
-	&.small {
+    &.small {
 
-	  nga-action {
-		height: nga-theme(actions-size-small);
-		i.control-icon {
-		  font-size: nga-theme(actions-size-small);
-		}
-	  }
-	}
-	&.medium {
-	  nga-action {
-		height: nga-theme(actions-size-medium);
-		i.control-icon {
-		  font-size: nga-theme(actions-size-medium);
-		}
-	  }
-	}
-	&.large {
-	  nga-action {
-		height: nga-theme(actions-size-large);
-		i.control-icon {
-		  font-size: nga-theme(actions-size-large);
-		}
-	  }
-	}
+      nga-action {
+        height: nga-theme(actions-size-small);
+        i.control-icon {
+          font-size: nga-theme(actions-size-small);
+        }
+      }
+    }
+    &.medium {
+      nga-action {
+        height: nga-theme(actions-size-medium);
+        i.control-icon {
+          font-size: nga-theme(actions-size-medium);
+        }
+      }
+    }
+    &.large {
+      nga-action {
+        height: nga-theme(actions-size-large);
+        i.control-icon {
+          font-size: nga-theme(actions-size-large);
+        }
+      }
+    }
   }
 }

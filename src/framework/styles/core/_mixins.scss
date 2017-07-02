@@ -6,40 +6,40 @@
 
 @mixin nga-scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
   ::-webkit-scrollbar {
-	width: $size;
-	height: $size;
+    width: $size;
+    height: $size;
   }
 
   ::-webkit-scrollbar-thumb {
-	background: $foreground-color;
-	cursor: pointer;
+    background: $foreground-color;
+    cursor: pointer;
   }
 
   ::-webkit-scrollbar-track {
-	background: $background-color;
+    background: $background-color;
   }
 
   // For Internet Explorer
   body {
-	scrollbar-face-color: $foreground-color;
-	scrollbar-track-color: $background-color;
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
   }
 }
 
 @mixin nga-radial-gradient($color-1, $color-2, $color-3) {
   background: $color-2; /* Old browsers */
   background: -moz-radial-gradient(bottom, ellipse cover, $color-1 0%,
-		  $color-2 45%,
-		  $color-3 100%); /* FF3.6-15 */
+    $color-2 45%,
+    $color-3 100%); /* FF3.6-15 */
   background: -webkit-radial-gradient(bottom, ellipse cover, $color-1 0%,
-		  $color-2 45%,
-		  $color-3 100%); /* Chrome10-25,Safari5.1-6 */
+    $color-2 45%,
+    $color-3 100%); /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at bottom, $color-1 0%,
-		  $color-2 45%,
-		  $color-3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    $color-2 45%,
+    $color-3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='$color-1',
-		  endColorstr='$color-3',
-		  GradientType=1); /* IE6-9 fallback on horizontal gradient */
+    endColorstr='$color-3',
+    GradientType=1); /* IE6-9 fallback on horizontal gradient */
 }
 
 @mixin nga-right-gradient($left-color, $right-color) {
@@ -48,9 +48,9 @@
 
 @mixin nga-headings($from: 1, $to: 6) {
   @for $i from $from through $to {
-	h#{$i} {
-	  margin: 0;
-	}
+    h#{$i} {
+      margin: 0;
+    }
   }
 }
 
@@ -58,7 +58,7 @@
   &:focus,
   &:active,
   &:hover {
-	@content;
+    @content;
   }
 }
 
@@ -70,21 +70,21 @@
 
 @mixin install-placeholder($color, $font-size) {
   $placeholder-selectors: (
-		  '::-webkit-input-placeholder' '::-moz-placeholder' ':-moz-placeholder' ':-ms-input-placeholder'
+    '::-webkit-input-placeholder' '::-moz-placeholder' ':-moz-placeholder' ':-ms-input-placeholder'
   );
 
   &[placeholder] {
-	@include placeholder($color, $font-size);
+    @include placeholder($color, $font-size);
   }
 
   @each $selector in $placeholder-selectors {
-	&#{$selector} {
-	  @include placeholder($color, $font-size);
-	}
+    &#{$selector} {
+      @include placeholder($color, $font-size);
+    }
 
-	&:focus#{$selector} {
-	  @include placeholder-focus();
-	}
+    &:focus#{$selector} {
+      @include placeholder-focus();
+    }
   }
 }
 

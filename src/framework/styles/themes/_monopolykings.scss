@@ -1,0 +1,14 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+@import '../core/functions';
+@import '../core/mixins';
+
+$theme: (
+  color-primary: #209e91
+);
+
+//register the theme
+$nga-themes: nga-register-theme($theme, monopolykings, default);

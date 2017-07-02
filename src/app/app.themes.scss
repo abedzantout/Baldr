@@ -12,6 +12,11 @@
 //}
 @import '../framework/styles/all';
 
+
+/*
+These two $nga-themes declarations call nga-register-theme in _theming.scss to add a new theme. nga-register-theme then
+returns a new map with the newly registered theme included.
+ */
 $nga-themes: nga-register-theme((
   background-inverse: #5f1eff,
   header-foreground: #ce55bd,
@@ -20,12 +25,16 @@ $nga-themes: nga-register-theme((
   card-separator: red,
   radius: 0,
   color-primary: red,
-), blue, cosmic);
+), blue, default);
 
 $nga-themes: nga-register-theme((
   header-foreground: #76ff81,
 ), blue1, blue);
 
+/*
+This function takes the components and bootstrap overrides we've created using nga-theme-global, then adds them
+to the styles of each of the enabled themes.
+ */
 @include nga-install() {
   @include nga-theme-global();
 }

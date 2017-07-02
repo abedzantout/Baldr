@@ -15,7 +15,7 @@ $nga-enabled-themes: () !global;
 
 //This function gets the map for the specified theme. Each item in the map is a property-value combination.
 @function nga-theme($key) {
-  @return map-get($theme, $key);
+  @return map-get($theme, $key); //where is this '$theme' variable defined ?
 }
 
 /*

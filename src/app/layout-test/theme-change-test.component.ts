@@ -39,11 +39,11 @@ import { NgaThemeService } from '../../framework';
   `,
 } )
 export class NgaThemeChangeTestComponent {
-  
+
   currentTheme = 'default';
-  
+
   constructor( private themeService: NgaThemeService ) { }
-  
+
   changeTheme() {
     this.currentTheme = this.currentTheme === 'default' ? 'blue' : 'default';
     this.themeService.changeTheme( this.currentTheme );
