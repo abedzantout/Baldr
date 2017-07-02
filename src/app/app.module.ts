@@ -94,7 +94,7 @@ const NGA_TEST_COMPONENTS = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot( routes, { useHash: true } ),
-    NgaThemeModule.forRoot( { name: 'monopolykings' } ),
+    NgaThemeModule.forRoot( { name: 'hodyr' } ),
     NgaCardModule,
     NgaLayoutModule,
     NgaMenuModule.forRoot( {
