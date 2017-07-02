@@ -11,7 +11,7 @@ import {Component} from '@angular/core';
               <nga-layout-column>
               <button class="btn btn-primary">button</button>
               <button class="btn btn-secondary">button</button>
-              <button class="btn btn-action">button</button>
+              <button class="btn btn-danger">button</button>
               </nga-layout-column>
              </nga-layout>`
 })
