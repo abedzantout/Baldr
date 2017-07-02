@@ -9,16 +9,32 @@
     &.primary-button{
       button{
         background-color: nga-theme(color-primary);
+        border: nga-theme(btn-border);
+        width: nga-theme(btn-primary-width);
+        height: nga-theme(btn-primary-height);
+        color: nga-theme(btn-text-color);
+        box-shadow: nga-theme(btn-box-shadow);
       }
     }
     &.secondary-button{
       button{
-        background-color: nga-theme(color-primary);
+        background-color: nga-theme(color-secondary);
+        border: nga-theme(btn-border);
+        width: nga-theme(btn-secondary-width);
+        height: nga-theme(btn-secondary-height);
+        color: nga-theme(btn-text-color);
+        box-shadow: nga-theme(btn-box-shadow);
+
       }
     }
     &.danger-button{
       button{
-        background-color: nga-theme(color-primary);
+        background-color: nga-theme(color-danger);
+        border: nga-theme(btn-border);
+        width: nga-theme(btn-danger-width);
+        height: nga-theme(btn-danger-height);
+        color: nga-theme(btn-text-color);
+        box-shadow: nga-theme(btn-box-shadow);
       }
     }
   }

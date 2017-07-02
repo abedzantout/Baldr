@@ -7,7 +7,18 @@
 @import '../core/mixins';
 
 $theme: (
-  color-primary: #209e91
+  color-primary: #209e91,
+  color-secondary: #277aca,
+  color-danger: #c00100,
+  btn-text-color: white,
+  btn-border: none,
+  btn-box-shadow:0 3px 6px rgba(0,0,0,0.23),
+  btn-primary-width: 150px,
+  btn-primary-height: 50px,
+  btn-secondary-width: btn-primary-width,
+  btn-secondary-height: btn-primary-height,
+  btn-danger-width: btn-primary-width,
+  btn-danger-height: btn-primary-height
 );
 
 //register the theme

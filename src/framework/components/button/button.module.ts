@@ -8,12 +8,7 @@ import {NgModule} from '@angular/core';
 
 import {NgaSharedModule} from '../shared/shared.module';
 
-import {NgaButtonComponent, NgaButtonBodyComponent} from './button.component';
-
-const NGA_BUTTON_COMPONENTS = [
-  NgaButtonComponent,
-  NgaButtonBodyComponent
-];
+import {NgaButtonComponent} from './button.component';
 
 
 @NgModule({
@@ -21,11 +16,11 @@ const NGA_BUTTON_COMPONENTS = [
     NgaSharedModule,
   ],
   declarations: [
-    ...NGA_BUTTON_COMPONENTS,
+    NgaButtonComponent,
   ],
   exports: [
-    ...NGA_BUTTON_COMPONENTS,
-  ],
+    NgaButtonComponent,
+  ]
 })
 export class NgaButtonModule {
 }

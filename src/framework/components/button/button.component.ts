@@ -7,39 +7,38 @@
 import {Component, HostBinding, Input} from '@angular/core';
 
 /**
- * Component intended to act as the body of the button.
- */
-@Component({
-  selector: 'nga-button-body',
-  template: `
-<ng-content></ng-content>
-<h1>HIIIIIIIIIII</h1>`,
-})
-
-export class NgaButtonBodyComponent {
-}
-
-/**
- * This is the main button component. It contains all other button sub-components.
+ * This is the main button component.
  */
 @Component({
   selector: 'nga-button',
   styleUrls: ['./button.component.scss'],
   template: `<ng-content></ng-content>
-<button>HII</button>
-<ng-content  select="nga-button-body"></ng-content>`,
+             <button>BUTTON</button>
+`,
 
 })
 
 export class NgaButtonComponent {
 
   static readonly TYPE_PRIMARY = 'primary';
+  static readonly TYPE_SECONDARY = 'secondary';
+  static readonly TYPE_DANGER = 'danger';
 
   role: string;
 
   @HostBinding('class.primary-button')
   private get primary() {
     return this.role === NgaButtonComponent.TYPE_PRIMARY;
+  }
+
+  @HostBinding('class.secondary-button')
+  private get secondary() {
+    return this.role === NgaButtonComponent.TYPE_SECONDARY;
+  }
+
+  @HostBinding('class.danger-button')
+  private get danger() {
+    return this.role === NgaButtonComponent.TYPE_DANGER;
   }
 
   @Input('role')
