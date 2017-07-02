@@ -1,0 +1,25 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+@mixin nga-button-theme(){
+  nga-button{
+    &.primary-button{
+      button{
+        background-color: nga-theme(color-primary);
+      }
+    }
+    &.secondary-button{
+      button{
+        background-color: nga-theme(color-primary);
+      }
+    }
+    &.danger-button{
+      button{
+        background-color: nga-theme(color-primary);
+      }
+    }
+  }
+}

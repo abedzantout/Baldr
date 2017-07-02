@@ -12,12 +12,14 @@
 @import '../../components/user/user.component.theme';
 @import '../../components/actions/actions.component.theme';
 @import '../../components/search/search.component.theme';
+@import '../../components/button/button.component.theme';
 
 @mixin nga-theme-components() {
 
   @include nga-layout-theme();
   @include nga-sidebar-theme();
   @include nga-card-theme();
+  @include nga-button-theme();
   @include nga-tabset-theme();
   @include nga-route-tabset-theme();
   @include nga-menu-theme();

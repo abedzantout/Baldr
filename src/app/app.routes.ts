@@ -22,6 +22,7 @@ import {
 import {
   NgaRouteTabsetTestChild1Component, NgaRouteTabsetTestChild2Component, NgaRouteTabsetTestComponent
 } from './route-tabset-test/route-tabset-test.component';
+import { NgaButtonsTestComponent } from './buttons-test/buttons-test.component';
 import { NgaSearchTestComponent } from './search-test/search-test.component';
 import { NgaSidebarTestOneComponent } from './sidebar-test/sidebar-test-one.component';
 import { NgaSidebarTestThreeComponent } from './sidebar-test/sidebar-test-three.component';
@@ -80,6 +81,10 @@ export const routes: Routes = [
   {
     path: 'sidebar/three',
     component: NgaSidebarTestThreeComponent,
+  },
+  {
+    path: 'buttons',
+    component: NgaButtonsTestComponent,
   },
   {
     path: 'route-tabset',

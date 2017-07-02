@@ -13,6 +13,7 @@ import { List } from 'immutable';
 
 import { NgaMenuItem, NgaSearchModule, NgaThemeModule } from '../framework/';
 import { NgaCardModule } from '../framework/components/card/card.module';
+import { NgaButtonModule } from '../framework/components/button/button.module';
 import { NgaLayoutModule } from '../framework/components/layout/layout.module';
 import { NgaMenuModule } from '../framework/components/menu/menu.module';
 import { NgaRouteTabsetModule } from '../framework/components/route-tabset/route-tabset.module';
@@ -44,6 +45,8 @@ import { NgaUserTestComponent } from './user-test/user-test.component';
 import { NgaDynamicToAddComponent, NgaThemeDynamicTestComponent } from './layout-test/theme-dynamic-test.component';
 import { NgaActionsTestComponent } from './actions-test/actions-test.component';
 import { NgaBootstrapTestComponent } from './bootstrap-test/bootstrap-test.component';
+
+import { NgaButtonsTestComponent } from './buttons-test/buttons-test.component';
 
 import { routes } from './app.routes';
 
@@ -81,6 +84,7 @@ const NGA_TEST_COMPONENTS = [
   NgaThemeChangeTestComponent,
   NgaSearchTestComponent,
   NgaBootstrapTestComponent,
+  NgaButtonsTestComponent,
   NgaDynamicToAddComponent,
   NgaThemeDynamicTestComponent,
   NgaActionsTestComponent,
@@ -96,6 +100,7 @@ const NGA_TEST_COMPONENTS = [
     RouterModule.forRoot( routes, { useHash: true } ),
     NgaThemeModule.forRoot( { name: 'monopolykings' } ),
     NgaCardModule,
+    NgaButtonModule,
     NgaLayoutModule,
     NgaMenuModule.forRoot( {
       items: List<NgaMenuItem>( [{
