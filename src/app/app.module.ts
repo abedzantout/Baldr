@@ -44,7 +44,6 @@ import { NgaUserTestComponent } from './user-test/user-test.component';
 import { NgaDynamicToAddComponent, NgaThemeDynamicTestComponent } from './layout-test/theme-dynamic-test.component';
 import { NgaActionsTestComponent } from './actions-test/actions-test.component';
 import { NgaBootstrapTestComponent } from './bootstrap-test/bootstrap-test.component';
-import { NgaButtonsTestComponent } from './buttons-test/buttons-test.component';
 
 import { routes } from './app.routes';
 
@@ -82,7 +81,6 @@ const NGA_TEST_COMPONENTS = [
   NgaThemeChangeTestComponent,
   NgaSearchTestComponent,
   NgaBootstrapTestComponent,
-  NgaButtonsTestComponent,
   NgaDynamicToAddComponent,
   NgaThemeDynamicTestComponent,
   NgaActionsTestComponent,

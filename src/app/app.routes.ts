@@ -29,7 +29,6 @@ import { NgaSidebarTestTwoComponent } from './sidebar-test/sidebar-test-two.comp
 import { NgaSidebarTestComponent } from './sidebar-test/sidebar-test.component';
 import { NgaTabsetTestComponent } from './tabset-test/tabset-test.component';
 import { NgaUserTestComponent } from './user-test/user-test.component';
-import { NgaButtonsTestComponent } from './buttons-test/buttons-test.component';
 import { CardComponent } from './card/card.component';
 import { SpinnerTest } from './spinner-test/spinner-test.component';
 
@@ -81,10 +80,6 @@ export const routes: Routes = [
   {
     path: 'sidebar/three',
     component: NgaSidebarTestThreeComponent,
-  },
-  {
-    path: 'buttons',
-    component: NgaButtonsTestComponent,
   },
   {
     path: 'route-tabset',
