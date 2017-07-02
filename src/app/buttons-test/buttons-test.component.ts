@@ -10,11 +10,11 @@ import {Component} from '@angular/core';
   selector: 'nga-buttons-test',
   template: `<nga-layout>
               <nga-layout-column>
-                <nga-button [role]="'primary'">
+                <nga-button [role]="'primary'" [label]="'PRIMARY'">
                 </nga-button>
-                <nga-button [role]="'secondary'">
+                <nga-button [role]="'secondary'" [label]="'SECONDARY'">
                 </nga-button>
-                <nga-button [role]="'danger'">
+                <nga-button [role]="'danger'" [label]="'DANGER'">
                 </nga-button>
               </nga-layout-column>
              </nga-layout>`

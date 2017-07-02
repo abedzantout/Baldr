@@ -13,7 +13,7 @@ import {Component, HostBinding, Input} from '@angular/core';
   selector: 'nga-button',
   styleUrls: ['./button.component.scss'],
   template: `<ng-content></ng-content>
-             <button>BUTTON</button>
+             <button>{{label}}</button>
 `,
 
 })
@@ -25,6 +25,7 @@ export class NgaButtonComponent {
   static readonly TYPE_DANGER = 'danger';
 
   role: string;
+  label: string;
 
   @HostBinding('class.primary-button')
   private get primary() {
@@ -44,6 +45,11 @@ export class NgaButtonComponent {
   @Input('role')
   private set setRole(val: string) {
     this.role = val;
+  }
+
+  @Input('label')
+  private set setLabel(val: string) {
+    this.label = val;
   }
 
 }

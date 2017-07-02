@@ -4,37 +4,55 @@
  * Distribution or making any copies of this software or documentation is prohibited.
  */
 
-@mixin nga-button-theme(){
-  nga-button{
-    &.primary-button{
-      button{
-        background-color: nga-theme(color-primary);
+@mixin nga-button-theme() {
+  nga-button {
+    &.primary-button {
+      button {
+        $bgColor: nga-theme(color-primary);
+        background-color: $bgColor;
         border: nga-theme(btn-border);
         width: nga-theme(btn-primary-width);
         height: nga-theme(btn-primary-height);
         color: nga-theme(btn-text-color);
         box-shadow: nga-theme(btn-box-shadow);
+        transition: box-shadow 0.1s ease-in-out;
+        &:hover {
+          background-color: tint($bgColor,20%);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
       }
+
     }
-    &.secondary-button{
-      button{
-        background-color: nga-theme(color-secondary);
+    &.secondary-button {
+      button {
+        $bgColor: nga-theme(color-secondary);
+        background-color: $bgColor;
         border: nga-theme(btn-border);
         width: nga-theme(btn-secondary-width);
         height: nga-theme(btn-secondary-height);
         color: nga-theme(btn-text-color);
         box-shadow: nga-theme(btn-box-shadow);
-
+        transition: box-shadow 0.1s ease-in-out;
+        &:hover {
+          background-color: tint($bgColor,20%);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
       }
     }
-    &.danger-button{
-      button{
-        background-color: nga-theme(color-danger);
+    &.danger-button {
+      button {
+        $bgColor: nga-theme(color-danger);
+        background-color: $bgColor;
         border: nga-theme(btn-border);
         width: nga-theme(btn-danger-width);
         height: nga-theme(btn-danger-height);
         color: nga-theme(btn-text-color);
         box-shadow: nga-theme(btn-box-shadow);
+        transition: box-shadow 0.1s ease-in-out;
+        &:hover {
+          background-color: tint($bgColor,20%);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
       }
     }
   }
