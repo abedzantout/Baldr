@@ -1,22 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-/* styles that I want to apply to the entire application */
-::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #F5F5F5;
-}
-::-webkit-scrollbar
-{
-  width: 6px;
-  background-color: #F5F5F5;
-}
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
 
-::-webkit-scrollbar-thumb
-{
-  background-color: #209e91;
-}
-::-webkit-scrollbar:horizontal
-{
-  height: 6px;
-  background-color: #F5F5F5;
-}
+/* You can add global styles to this file, and also import other style files */
