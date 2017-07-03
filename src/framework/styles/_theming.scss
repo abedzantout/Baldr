@@ -13,16 +13,20 @@ $nga-themes: () !global;
 $nga-themes-non-processed: () !global;
 $nga-enabled-themes: () !global;
 
-//This function gets the map for the specified theme. Each item in the map is a property-value combination.
+/**This function gets the map for the specified theme. Each item in the map is a property-value combination.
+ *@param {string} $key. The name of the property whose value we want to retrieve.
+*/
 @function nga-theme($key) {
   @return map-get($theme, $key); //where is this '$theme' variable defined ?
 }
 
-/*
-This function is a robust function used to get the values for each key in a map.
-It checks first if the $value param passed is a string. Then checks if a key for this value does exist.If it does, then
-it returns the value.
-If the $value param is not a string (is a mixin) then we return that value.
+/**
+ *This function is a robust function used to get the values for each key in a map.
+ *It checks first if the $value param passed is a string. Then checks if a key for this value does exist.If it does, then
+ *@param {map} $theme. The theme currently in use.
+ *@param {string} $key. The key of the property we need.
+ *@param {any} $value.
+ *@return {string} property value
  */
 @function nga-get-value($theme, $key, $value) {
   @if (type-of($value) == 'string') {
@@ -36,10 +40,11 @@ If the $value param is not a string (is a mixin) then we return that value.
   @return map-get($theme, $key);
 }
 
-/*This function is used to register a new theme and process it's values.
-  @params: $theme: the map of theme we want to register.
-           $name: name of the new theme.
-           $default: name of the theme we wanna merge ours with.
+/**
+ *This function is used to register a new theme and process it's values.
+ *@param {map} $theme. Theme we want to register.
+ *@param {string} $name. Name of the new theme.
+ *@param {string} $default. Name of the theme we wanna merge ours with.
  */
 @function nga-register-theme($theme, $name, $default: null) {
 
@@ -64,8 +69,10 @@ If the $value param is not a string (is a mixin) then we return that value.
 }
 
 
-/*This function checks if we have themes in $nga-enabled-themes and merges them in a map with $nga-themes.
-  Then returns this map. */
+/**
+ *This function checks if we have themes in $nga-enabled-themes and merges them in a map with $nga-themes.
+ *@returns {map} $themes-to-install
+*/
 @function get-enabled-themes() {
   $themes-to-install: ();
 
@@ -107,8 +114,8 @@ If the $value param is not a string (is a mixin) then we return that value.
 }
 
 /*
-This mixin creates a new class with the theme name for each theme.
- */
+ *This mixin creates a new class with the theme name for each theme.
+*/
 @mixin nga-install-global() {
   $themes-to-install: get-enabled-themes();
 
