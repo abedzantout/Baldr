@@ -93,7 +93,7 @@ const NGA_TEST_COMPONENTS = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot( routes, { useHash: true } ),
+    RouterModule.forRoot( routes, { useHash: false } ),
     NgaThemeModule.forRoot( { name: 'hodyr' } ),
     NgaCardModule,
     NgaLayoutModule,
