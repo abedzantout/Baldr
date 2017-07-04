@@ -9,7 +9,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'style-guide',
   template: `
-  <side-nav></side-nav>`
+<div class="row">
+<side-nav class="col-4"></side-nav>
+</div>
+  `
 })
 
 export class StyleGuideComponent{}

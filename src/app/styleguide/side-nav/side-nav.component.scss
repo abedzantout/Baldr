@@ -1,0 +1,21 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+nga-layout-column{
+  padding: 0 !important;
+}
+.card-header{
+  background-color: white;
+  padding: 2rem 1rem;
+}
+#side-nav{
+  width:30%;
+  position:fixed;
+  height: 100%;
+  overflow: auto;
+}
+#accordion{
+  border-top: 0px;
+}

@@ -6,6 +6,24 @@
 
 @mixin nga-b-accordion-theme(){
   #accordion{
-    color: blue;
+    border: 1px solid nga-theme(border-color);
+
+    .card{
+      border:0px;
+      border-bottom: 1px solid nga-theme(border-color);
+    }
+
+    .card-header{
+      color: nga-theme(color-primary);
+      padding: nga-theme(menu-item-padding);
+      border-bottom: 1px solid nga-theme(border-color);
+      cursor: pointer;
+    }
+
+    .card-block{
+      color: nga-theme(color-text-primary);
+    }
   }
+
+
 }
