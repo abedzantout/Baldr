@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'style-guide',
   template: `
-  <h1>styleguide works</h1>`
+  <side-nav></side-nav>`
 })
 
 export class StyleGuideComponent{}
