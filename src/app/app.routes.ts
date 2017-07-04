@@ -32,10 +32,16 @@ import { NgaUserTestComponent } from './user-test/user-test.component';
 import { CardComponent } from './card/card.component';
 import { SpinnerTest } from './spinner-test/spinner-test.component';
 
+import { StyleGuideComponent } from './styleguide/styleguide.component';
+
 export const routes: Routes = [
   {
     path: '',
     component: CardComponent,
+  },
+  {
+    path: 'styleguide',
+    component: StyleGuideComponent,
   },
   {
     path: 'layout',
