@@ -10,6 +10,7 @@
 @import './pagination';
 @import './icon-buttons';
 @import './forms';
+@import './accordion';
 
 @mixin nga-bootstrap-theme() {
   @include nga-b-buttons-theme();
@@ -18,4 +19,5 @@
   @include nga-b-pagination-theme();
   @include nga-b-icon-buttons-theme();
   @include nga-b-forms-theme();
+  @include nga-b-accordion-theme();
 }
