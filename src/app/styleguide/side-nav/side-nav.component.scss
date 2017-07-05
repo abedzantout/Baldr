@@ -13,9 +13,12 @@ nga-layout-column{
 #side-nav{
   width:30%;
   position:fixed;
-  height: 100%;
+  height: 100vh;
   overflow: auto;
+  border-width: 0px 1px 1px 0px;
+  border-color: nga-theme(border-color);
+  border-style: solid;
 }
 #accordion{
-  border-top: 0px;
+  border: 0px;
 }

@@ -11,6 +11,7 @@
             <h5 class="mb-0">
               <a data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">
                 Overview
+                <i [ngClass]="accordionClasses[0].chevron"></i>
               </a>
             </h5>
           </div>
@@ -36,6 +37,7 @@
               <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false"
                  aria-controls="collapseTwo">
                 Design
+                <i [ngClass]="accordionClasses[1].chevron"></i>
               </a>
             </h5>
           </div>
@@ -59,6 +61,7 @@
             <h5 class="mb-0">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false">
                 Components
+                <i [ngClass]="accordionClasses[2].chevron"></i>
               </a>
             </h5>
           </div>

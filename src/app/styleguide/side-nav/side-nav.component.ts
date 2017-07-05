@@ -17,9 +17,9 @@ export class SideNavComponent{
 
   constructor(){
     this.accordionClasses = [
-      {name: 'collapseOne',classes: {'collapse': true, 'show': true} },
-      {name: 'collapseTwo',classes: {'collapse': true, 'show': false} },
-      {name: 'collapseThree',classes: {'collapse': true, 'show': false} }
+      {name: 'collapseOne',classes: {'collapse': true, 'show': true},chevron: {'icon':true,'ion-chevron-down':false,'ion-chevron-up':true}},
+      {name: 'collapseTwo',classes: {'collapse': true, 'show': false},chevron: {'icon':true,'ion-chevron-down':true,'ion-chevron-up':false}},
+      {name: 'collapseThree',classes: {'collapse': true, 'show': false},chevron: {'icon':true,'ion-chevron-down':true,'ion-chevron-up':false}}
     ]
   }
 
@@ -28,9 +28,13 @@ export class SideNavComponent{
     this.accordionClasses.forEach((item) => {
       if(item.name == panel && item.classes.show == false){
         item.classes.show = true;
+        item.chevron['ion-chevron-down'] = false;
+        item.chevron['ion-chevron-up'] = true;
       }
       else{
         item.classes.show = false;
+        item.chevron['ion-chevron-down'] = true;
+        item.chevron['ion-chevron-up'] = false;
       }
     })
 
