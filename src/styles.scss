@@ -5,3 +5,23 @@
  */
 
 /* You can add global styles to this file, and also import other style files */
+/* We need the scrollbar styles here to apply to the overall page, not just specific components.*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #209e91;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e5e5;
+}
+
+// For Internet Explorer
+body {
+  scrollbar-face-color: #209e91;
+  scrollbar-track-color: #e5e5e5;
+}
