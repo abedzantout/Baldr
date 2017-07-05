@@ -12,7 +12,8 @@ import { Component } from '@angular/core';
 <div class="row">
 <side-nav class="col-4"></side-nav>
 </div>
-  `
+  `,
+  styleUrls: ['./styleguide.component.scss']
 })
 
 export class StyleGuideComponent{}
