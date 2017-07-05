@@ -7,57 +7,46 @@
     <div id="side-nav">
       <div id="accordion" role="tablist" aria-multiselectable="true">
         <div class="card">
-          <div class="card-header" role="tab" id="headingOne" (click)='openPanel("collapseOne")'>
+          <div class="card-header" role="tab" id="headingOverview" (click)='openPanel("collapseOverview")'>
             <h5 class="mb-0">
-              <a data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">
+              <a data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOverview">
                 Overview
                 <i [ngClass]="accordionClasses[0].chevron"></i>
               </a>
             </h5>
           </div>
 
-          <div id="collapseOne" [ngClass]="accordionClasses[0].classes" role="tabpanel" aria-labelledby="headingOne">
+          <div id="collapseOverview" [ngClass]="accordionClasses[0].classes" role="tabpanel" aria-labelledby="headingOverview">
             <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-              moon
-              officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-              wolf
-              moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
-              anim
-              keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-              butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
-              probably
-              haven't heard of them accusamus labore sustainable VHS.
+              <p class="sub-section-link"><a>Introduction</a></p>
+              <p class="sub-section-link"><a>Code Guidelines</a></p>
             </div>
           </div>
         </div>
         <div class="card">
-          <div class="card-header" role="tab" id="headingTwo" (click)='openPanel("collapseTwo")'>
+          <div class="card-header" role="tab" id="headingDesign" (click)='openPanel("collapseDesign")'>
             <h5 class="mb-0">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false"
-                 aria-controls="collapseTwo">
+                 aria-controls="collapseDesign">
                 Design
                 <i [ngClass]="accordionClasses[1].chevron"></i>
               </a>
             </h5>
           </div>
-          <div id="collapseTwo" [ngClass]="accordionClasses[1].classes" role="tabpanel" aria-labelledby="headingTwo">
+          <div id="collapseDesign" [ngClass]="accordionClasses[1].classes" role="tabpanel" aria-labelledby="headingDesign">
             <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-              moon
-              officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-              wolf
-              moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
-              anim
-              keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-              butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
-              probably
-              haven't heard of them accusamus labore sustainable VHS.
+              <p class="sub-section-link"><a>Color Scheme</a></p>
+              <p class="sub-section-link"><a>Typography</a>
+              <p class="sub-section-link"><a>Border</a></p>
+              <p class="sub-section-link"><a>Animation</a></p>
+              <p class="sub-section-link"><a>Box Shadow</a></p>
+              <p class="sub-section-link"><a>Layout</a></p>
+              <p class="sub-section-link"><a>Icons</a></p>
             </div>
           </div>
         </div>
         <div class="card">
-          <div class="card-header" role="tab" id="headingThree" (click)='openPanel("collapseThree")'>
+          <div class="card-header" role="tab" id="headingComponents" (click)='openPanel("collapseComponents")'>
             <h5 class="mb-0">
               <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false">
                 Components
@@ -65,19 +54,35 @@
               </a>
             </h5>
           </div>
-          <div id="collapseThree" [ngClass]="accordionClasses[2].classes" role="tabpanel"
-               aria-labelledby="headingThree">
+          <div id="collapseComponents" [ngClass]="accordionClasses[2].classes" role="tabpanel"
+               aria-labelledby="headingComponents">
             <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-              moon
-              officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-              wolf
-              moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
-              anim
-              keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-              butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
-              probably
-              haven't heard of them accusamus labore sustainable VHS.
+              <p class="sub-section-link"><a>Avatars</a></p>
+              <p class="sub-section-link"><a>Buttons</a></p>
+              <p class="sub-section-link"><a>Charts</a></p>
+              <p class="sub-section-link"><a>Form Elements</a></p>
+              <p class="sub-section-link"><a>Grid</a></p>
+              <p class="sub-section-link"><a>Lists</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" role="tab" id="headingUtility" (click)='openPanel("collapseUtility")'>
+            <h5 class="mb-0">
+              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false">
+                Utility
+                <i [ngClass]="accordionClasses[3].chevron"></i>
+              </a>
+            </h5>
+          </div>
+          <div id="collapseUtility" [ngClass]="accordionClasses[3].classes" role="tabpanel"
+               aria-labelledby="headingUtility">
+            <div class="card-block">
+              <p class="sub-section-link"><a>Aspect Ratio</a></p>
+              <p class="sub-section-link"><a>Center Elements</a></p>
+              <p class="sub-section-link"><a>Hide Elements</a></p>
+              <p class="sub-section-link"><a>Layout</a></p>
+              <p class="sub-section-link"><a>Text Manipulation</a></p>
             </div>
           </div>
         </div>

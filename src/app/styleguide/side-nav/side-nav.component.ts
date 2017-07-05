@@ -17,14 +17,14 @@ export class SideNavComponent{
 
   constructor(){
     this.accordionClasses = [
-      {name: 'collapseOne',classes: {'collapse': true, 'show': true},chevron: {'icon':true,'ion-chevron-down':false,'ion-chevron-up':true}},
-      {name: 'collapseTwo',classes: {'collapse': true, 'show': false},chevron: {'icon':true,'ion-chevron-down':true,'ion-chevron-up':false}},
-      {name: 'collapseThree',classes: {'collapse': true, 'show': false},chevron: {'icon':true,'ion-chevron-down':true,'ion-chevron-up':false}}
+      {name: 'collapseOverview',classes: {'collapse': true, 'show': true},chevron: {'icon':true,'ion-chevron-down':false,'ion-chevron-up':true}},
+      {name: 'collapseDesign',classes: {'collapse': true, 'show': false},chevron: {'icon':true,'ion-chevron-down':true,'ion-chevron-up':false}},
+      {name: 'collapseComponents',classes: {'collapse': true, 'show': false},chevron: {'icon':true,'ion-chevron-down':true,'ion-chevron-up':false}},
+      {name: 'collapseUtility',classes: {'collapse': true, 'show': false},chevron: {'icon':true,'ion-chevron-down':true,'ion-chevron-up':false}}
     ]
   }
 
   openPanel(panel: string){
-
     this.accordionClasses.forEach((item) => {
       if(item.name == panel && item.classes.show == false){
         item.classes.show = true;

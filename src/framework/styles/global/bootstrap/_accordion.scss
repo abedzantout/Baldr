@@ -22,13 +22,13 @@
 
     .card-block{
       color: nga-theme(color-text-primary);
+      margin: nga-theme(margin);
     }
 
-    //TODO: try incorporating these styles from hodyr.
+    //TODO: try incorporating these styles into hodyr.
     .icon{
-      width:1%;
+      width:5%;
       float:right;
-      margin-right:5%;
     }
   }
 
