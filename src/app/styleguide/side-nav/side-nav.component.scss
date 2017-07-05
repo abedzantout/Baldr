@@ -14,8 +14,7 @@ nga-layout-column{
   position:fixed;
   height: 100vh;
   overflow: auto;
-  border-width: 0px 1px 1px 0px;
-  border-color: nga-theme(border-color);
+  border-width: 0 1px 1px 0;
   border-style: solid;
 }
 #accordion{
@@ -37,4 +36,36 @@ nga-layout-column{
 
 .card-block{
   padding-left: 5em;
+}
+
+.sub-section-link a{
+  //TODO: Should I be able to use nga-theme here ? Discuss it with Abed.
+  color: #209e91;
+  &:hover{
+    color: #222222;
+  }
+}
+
+.ion-chevron-right{
+  margin-right:10%;
+}
+
+/* TODO: see if I should move the logos and create a special component just for them.*/
+.third-party-section{
+  text-align: center;
+  border-top: 1px solid;
+}
+.grow {
+  transition: all .2s ease-in-out;
+  width:15%;
+
+  margin: 5%;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.grow:hover {
+  transform: scale(1.1);
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
 }
