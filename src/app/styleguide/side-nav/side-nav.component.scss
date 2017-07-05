@@ -8,10 +8,9 @@ nga-layout-column{
 }
 .card-header{
   background-color: white;
-  padding: 2rem 1rem;
 }
 #side-nav{
-  width:30%;
+  width:25%;
   position:fixed;
   height: 100vh;
   overflow: auto;
@@ -21,6 +20,15 @@ nga-layout-column{
 }
 #accordion{
   border: 0px;
+}
+#logo-section{
+  border-bottom: 1px solid;
+  padding: 20%;
+  img{
+    width:50%;
+    margin: auto;
+    display: block;
+  }
 }
 .icon{
   margin-right:5%;
