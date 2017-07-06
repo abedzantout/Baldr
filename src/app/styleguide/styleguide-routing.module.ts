@@ -17,7 +17,7 @@ const routes: Routes = [
       {
         path: 'code-guidelines',
         component: CodeGuidelinesPageComponent,
-        // outlet: 'pages',
+        outlet: 'pages',
       }
     ]
   }
