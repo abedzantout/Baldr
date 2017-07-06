@@ -6,8 +6,10 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CodeGuidelinesPageComponent } from './pages/code-guidelines-page/code-guidelines-page.component';
+
 import { StyleGuideComponent } from './styleguide.component';
+import { IntroductionPageComponent } from './pages/introduction-page/introduction-page.component';
+import { CodeGuidelinesPageComponent } from './pages/code-guidelines-page/code-guidelines-page.component';
 
 /**
  * there is a known bug with angular regarding aux routing in lazyLoaded submodules.
@@ -23,6 +25,11 @@ const routes: Routes = [
         path: 'pages',
         component: StyleGuideComponent,
         children:[
+          {
+            path: 'introduction',
+            component: IntroductionPageComponent,
+            outlet: 'pages'
+          },
           {
             path: 'code-guidelines',
             component: CodeGuidelinesPageComponent,

@@ -23,7 +23,7 @@
           <div id="collapseOverview" [ngClass]="accordionClasses[0].classes" role="tabpanel"
                aria-labelledby="headingOverview">
             <div class="card-block">
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Introduction</a></p>
+              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['introduction']}}]"><i class="icons ion-chevron-right"></i>Introduction</a></p>
               <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['code-guidelines']}}]"><i
                 class="icons ion-chevron-right"></i>Code Guidelines</a></p>
             </div>

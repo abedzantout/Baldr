@@ -14,6 +14,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { StyleGuideRoutingModule } from './styleguide-routing.module';
 import { CodeGuidelinesPageComponent } from './pages/code-guidelines-page/code-guidelines-page.component';
 import { StyleGuideComponent } from './styleguide.component';
+import { IntroductionPageComponent } from './pages/introduction-page/introduction-page.component';
 
 @NgModule( {
   imports: [
@@ -25,11 +26,13 @@ import { StyleGuideComponent } from './styleguide.component';
     SideNavComponent,
     CodeGuidelinesPageComponent,
     StyleGuideComponent,
+    IntroductionPageComponent,
   ],
   exports: [
     StyleGuideRoutingModule,
     SideNavComponent,
     CodeGuidelinesPageComponent,
+    IntroductionPageComponent,
 
   ]
 } )
