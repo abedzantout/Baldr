@@ -41,14 +41,15 @@ nga-layout-column{
 .sub-section-link a{
   //TODO: Should I be able to use nga-theme here ? Discuss it with Abed.
   color: #209e91;
+  .ion-chevron-right{
+    margin-right:10%;
+  }
   &:hover{
     color: #222222;
   }
 }
 
-.ion-chevron-right{
-  margin-right:10%;
-}
+
 
 /* TODO: see if I should move the logos and create a special component just for them.*/
 .third-party-section{

@@ -7,12 +7,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 import { NgaLayoutModule } from '../../framework/components/layout/layout.module';
 
 import { SideNavComponent } from './side-nav/side-nav.component';
 
 
 import { StyleguideRoutingModule } from './styleguide-routing.module';
+import { CodeGuidelinesPageComponent } from './pages/code-guidelines-page/code-guidelines-page.component';
 
 
 @NgModule({
@@ -22,10 +24,14 @@ import { StyleguideRoutingModule } from './styleguide-routing.module';
     NgaLayoutModule,
   ],
   declarations: [
-    SideNavComponent
+    SideNavComponent,
+    CodeGuidelinesPageComponent
   ],
   exports: [
-    SideNavComponent
+    StyleguideRoutingModule,
+    SideNavComponent,
+    CodeGuidelinesPageComponent
+
   ]
 })
 export class StyleGuideModule { }

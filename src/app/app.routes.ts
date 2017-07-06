@@ -33,15 +33,23 @@ import { CardComponent } from './card/card.component';
 import { SpinnerTest } from './spinner-test/spinner-test.component';
 
 import { StyleGuideComponent } from './styleguide/styleguide.component';
+import { CodeGuidelinesPageComponent } from './styleguide/pages/code-guidelines-page/code-guidelines-page.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: CardComponent,
   },
-  {
+  {//TODO: try moving the child routes into styleguide-routing.module.ts
     path: 'styleguide',
     component: StyleGuideComponent,
+    children: [
+      {
+        path: 'code-guidelines',
+        component: CodeGuidelinesPageComponent,
+        outlet: 'pages',
+      }
+    ]
   },
   {
     path: 'layout',
