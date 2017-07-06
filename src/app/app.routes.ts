@@ -38,7 +38,8 @@ import { CodeGuidelinesPageComponent } from './styleguide/pages/code-guidelines-
 export const routes: Routes = [
   {
     path: '',
-    component: CardComponent,
+    redirectTo:'styleguide',
+    pathMatch: 'full',
   },
   {//TODO: try moving the child routes into styleguide-routing.module.ts
     path: 'styleguide',
@@ -50,6 +51,10 @@ export const routes: Routes = [
         outlet: 'pages',
       }
     ]
+  },
+  {
+    path: 'cards',
+    component: CardComponent,
   },
   {
     path: 'layout',
@@ -201,6 +206,7 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    component: CardComponent,
+    redirectTo: 'styleguide',
+    pathMatch: 'full',
   },
 ];
