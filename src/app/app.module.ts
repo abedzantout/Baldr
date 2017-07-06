@@ -20,7 +20,6 @@ import { NgaSidebarModule } from '../framework/components/sidebar/sidebar.module
 import { NgaTabsetModule } from '../framework/components/tabset/tabset.module';
 import { NgaUserModule } from '../framework/components/user/user.module';
 import { NgaActionsModule } from '../framework/components/actions/actions.module';
-import { StyleGuideModule } from './styleguide/styleguide.module';
 
 import { NgaAppComponent } from './app.component';
 import { NgaLayoutTestComponent } from './layout-test/layout-test.component';
@@ -50,8 +49,6 @@ import { routes } from './app.routes';
 
 import { NgaSearchTestComponent } from './search-test/search-test.component';
 import { NgaFormsTestComponent } from './forms-test/forms-test.component';
-
-import { StyleGuideComponent } from './styleguide/styleguide.component';
 
 import { CardComponent } from './card/card.component';
 import { SpinnerTest } from 'app/spinner-test/spinner-test.component';
@@ -116,11 +113,9 @@ const NGA_TEST_COMPONENTS = [
     NgaUserModule,
     NgaSearchModule,
     NgaActionsModule,
-    StyleGuideModule,
   ],
   declarations: [
     ...NGA_TEST_COMPONENTS,
-    StyleGuideComponent,
   ],
   entryComponents: [
     NgaDynamicToAddComponent,

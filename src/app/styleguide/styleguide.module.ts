@@ -7,31 +7,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
 import { NgaLayoutModule } from '../../framework/components/layout/layout.module';
 
 import { SideNavComponent } from './side-nav/side-nav.component';
 
-
-import { StyleguideRoutingModule } from './styleguide-routing.module';
+import { StyleGuideRoutingModule } from './styleguide-routing.module';
 import { CodeGuidelinesPageComponent } from './pages/code-guidelines-page/code-guidelines-page.component';
+import { StyleGuideComponent } from './styleguide.component';
 
-
-@NgModule({
+@NgModule( {
   imports: [
     CommonModule,
-    StyleguideRoutingModule,
+    StyleGuideRoutingModule,
     NgaLayoutModule,
   ],
   declarations: [
     SideNavComponent,
-    CodeGuidelinesPageComponent
+    CodeGuidelinesPageComponent,
+    StyleGuideComponent,
   ],
   exports: [
-    StyleguideRoutingModule,
+    StyleGuideRoutingModule,
     SideNavComponent,
     CodeGuidelinesPageComponent
-
   ]
-})
-export class StyleGuideModule { }
+} )
+export class StyleGuideModule {
+}

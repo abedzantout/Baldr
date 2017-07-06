@@ -32,25 +32,15 @@ import { NgaUserTestComponent } from './user-test/user-test.component';
 import { CardComponent } from './card/card.component';
 import { SpinnerTest } from './spinner-test/spinner-test.component';
 
-import { StyleGuideComponent } from './styleguide/styleguide.component';
-import { CodeGuidelinesPageComponent } from './styleguide/pages/code-guidelines-page/code-guidelines-page.component';
-
 export const routes: Routes = [
   {
     path: '',
-    redirectTo:'styleguide',
+    redirectTo: 'styleguide',
     pathMatch: 'full',
   },
-  {//TODO: try moving the child routes into styleguide-routing.module.ts
+  {
     path: 'styleguide',
-    component: StyleGuideComponent,
-    children: [
-      {
-        path: 'code-guidelines',
-        component: CodeGuidelinesPageComponent,
-        outlet: 'pages',
-      }
-    ]
+    loadChildren: 'app/styleguide/styleguide.module#StyleGuideModule', data: { preload: true },
   },
   {
     path: 'cards',
