@@ -29,7 +29,8 @@ import { StyleGuideComponent } from './styleguide.component';
   exports: [
     StyleGuideRoutingModule,
     SideNavComponent,
-    CodeGuidelinesPageComponent
+    CodeGuidelinesPageComponent,
+
   ]
 } )
 export class StyleGuideModule {

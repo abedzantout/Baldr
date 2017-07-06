@@ -35,7 +35,7 @@ import { SpinnerTest } from './spinner-test/spinner-test.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'styleguide',
+    redirectTo: 'styleguide/pages',
     pathMatch: 'full',
   },
   {
@@ -196,7 +196,7 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'styleguide',
+    redirectTo: 'styleguide/pages',
     pathMatch: 'full',
   },
 ];
