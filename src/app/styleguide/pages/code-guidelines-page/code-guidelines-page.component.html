@@ -6,14 +6,13 @@
   <h1>Code Guidelines</h1>
   <div class="section">
     <p class="main-text">
-      The bulk of our Style-guide's code consists of single-purpose classes which, as their name suggests, are classes
-      that declare a single value for a single property. This division of concerns helps keep the code modular and easy
-      to maintain. The main benefit of using single-purpose classes is that an engineer will know exactly how
-      each class affects the markup and will be able to quickly develop or alter views without affecting others.
+      The bulk of our styling framework's code consists of custom made components and
+       bootstrap overrides. This division of concerns helps keep the code modular and easy
+      to maintain. All those components take their styles from a set of predefined themes.
     </p>
     <p class="main-text">
-      Our style-guide follows the Atomic Design structure. The majority of the code base consists of single purpose
-      classes
+      Our style-guide follows the Atomic Design structure. Our themes consist of maps where the key is
+      the property name and the value is the property value.
       which are used to create may different atoms such as buttons and inputs. These many different atoms can be further
       combined
       together to form molecules which are components that put the atoms to good use. These components should be used in
@@ -25,44 +24,90 @@
   <div class="section">
     <h3>File Naming</h3>
     <p class="section-text">
-      All folder names for our styles should be plural while all class names should be singular.
-      Additionally, files belonging to the <span class="important-text">'Atoms'</span> folder should include a <span
-      class="important-text">'.atom'</span> extension while those belonging to the
-      <span class="important-text">'single-purpose-classes'</span> folder should include a <span class="important-text">'.spc'</span>
-      extension. So on and so fourth.
+      All folder, file, and property names in our framework should be singular.
+      Style files that are to be imported to the global theme should have the <span class="important-text">'theme'</span>
+      subclass added.<br>
+      Additionally any files related to components should also have the <span class="important-text">'component'</span> added. <br>
     </p>
     <div class="code-section">
       <code>
         /* Do */
-        @import 'border.spc.scss';
-        @import 'button.atom.scss';
+        @import '_card.component.theme.scss';
+        @import '_bootstrap.theme.scss';
 
         /* Don't */
-        @import 'borders.scss';
-        @import 'buttons.scss';
+        @import 'card.scss';
+        @import 'bootstrap.scss';
       </code>
     </div>
   </div>
   <div class="section">
-    <h3>Class Names</h3>
+    <h3>Theme Combination Naming</h3>
     <p class="section-text">
-      Class names should be all in lower-kebab-case meaning that capital letters are never used and words are delimited by
+      Keys in theme maps should all be in <span class="important-text">lower-kebab-case</span> meaning that capital letters are never used and words are delimited by
       hyphens.
+      And whenever we have multiple keys with the same values, all the keys should reference the very first one
+      to avoid redundancy and improve performance.<br>
       Their intuitive design will get all developers familiar with them as quick as possible, with some special classes
       designed
-      specifically to speed up development. Class names usually follow this convention <span class="important-text">'propertyname-value'</span>.
     </p>
     <div class="code-section">
       <code>
-        /* propertyname-value */
-        @extend %text-color-primary;
-        @extend %text-align-left;
-        @extend %background-color-primary;
+        /* Do */
+        color-primary: #209e91
+        color-secondary-gray: #e5e5e5
+        color-text-primary: color-primary-gray
 
-        /* special classes */
-        @include margin-perc(5%,top,bottom,right);
-        @include margin-perc(2%);
-        @include padding-perc(10%,All);
+        /* Don't */
+        ColorPrimary: #209e91
+        ColorSecondaryGray: #e5e5e5
+        ColorTextPrimary: #e5e5e5
+      </code>
+    </div>
+  </div>
+  <div class="section">
+    <h3>Mixins and Directives</h3>
+    <p class="section-text">
+      All component styles and overrides are applied using mixins. And all components are implemented as shadow DOM
+      elements (directives). <br>
+      Component style mixin names should begin with <span class="important-text">'nga'</span> followed by the
+      component name, and end with <span class="important-text">'theme'</span>.<br>
+      Bootstrap overrides mixin names follow the same rules except they also include a <span class="important-text">'b'</span>.<br>
+      Finally, all custom component tags should include <span class="important-text">'nga'</span> at the beginning.<br>
+      All names are in <span class="important-text">lower-camel-case</span>.
+    </p>
+    <div class="code-section">
+      <code>
+        /* Mixins */
+
+        @mixin nga-actions-theme()
+        @mixin nga-card-theme()
+
+        @mixin nga-b-accordion-theme()
+        @mixin nga-b-button-group-theme()
+
+        /* Directives  */
+
+        &lt;nga-card&gt; &lt;/nga-card&gt;
+        &lt;nga-search-field&gt; &lt;/nga-search-field&gt;
+      </code>
+    </div>
+  </div>
+  <div class="section">
+    <h3>Applying The Theme</h3>
+    <p class="section-text">
+      Any section of code where the activated theme(s) should be applied must be enclosed inside the nga-layout
+      tags. This gives us more control over our styles and view encapsulation.
+    </p>
+    <div class="code-section">
+      <code>
+        /* nga-layout */
+
+        &lt;nga-layout&gt;
+          &lt;nga-layout-columns&gt;
+            &lt;h1&gt; Hello World! &lt;h1&gt;
+          &lt;/nga-layout-columns&gt;
+        &lt;/nga-layout&gt;
       </code>
     </div>
   </div>
