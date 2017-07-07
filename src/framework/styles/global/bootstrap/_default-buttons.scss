@@ -40,7 +40,7 @@
 }
 
 @mixin btn-warning() {
-  background-color: nga-theme(btn-warning-bg);
+  background-color: nga-theme(btn-b-warningg);
 
   @include btn-warning-focus();
   @include btn-warning-hover();

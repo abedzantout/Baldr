@@ -9,12 +9,12 @@ import { Component } from '@angular/core';
 @Component( {
   selector: 'side-nav',
   templateUrl: './side-nav.component.html',
-  styleUrls: ['./side-nav.component.scss']
+  styleUrls: ['./side-nav.component.scss'],
 } )
 
 export class SideNavComponent {
   private accordionClasses: any;
-  
+
   constructor() {
     this.accordionClasses = [
       {
@@ -39,7 +39,7 @@ export class SideNavComponent {
       }
     ]
   }
-  
+
   openPanel( panel: string ) {
     this.accordionClasses.forEach( ( item ) => {
       if ( item.name == panel && item.classes.show == false ) {
@@ -53,6 +53,6 @@ export class SideNavComponent {
         item.chevron['ion-chevron-up']   = false;
       }
     } )
-    
+
   }
 }

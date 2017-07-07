@@ -21,7 +21,7 @@ import { Component,ViewEncapsulation } from '@angular/core';
 </nga-layout>
 
   `,
-  styleUrls: ['./styleguide.component.scss'],
+  styleUrls: ['./styleguide.component.scss','./styleguide.styles.scss'],
   encapsulation: ViewEncapsulation.None,
 } )
 
