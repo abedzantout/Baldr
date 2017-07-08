@@ -20,12 +20,13 @@ $theme: (
   color-bg: color-white,
   color-bg-highlight: color-secondary-gray,
   border-color: color-secondary-gray,
-  menu-item-padding: 1rem 1rem,
+  menu-item-padding: 1em 1em,
   btn-primary-bg: color-primary,
   btn-secondary-bg: color-secondary,
   btn-secondary-border: color-secondary,
   btn-danger-bg: color-danger,
-  btn-border-radius: 0px,
+  btn-border-radius: 0,
+  menu-border-radius: btn-border-radius,
   shadow: 0 4px 6px rgba(0,0,0,0.23),
 );
 
