@@ -16,6 +16,7 @@ import { CodeGuidelinesPageComponent } from './pages/code-guidelines-page/code-g
 import { StyleGuideComponent } from './styleguide.component';
 import { IntroductionPageComponent } from './pages/introduction-page/introduction-page.component';
 import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.component';
+import { TypographyPageComponent } from './pages/typography-page/typography-page.component';
 
 @NgModule( {
   imports: [
@@ -29,6 +30,7 @@ import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.componen
     StyleGuideComponent,
     IntroductionPageComponent,
     ButtonsPageComponent,
+    TypographyPageComponent,
   ],
   exports: [
     StyleGuideRoutingModule,

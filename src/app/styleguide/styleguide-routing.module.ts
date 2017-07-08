@@ -11,6 +11,7 @@ import { StyleGuideComponent } from './styleguide.component';
 import { IntroductionPageComponent } from './pages/introduction-page/introduction-page.component';
 import { CodeGuidelinesPageComponent } from './pages/code-guidelines-page/code-guidelines-page.component';
 import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.component';
+import { TypographyPageComponent } from './pages/typography-page/typography-page.component';
 
 /**
  * there is a known bug with angular regarding aux routing in lazyLoaded submodules.
@@ -39,6 +40,11 @@ const routes: Routes = [
           {
             path: 'buttons-page',
             component: ButtonsPageComponent,
+            outlet: 'pages',
+          },
+          {
+            path: 'typography-page',
+            component: TypographyPageComponent,
             outlet: 'pages',
           },
         ],

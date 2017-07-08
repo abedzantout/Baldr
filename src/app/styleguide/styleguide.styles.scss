@@ -3,7 +3,13 @@
  * Copyright Protected MonopolyKings. All Rights Reserved.
  * Distribution or making any copies of this software or documentation is prohibited.
  */
-
+nga-layout{
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url('../../assets/fonts/SF-Pro-Display-Regular.otf')  format("opentype");
+  }
+}
 .page-container{
   padding: 10% 0 5% 0;
 }
