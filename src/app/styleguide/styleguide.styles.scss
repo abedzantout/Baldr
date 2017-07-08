@@ -3,45 +3,58 @@
  * Copyright Protected MonopolyKings. All Rights Reserved.
  * Distribution or making any copies of this software or documentation is prohibited.
  */
-nga-layout{
+nga-layout {
   @font-face {
     font-family: "San Francisco";
     font-weight: 400;
-    src: url('../../assets/fonts/SF-Pro-Display-Regular.otf')  format("opentype");
+    src: url('../../assets/fonts/SF-Pro-Display-Regular.otf') format("opentype");
   }
 }
-.page-container{
+
+.page-container {
   padding: 10% 0 5% 0;
 }
-a, h1, h2 , h3, h4, h5, h6, .important-text{
+
+a, h1, h2, h3, h4, h5, h6, .important-text {
   color: #209e91;
 }
 
-p, .section-text, .demo{
+p, .section-text, .demo {
   color: #222222;
 }
 
-.section{
+.section {
   margin-top: 10%;
 }
 
-.code-section{
+.code-section {
   padding: 2%;
-  border: rgba(0,0,0,0.25) 1px solid;
+  border: rgba(0, 0, 0, 0.25) 1px solid;
 }
 
-code{
+code {
   white-space: pre-wrap;
   background-color: white;
 }
 
-.demo-section{
-  border-top: rgba(0,0,0,0.25) 1px solid;
-  border-left: rgba(0,0,0,0.25) 1px solid;
+.demo-section {
+  border-top: rgba(0, 0, 0, 0.25) 1px solid;
+  border-left: rgba(0, 0, 0, 0.25) 1px solid;
 }
 
-.demo{
-  border-right: rgba(0,0,0,0.25) 1px solid;
-  text-align: center;
-  padding: 5% 0 5% 0;
+
+
+.guide-section {
+  border: rgba(0, 0, 0, 0.25) 1px solid;
+  .code-section {
+    border: 0;
+    border-top: rgba(0, 0, 0, 0.25) 1px solid;
+  }
+  .demo-section {
+    border: 0;
+  }
+  .demo {
+    text-align: center;
+    padding: 5% 0 5% 0;
+  }
 }
