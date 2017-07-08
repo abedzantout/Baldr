@@ -17,6 +17,16 @@ import { StyleGuideComponent } from './styleguide.component';
 import { IntroductionPageComponent } from './pages/introduction-page/introduction-page.component';
 import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.component';
 import { TypographyPageComponent } from './pages/typography-page/typography-page.component';
+import { ColorSchemePageComponent } from './pages/color-scheme-page/color-scheme-page.component';
+import { BorderPageComponent } from './pages/border-page/border-page.component';
+import { BoxShadowPageComponent } from './pages/box-shadow-page/box-shadow-page.component';
+import { IconsPageComponent } from './pages/icons-page/icons-page.component';
+import { CardsPageComponent } from './pages/cards-page/cards-page.component';
+import { ChartsPageComponent } from './pages/charts-page/charts-page.component';
+import { FormElementsPageComponent } from './pages/form-elements-page/form-elements-page.component';
+import { ListsPageComponent } from './pages/lists-page/lists-page.component';
+import { MapPageComponent } from './pages/map-page/map-page.component';
+import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 
 @NgModule( {
   imports: [
@@ -31,6 +41,16 @@ import { TypographyPageComponent } from './pages/typography-page/typography-page
     IntroductionPageComponent,
     ButtonsPageComponent,
     TypographyPageComponent,
+    ColorSchemePageComponent,
+    BorderPageComponent,
+    BoxShadowPageComponent,
+    IconsPageComponent,
+    CardsPageComponent,
+    ChartsPageComponent,
+    FormElementsPageComponent,
+    ListsPageComponent,
+    MapPageComponent,
+    LayoutPageComponent,
   ],
   exports: [
     StyleGuideRoutingModule,

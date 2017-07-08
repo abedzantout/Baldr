@@ -22,8 +22,7 @@
                aria-labelledby="headingOverview">
             <div class="card-block">
               <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['introduction']}}]"><i class="icons ion-chevron-right"></i>Introduction</a></p>
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['code-guidelines']}}]"><i
-                class="icons ion-chevron-right"></i>Code Guidelines</a></p>
+              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['code-guidelines']}}]"><i class="icons ion-chevron-right"></i>Code Guidelines</a></p>
             </div>
           </div>
         </div>
@@ -40,13 +39,12 @@
           <div id="collapseDesign" [ngClass]="accordionClasses[1].classes" role="tabpanel"
                aria-labelledby="headingDesign">
             <div class="card-block">
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Color Scheme</a></p>
+              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['color-scheme-page']}}]"><i class="icons ion-chevron-right"></i>Color Scheme</a></p>
               <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['typography-page']}}]"><i class="icons ion-chevron-right"></i>Typography</a>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Border</a></p>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Animation</a></p>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Box Shadow</a></p>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Layout</a></p>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Icons</a></p>
+              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['border-page']}}]"><i class="icons ion-chevron-right"></i>Border</a></p>
+              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['box-shadow-page']}}]"><i class="icons ion-chevron-right"></i>Box Shadow</a></p>
+              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['layout-page']}}]"><i class="icons ion-chevron-right"></i>Layout</a></p>
+              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['icons-page']}}]"><i class="icons ion-chevron-right"></i>Icons</a></p>
             </div>
           </div>
         </div>
@@ -62,12 +60,12 @@
           <div id="collapseComponents" [ngClass]="accordionClasses[2].classes" role="tabpanel"
                aria-labelledby="headingComponents">
             <div class="card-block">
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Avatars</a></p>
+              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['cards-page']}}]"><i class="icons ion-chevron-right"></i>Cards</a></p>
               <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['buttons-page']}}]"><i class="icons ion-chevron-right"></i>Buttons</a></p>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Charts</a></p>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Form Elements</a></p>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Grid</a></p>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Lists</a></p>
+              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['charts-page']}}]"><i class="icons ion-chevron-right"></i>Charts</a></p>
+              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['form-elements-page']}}]"><i class="icons ion-chevron-right"></i>Form Elements</a></p>
+              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['map-page']}}]"><i class="icons ion-chevron-right"></i>Map</a></p>
+              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['lists-page']}}]"><i class="icons ion-chevron-right"></i>Lists</a></p>
             </div>
           </div>
         </div>
