@@ -10,12 +10,18 @@ $fa-font-path: '~font-awesome/fonts';
 
 $ionicons-font-path: '~ionicons/fonts';
 
+$sanfrancisco-font-path: '../../../assets/fonts';
+
 // TODO: test if this actually works
 @mixin SanFransisco() {
-  font-family: 'San Francisco';
-  font-weight: 400;
-  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff');
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url('../../../assets/fonts/SF-Pro-Display-Regular.otf')  format("opentype");
+  }
 }
+
+
 
 @import '~ionicons/scss/ionicons';
 
