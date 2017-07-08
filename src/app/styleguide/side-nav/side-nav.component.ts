@@ -19,8 +19,8 @@ export class SideNavComponent {
     this.accordionClasses = [
       {
         name: 'collapseOverview',
-        classes: { 'collapse': true, 'show': true },
-        chevron: { 'icon': true, 'ion-chevron-down': false, 'ion-chevron-up': true }
+        classes: { 'collapse': true, 'show': false },
+        chevron: { 'icon': true, 'ion-chevron-down': true, 'ion-chevron-up': false }
       },
       {
         name: 'collapseDesign',
