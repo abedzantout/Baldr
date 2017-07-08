@@ -12,7 +12,6 @@ $ionicons-font-path: '~ionicons/fonts';
 
 $sanfrancisco-font-path: '../../../assets/fonts';
 
-// TODO: test if this actually works
 @mixin SanFransisco() {
   @font-face {
     font-family: "San Francisco";

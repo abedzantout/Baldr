@@ -5,5 +5,28 @@
  */
 
 @mixin nga-b-dropdowns-theme() {
+  .dropdown{
+    width:15em;
 
+    button, div, a{
+      width: 100%;
+    }
+
+    .dropdown-toggle{
+      //box-shadow:
+      &::after{
+        background-color: tint(nga-theme(color-primary),14%);
+
+      }
+
+    }
+    .dropdown-item{
+      color: nga-theme(color-primary-text);
+
+      &:hover{
+        background-color: nga-theme(color-bg-highlight);
+      }
+    }
+
+  }
 }
