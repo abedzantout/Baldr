@@ -73,7 +73,7 @@
     '::-webkit-input-placeholder' '::-moz-placeholder' ':-moz-placeholder' ':-ms-input-placeholder'
   );
 
-  &[placeholder] {
+  &::placeholder {
     @include placeholder($color, $font-size);
   }
 
