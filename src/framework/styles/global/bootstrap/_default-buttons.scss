@@ -7,32 +7,33 @@
 @mixin btn-default() {
 
   .btn.btn-primary {
-	@include btn-primary();
+    @include btn-primary();
   }
 
   .btn.btn-warning {
-	@include btn-warning();
+    @include btn-warning();
   }
 
   .btn.btn-info {
-	@include btn-info();
+    @include btn-info();
   }
 
   .btn.btn-success {
-	@include btn-success();
+    @include btn-success();
   }
 
   .btn.btn-danger {
-	@include btn-danger();
+    @include btn-danger();
   }
 
   .btn.btn-secondary {
-	@include btn-secondary();
+    @include btn-secondary();
   }
 }
 
 @mixin btn-primary() {
   background-color: nga-theme(btn-primary-bg);
+  box-shadow: nga-theme(shadow);
 
   @include btn-primary-focus();
   @include btn-primary-hover();
@@ -41,6 +42,7 @@
 
 @mixin btn-warning() {
   background-color: nga-theme(btn-b-warningg);
+  box-shadow: nga-theme(shadow);
 
   @include btn-warning-focus();
   @include btn-warning-hover();
@@ -49,6 +51,7 @@
 
 @mixin btn-info() {
   background-color: nga-theme(btn-info-bg);
+  box-shadow: nga-theme(shadow);
 
   @include btn-info-focus();
   @include btn-info-hover();
@@ -57,6 +60,7 @@
 
 @mixin btn-success() {
   background-color: nga-theme(btn-success-bg);
+  box-shadow: nga-theme(shadow);
 
   @include btn-success-focus();
   @include btn-success-hover();
@@ -65,6 +69,7 @@
 
 @mixin btn-danger() {
   background-color: nga-theme(btn-danger-bg);
+  box-shadow: nga-theme(shadow);
 
   @include btn-danger-focus();
   @include btn-danger-hover();
@@ -72,6 +77,7 @@
 }
 
 @mixin btn-secondary() {
+  box-shadow: nga-theme(shadow);
   @include btn-secondary-border();
   @include btn-secondary-bg();
   @include btn-secondary-focus();
@@ -90,25 +96,25 @@
 @mixin btn-focus($focus) {
   &:focus,
   &.focus {
-	background-color: $focus;
-	border-color: transparent;
-	box-shadow: none;
+    background-color: $focus;
+    border-color: transparent;
+    box-shadow: none;
   }
 }
 
 @mixin btn-hover($hover) {
   &:hover,
   &.hover {
-	background-color: $hover;
-	border-color: transparent;
+    background-color: $hover;
+    border-color: transparent;
   }
 }
 
 @mixin btn-active($active) {
   &:active,
   &.active {
-	background-color: $active;
-	border-color: transparent;
+    background-color: $active;
+    border-color: transparent;
   }
 }
 
