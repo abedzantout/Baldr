@@ -5,8 +5,13 @@
  */
 
 // TODO: Refactor code
-/deep/ /**/.page-container {
+/deep/ .page-container {
   padding: 4% 0 5% 0;
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /deep/ p, .section-text, .demo {
