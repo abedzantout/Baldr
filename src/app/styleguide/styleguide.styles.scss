@@ -35,6 +35,14 @@
 /deep/ .demo-section {
   border-top: rgba(0, 0, 0, 0.25) 1px solid;
   border-left: rgba(0, 0, 0, 0.25) 1px solid;
+
+  .demo {
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+  }
+  .demo:last-child {
+    border: 0;
+  }
+
 }
 
 /deep/ .guide-section {
