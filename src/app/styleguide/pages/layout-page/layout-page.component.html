@@ -3,4 +3,61 @@
 <!--Distribution or making any copies of this software or documentation is prohibited.-->
 <div class="page-container">
   <h1>Layout</h1>
+
+  <div class="section">
+    <h3>Grid</h3>
+    <p class="section-text">
+      We are using the same grid as bootstrap since we did not override it.<br>
+      Each row you define can be divided into 1 to 12 sections with varying width.<br>
+      And for responsiveness, you can specify how wide each section should be for each screen size.
+    </p>
+
+    <div class="guide-section">
+      <div class="row">
+        <div class="demo-section col-12">
+          <div class="row">
+            <div class="demo col-6">
+              This section is taking 6/12 of the row's width
+            </div>
+            <div class="demo col-6">
+              This section is taking 6/12 of the row's width
+            </div>
+          </div>
+          <div class="row">
+            <div class="demo col-6">
+              This section is taking 6/12 of the row's width
+            </div>
+            <div class="demo col-3">
+              This section is taking 3/12 of the row's width
+            </div>
+            <div class="demo col-3">
+              This section is taking 3/12 of the row's width
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="code-section">
+        <code>
+          &lt;div class="row"&gt;
+            &lt;div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"&gt;
+              This section is taking 6/12 of the row's width
+            &lt;/div&gt;
+            &lt;div class="col-sm-3 col-md-3 col-lg-3 col-xl-3"&gt;
+             This section is taking 3/12 of the row's width
+            &lt;/div&gt;
+            &lt;div class="col-sm-3 col-md-3 col-lg-3 col-xl-3"&gt;
+              This section is taking 6/12 of the row's width
+            &lt;/div&gt;
+          &lt;/div&gt;
+        </code>
+      </div>
+    </div>
+    <p class="section-text">
+      You can change the classes to accommodate different widths for different devices.
+      Also, you can replace all the classes with a single one <span class="important-text">col-6</span> to specify
+      a width of 6 for all screen sizes.<br>
+      For more information about grids <a href="https://v4-alpha.getbootstrap.com/layout/grid/">click here.</a>
+    </p>
+  </div>
+
 </div>
