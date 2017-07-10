@@ -98,7 +98,6 @@
   &.focus {
     background-color: $focus;
     border-color: transparent;
-    box-shadow: none;
   }
 }
 
@@ -191,6 +190,7 @@
 
 @mixin btn-secondary-active() {
   @include btn-active(btn-focus-active(btn-secondary-border));
+  color: nga-theme(color-white);
 }
 
 @mixin btn-secondary-border() {

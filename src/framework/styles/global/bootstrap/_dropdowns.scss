@@ -31,8 +31,11 @@
 }
 
 .dropdown-toggle {
+  border: 0;
+  color: nga-theme(color-white);
   //box-shadow:
   &::after {
     background-color: transparent;
+    color: nga-theme(color-white);
   }
 }
