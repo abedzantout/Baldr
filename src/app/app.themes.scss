@@ -12,7 +12,6 @@
 //}
 @import '../framework/styles/all';
 
-
 /*
 These two $nga-themes declarations call nga-register-theme in _theming.scss to add a new theme. nga-register-theme then
 returns a new map with the newly registered theme included.
@@ -25,7 +24,7 @@ $nga-themes: nga-register-theme((
   card-separator: red,
   radius: 0,
   color-primary: red,
-), blue, default);
+), blue, hodyr);
 
 $nga-themes: nga-register-theme((
   header-foreground: #76ff81,

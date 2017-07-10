@@ -3,48 +3,36 @@
  * Copyright Protected MonopolyKings. All Rights Reserved.
  * Distribution or making any copies of this software or documentation is prohibited.
  */
-nga-layout {
-  @font-face {
-    font-family: "San Francisco";
-    font-weight: 400;
-    src: url('../../assets/fonts/SF-Pro-Display-Regular.otf') format("opentype");
-  }
+
+// TODO: Refactor code
+/deep/ /**/.page-container {
+  padding: 4% 0 5% 0;
 }
 
-.page-container {
-  padding: 10% 0 5% 0;
-}
-
-a, h1, h2, h3, h4, h5, h6, .important-text {
-  color: #209e91;
-}
-
-p, .section-text, .demo {
+/deep/ p, .section-text, .demo {
   color: #222222;
 }
 
-.section {
+/deep/ .section {
   margin-top: 10%;
 }
 
-.code-section {
+/deep/ .code-section {
   padding: 2%;
   border: rgba(0, 0, 0, 0.25) 1px solid;
 }
 
-code {
+/deep/ code {
   white-space: pre-wrap;
   background-color: white;
 }
 
-.demo-section {
+/deep/ .demo-section {
   border-top: rgba(0, 0, 0, 0.25) 1px solid;
   border-left: rgba(0, 0, 0, 0.25) 1px solid;
 }
 
-
-
-.guide-section {
+/deep/ .guide-section {
   border: rgba(0, 0, 0, 0.25) 1px solid;
   .code-section {
     border: 0;

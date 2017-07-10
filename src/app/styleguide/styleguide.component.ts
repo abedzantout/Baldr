@@ -4,25 +4,21 @@
  * Distribution or making any copies of this software or documentation is prohibited.
  */
 
-import { Component,ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component( {
   selector: 'style-guide',
   template: `
-<nga-layout>
-  <nga-layout-column>
-    <div class="row">
-      <side-nav class="col-4"></side-nav>
-      <div class="col-8">
+    <nga-layout>
+      <nga-sidebar>
+        <side-nav></side-nav>
+      </nga-sidebar>
+      <nga-layout-column>
         <router-outlet name="pages"></router-outlet>
-      </div>
-    </div>
-  </nga-layout-column>
-</nga-layout>
-
+      </nga-layout-column>
+    </nga-layout>
   `,
-  styleUrls: ['./styleguide.component.scss','./styleguide.styles.scss'],
-  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./styleguide.component.scss', './styleguide.styles.scss'],
 } )
 
 export class StyleGuideComponent {

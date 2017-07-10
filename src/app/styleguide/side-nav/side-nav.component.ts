@@ -13,8 +13,8 @@ import { Component } from '@angular/core';
 } )
 
 export class SideNavComponent {
-  private accordionClasses: any;
-
+  public accordionClasses: any;
+  
   constructor() {
     this.accordionClasses = [
       {
@@ -53,6 +53,6 @@ export class SideNavComponent {
         item.chevron['ion-chevron-up']   = false;
       }
     } )
-
+    
   }
 }

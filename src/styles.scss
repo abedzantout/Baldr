@@ -8,24 +8,3 @@
 
 /* We need the scrollbar styles here to apply to the overall page, not just specific components.*/
 
-//TODO: find a way to move all these styles to the framework.
-
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #209e91;
-  cursor: pointer;
-}
-
-::-webkit-scrollbar-track {
-  background: #e5e5e5;
-}
-
-// For Internet Explorer
-body {
-  scrollbar-face-color: #209e91;
-  scrollbar-track-color: #e5e5e5;
-}

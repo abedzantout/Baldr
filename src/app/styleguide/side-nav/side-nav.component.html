@@ -2,100 +2,114 @@
 <!--Copyright Protected MonopolyKings. All Rights Reserved.-->
 <!--Distribution or making any copies of this software or documentation is prohibited.-->
 
-    <div id="side-nav">
-      <div id="logo-section">
-        <img src="../../../assets/logo/MK_logo.svg"/>
 
-      </div>
-      <div id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="card">
-          <div class="card-header" role="tab" id="headingOverview" (click)='openPanel("collapseOverview")'>
-            <h5 class="mb-0">
-              <a data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOverview">
-                Overview
-                <i [ngClass]="accordionClasses[0].chevron"></i>
-              </a>
-            </h5>
-          </div>
+<div id="logo-section">
+  <img src="../../../assets/logo/MK_logo.svg"/>
+</div>
+<div id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOverview" (click)='openPanel("collapseOverview")'>
+      <h5>
+        <a data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOverview">
+          Overview
+          <i [ngClass]="accordionClasses[0].chevron"></i>
+        </a>
+      </h5>
+    </div>
 
-          <div id="collapseOverview" [ngClass]="accordionClasses[0].classes" role="tabpanel"
-               aria-labelledby="headingOverview">
-            <div class="card-block">
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['introduction']}}]"><i class="icons ion-chevron-right"></i>Introduction</a></p>
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['code-guidelines']}}]"><i class="icons ion-chevron-right"></i>Code Guidelines</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" role="tab" id="headingDesign" (click)='openPanel("collapseDesign")'>
-            <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false"
-                 aria-controls="collapseDesign">
-                Design
-                <i [ngClass]="accordionClasses[1].chevron"></i>
-              </a>
-            </h5>
-          </div>
-          <div id="collapseDesign" [ngClass]="accordionClasses[1].classes" role="tabpanel"
-               aria-labelledby="headingDesign">
-            <div class="card-block">
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['color-scheme-page']}}]"><i class="icons ion-chevron-right"></i>Color Scheme</a></p>
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['typography-page']}}]"><i class="icons ion-chevron-right"></i>Typography</a>
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['border-page']}}]"><i class="icons ion-chevron-right"></i>Border</a></p>
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['box-shadow-page']}}]"><i class="icons ion-chevron-right"></i>Box Shadow</a></p>
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['layout-page']}}]"><i class="icons ion-chevron-right"></i>Layout</a></p>
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['icons-page']}}]"><i class="icons ion-chevron-right"></i>Icons</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" role="tab" id="headingComponents" (click)='openPanel("collapseComponents")'>
-            <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false">
-                Components
-                <i [ngClass]="accordionClasses[2].chevron"></i>
-              </a>
-            </h5>
-          </div>
-          <div id="collapseComponents" [ngClass]="accordionClasses[2].classes" role="tabpanel"
-               aria-labelledby="headingComponents">
-            <div class="card-block">
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['cards-page']}}]"><i class="icons ion-chevron-right"></i>Cards</a></p>
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['buttons-page']}}]"><i class="icons ion-chevron-right"></i>Buttons</a></p>
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['charts-page']}}]"><i class="icons ion-chevron-right"></i>Charts</a></p>
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['form-elements-page']}}]"><i class="icons ion-chevron-right"></i>Form Elements</a></p>
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['map-page']}}]"><i class="icons ion-chevron-right"></i>Map</a></p>
-              <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['lists-page']}}]"><i class="icons ion-chevron-right"></i>Lists</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" role="tab" id="headingUtility" (click)='openPanel("collapseUtility")'>
-            <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false">
-                Utility
-                <i [ngClass]="accordionClasses[3].chevron"></i>
-              </a>
-            </h5>
-          </div>
-          <div id="collapseUtility" [ngClass]="accordionClasses[3].classes" role="tabpanel"
-               aria-labelledby="headingUtility">
-            <div class="card-block">
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Aspect Ratio</a></p>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Center Elements</a></p>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Hide Elements</a></p>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Layout</a></p>
-              <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Text Manipulation</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="third-party-section">
-        <a href="https://github.com/abedzantout/Baldr">
-          <img class="grow" src="../../../assets/icons/github-icon.svg"/>
-        </a>
-        <a href="https://www.youtube.com/channel/UCA2hUlsvp15BDtTfEP-_Xyg">
-          <img class="grow" src="../../../assets/icons/youtube-icon.svg"/>
-        </a>
+    <div id="collapseOverview" [ngClass]="accordionClasses[0].classes" role="tabpanel"
+         aria-labelledby="headingOverview">
+      <div class="card-block">
+        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['introduction']}}]"><i
+          class="icons ion-chevron-right"></i>Introduction</a></p>
+        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['code-guidelines']}}]"><i
+          class="icons ion-chevron-right"></i>Code Guidelines</a></p>
       </div>
     </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingDesign" (click)='openPanel("collapseDesign")'>
+      <h5>
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false"
+           aria-controls="collapseDesign">
+          Design
+          <i [ngClass]="accordionClasses[1].chevron"></i>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseDesign" [ngClass]="accordionClasses[1].classes" role="tabpanel"
+         aria-labelledby="headingDesign">
+      <div class="card-block">
+        <p class="sub-section-link"><a
+          [routerLink]="['/styleguide/pages',{outlets: {'pages': ['color-scheme-page']}}]"><i
+          class="icons ion-chevron-right"></i>Color Scheme</a></p>
+        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['typography-page']}}]"><i
+          class="icons ion-chevron-right"></i>Typography</a>
+        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['border-page']}}]"><i
+          class="icons ion-chevron-right"></i>Border</a></p>
+        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['box-shadow-page']}}]"><i
+          class="icons ion-chevron-right"></i>Box Shadow</a></p>
+        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['layout-page']}}]"><i
+          class="icons ion-chevron-right"></i>Layout</a></p>
+        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['icons-page']}}]"><i
+          class="icons ion-chevron-right"></i>Icons</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingComponents" (click)='openPanel("collapseComponents")'>
+      <h5>
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false">
+          Components
+          <i [ngClass]="accordionClasses[2].chevron"></i>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseComponents" [ngClass]="accordionClasses[2].classes" role="tabpanel"
+         aria-labelledby="headingComponents">
+      <div class="card-block">
+        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['cards-page']}}]"><i
+          class="icons ion-chevron-right"></i>Cards</a></p>
+        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['buttons-page']}}]"><i
+          class="icons ion-chevron-right"></i>Buttons</a></p>
+        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['charts-page']}}]"><i
+          class="icons ion-chevron-right"></i>Charts</a></p>
+        <p class="sub-section-link"><a
+          [routerLink]="['/styleguide/pages',{outlets: {'pages': ['form-elements-page']}}]"><i
+          class="icons ion-chevron-right"></i>Form Elements</a></p>
+        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['map-page']}}]"><i
+          class="icons ion-chevron-right"></i>Map</a></p>
+        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['lists-page']}}]"><i
+          class="icons ion-chevron-right"></i>Lists</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingUtility" (click)='openPanel("collapseUtility")'>
+      <h5>
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false">
+          Utility
+          <i [ngClass]="accordionClasses[3].chevron"></i>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseUtility" [ngClass]="accordionClasses[3].classes" role="tabpanel"
+         aria-labelledby="headingUtility">
+      <div class="card-block">
+        <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Aspect Ratio</a></p>
+        <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Center Elements</a></p>
+        <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Hide Elements</a></p>
+        <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Layout</a></p>
+        <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Text Manipulation</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="third-party-section">
+  <a href="https://github.com/abedzantout/Baldr">
+    <img class="grow" src="../../../assets/icons/github-icon.svg"/>
+  </a>
+  <a href="https://www.youtube.com/channel/UCA2hUlsvp15BDtTfEP-_Xyg">
+    <img class="grow" src="../../../assets/icons/youtube-icon.svg"/>
+  </a>
+</div>

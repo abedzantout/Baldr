@@ -27,11 +27,15 @@ import { FormElementsPageComponent } from './pages/form-elements-page/form-eleme
 import { ListsPageComponent } from './pages/lists-page/lists-page.component';
 import { MapPageComponent } from './pages/map-page/map-page.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
+import { NgaSidebarModule } from '../../framework/components/sidebar/sidebar.module';
+import { NgaThemeModule } from '../../framework/theme.module';
 
 @NgModule( {
   imports: [
     CommonModule,
     StyleGuideRoutingModule,
+    NgaSidebarModule.forRoot(),
+    NgaThemeModule.forRoot( { name: 'hodyr' } ),
     NgaLayoutModule,
   ],
   declarations: [
@@ -58,7 +62,7 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
     CodeGuidelinesPageComponent,
     IntroductionPageComponent,
     ButtonsPageComponent,
-
+  
   ]
 } )
 export class StyleGuideModule {

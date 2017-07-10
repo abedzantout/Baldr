@@ -3,64 +3,59 @@
  * Copyright Protected MonopolyKings. All Rights Reserved.
  * Distribution or making any copies of this software or documentation is prohibited.
  */
-nga-layout-column{
-  padding: 0 !important;
-}
-.card-header{
+
+.card-header {
   background-color: white;
 }
-#side-nav{
-  width:25%;
-  position:fixed;
-  height: 100vh;
-  overflow: auto;
-  border-width: 0 1px 1px 0;
-  border-style: solid;
+
+#accordion {
+  border: 0;
 }
-#accordion{
-  border: 0px;
-}
-#logo-section{
+
+#logo-section {
   border-bottom: 1px solid;
   padding: 20%;
-  img{
-    width:70%;
+  img {
+    width: 70%;
     margin: auto;
     display: block;
   }
 }
-.icon{
-  margin-right:5%;
-  width:1%;
+
+.icon {
+  margin-right: 5%;
+  width: 1%;
 }
 
-.card-block{
+.card {
+  margin: -1.25rem;
+}
+
+.card-block {
   padding-left: 5em;
 }
 
-.sub-section-link a{
+.sub-section-link a {
   //TODO: Should I be able to use nga-theme here ? Discuss it with Abed.
   color: #209e91;
-  .ion-chevron-right{
-    margin-right:10%;
+  .ion-chevron-right {
+    margin-right: 10%;
   }
-  &:hover{
+  &:hover {
     color: #222222;
     text-decoration: none;
   }
 }
 
-
-
 /* TODO: see if I should move the logos and create a special component just for them.*/
-.third-party-section{
+.third-party-section {
   text-align: center;
   border-top: 1px solid;
 }
+
 .grow {
   transition: all .2s ease-in-out;
-  width:15%;
-
+  width: 15%;
   margin: 5%;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
