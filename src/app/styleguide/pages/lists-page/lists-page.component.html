@@ -46,8 +46,8 @@
       </div>
       <div class="code-section">
         <code>
-          &lt;div class="dropdown"&gt;
-             &lt;button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton"
+          &lt;div class="<span class="important-text">dropdown</span>"&gt;
+          &lt;button class="btn <span class="important-text">btn-primary</span> dropdown-toggle" id="dropdownMenuButton"
                     data-toggle="dropdown"&gt;
                 Dropdown Button
              &lt;/button&gt;
@@ -60,6 +60,12 @@
         </code>
       </div>
     </div>
+    <p class="section-text">
+      We have two types of toggle-lists, Dropdown and Dropup. They can be used interchangeably by changing the container <br>
+      class (labeled in green) from dropdown to dropup and vice-versa.<br>
+      Similarly, we can change the type of button we would like to use for the list by changing the button's class (also labeled in green).
+      To learn more about how you can change between button types <a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['buttons-page']}}]">click here.</a>
+    </p>
 
   </div>
 </div>
