@@ -7,11 +7,6 @@
 // TODO: Refactor code
 /deep/ .page-container {
   padding: 4% 0 5% 0;
-
-  .row {
-    margin-left: 0;
-    margin-right: 0;
-  }
 }
 
 /deep/ p, .section-text, .demo {
@@ -32,22 +27,43 @@
   background-color: white;
 }
 
-/deep/ .demo-section {
-  border-top: rgba(0, 0, 0, 0.25) 1px solid;
-  border-left: rgba(0, 0, 0, 0.25) 1px solid;
-}
+
 
 /deep/ .guide-section {
   border: rgba(0, 0, 0, 0.25) 1px solid;
+
+  .demo-section {
+    border-top: rgba(0, 0, 0, 0.25) 1px solid;
+    border-left: rgba(0, 0, 0, 0.25) 1px solid;
+    padding:0;
+  }
+
   .code-section {
     border: 0;
     border-top: rgba(0, 0, 0, 0.25) 1px solid;
   }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+  }
+
+  .row:last-child{
+    border:0;
+  }
+
   .demo-section {
     border: 0;
-  }
-  .demo {
-    text-align: center;
-    padding: 5% 0 5% 0;
+
+    .demo {
+      text-align: center;
+      padding: 5% 0 5% 0;
+      border-right: 1px solid rgba(0,0,0,0.25);
+    }
+
+    .demo:last-child{
+      border:0;
+    }
   }
 }
