@@ -37,47 +37,52 @@
     }
 
     &.active-card {
-      nga-card-header {
+      nga-card-side {
         background-color: nga-theme(card-header-active-bg);
         border-bottom-color: nga-theme(card-header-active-bg);
         color: nga-theme(card-header-active-fg);
       }
     }
     &.disabled-card {
-      nga-card-header {
+      nga-card-side {
         background-color: nga-theme(card-header-disabled-bg);
         border-bottom-color: nga-theme(card-header-disabled-bg);
       }
     }
     &.primary-card {
-      nga-card-header {
+      nga-card-side {
         background-color: nga-theme(card-header-primary-bg);
         border-bottom-color: nga-theme(card-header-primary-bg);
       }
     }
     &.info-card {
-      nga-card-header {
+      nga-card-side {
         background-color: nga-theme(card-header-info-bg);
         border-bottom-color: nga-theme(card-header-info-bg);
       }
     }
     &.success-card {
-      nga-card-header {
+      nga-card-side {
         background-color: nga-theme(card-header-success-bg);
         border-bottom-color: nga-theme(card-header-success-bg);
       }
     }
     &.warning-card {
-      nga-card-header {
+      nga-card-side {
         background-color: nga-theme(card-header-warning-bg);
         border-bottom-color: nga-theme(card-header-warning-bg);
       }
     }
     &.danger-card {
-      nga-card-header {
+      nga-card-side {
         background-color: nga-theme(card-header-danger-bg);
         border-bottom-color: nga-theme(card-header-danger-bg);
       }
+    }
+    nga-card-side{
+      float: left;
+      height: inherit;
+      width: 1%;
     }
 
     nga-card-body {
@@ -92,7 +97,6 @@
 
     nga-card-header {
       padding: nga-theme(card-padding);
-      border-bottom: 1px solid nga-theme(card-header-separator);
       border-top-left-radius: nga-theme(card-border-radius);
       border-top-right-radius: nga-theme(card-border-radius);
       color: nga-theme(card-header-fg);

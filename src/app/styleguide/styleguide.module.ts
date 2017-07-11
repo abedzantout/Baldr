@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { NgaLayoutModule } from '../../framework/components/layout/layout.module';
+import { NgaCardModule } from '../../framework/components/card/card.module';
 
 import { SideNavComponent } from './side-nav/side-nav.component';
 
@@ -37,6 +38,7 @@ import { NgaThemeModule } from '../../framework/theme.module';
     NgaSidebarModule.forRoot(),
     NgaThemeModule.forRoot( { name: 'hodyr' } ),
     NgaLayoutModule,
+    NgaCardModule,
   ],
   declarations: [
     SideNavComponent,
@@ -62,7 +64,7 @@ import { NgaThemeModule } from '../../framework/theme.module';
     CodeGuidelinesPageComponent,
     IntroductionPageComponent,
     ButtonsPageComponent,
-  
+
   ]
 } )
 export class StyleGuideModule {

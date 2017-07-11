@@ -8,13 +8,14 @@ import { NgModule } from '@angular/core';
 
 import { NgaSharedModule } from '../shared/shared.module';
 
-import { NgaCardBodyComponent, NgaCardComponent, NgaCardFooterComponent, NgaCardHeaderComponent } from './card.component';
+import { NgaCardBodyComponent, NgaCardComponent, NgaCardFooterComponent, NgaCardHeaderComponent, NgaCardSideComponent } from './card.component';
 
 const NGA_CARD_COMPONENTS = [
   NgaCardComponent,
   NgaCardBodyComponent,
   NgaCardFooterComponent,
   NgaCardHeaderComponent,
+  NgaCardSideComponent,
 ];
 
 @NgModule( {

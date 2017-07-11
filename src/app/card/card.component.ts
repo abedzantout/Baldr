@@ -15,6 +15,9 @@ import { Component } from '@angular/core';
                   <nga-card-header>
                       <span>Header</span>
                   </nga-card-header>
+                  <nga-card-side>
+                  
+                  </nga-card-side>
                   <nga-card-body>
                       <span>Body</span>
                   </nga-card-body>
@@ -27,19 +30,19 @@ import { Component } from '@angular/core';
   `,
 } )
 export class CardComponent {
-  
+
   sizes    = ['small', 'xsmall', 'medium', 'xmedium', 'large'];
   statuses = ['primary', 'success', 'info', 'warning', 'danger', 'active', 'disabled'];
-  
+
   cards: any[];
-  
+
   constructor() {
     this.cards = this.prepareCards();
   }
-  
+
   private prepareCards(): any[] {
     const result = [];
-    
+
     this.statuses.forEach( status => {
       this.sizes.forEach( size => {
         result.push( {
@@ -48,7 +51,7 @@ export class CardComponent {
         } );
       } );
     } );
-    
+
     return result;
   }
 }
