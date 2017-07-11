@@ -7,10 +7,11 @@
 // TODO: Refactor code
 /deep/ .page-container {
   padding: 4% 0 5% 0;
-}
 
-/deep/ h1{
-  color: #0096A8;
+  h1 {
+    color: #0096A8;
+  }
+
 }
 
 /deep/ p, .section-text, .demo {
@@ -24,47 +25,52 @@
 /deep/ .code-section {
   padding: 2%;
   border: rgba(0, 0, 0, 0.25) 1px solid;
-}
 
-/deep/ code {
-  white-space: pre-wrap;
-  background-color: white;
-}
-
-/deep/ .demo-section {
-  border-top: rgba(0, 0, 0, 0.25) 1px solid;
-  border-left: rgba(0, 0, 0, 0.25) 1px solid;
-
-  .row {
-    margin-left: 0;
-    margin-right: 0;
-    border-bottom: 1px solid rgba(0,0,0,0.25);
+  code {
+    white-space: pre-wrap;
+    background-color: white;
   }
-
-  .row:last-child{
-    border:0;
-  }
-
-  .demo {
-    border-right: 1px solid rgba(0, 0, 0, 0.25);
-  }
-  .demo:last-child {
-    border: 0;
-  }
-
 }
 
 /deep/ .guide-section {
   border: rgba(0, 0, 0, 0.25) 1px solid;
+
   .code-section {
     border: 0;
     border-top: rgba(0, 0, 0, 0.25) 1px solid;
   }
   .demo-section {
+
     border: 0;
+
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    }
+
+    .row:last-child {
+      border: 0;
+    }
+
+    .demo {
+      border-right: 1px solid rgba(0, 0, 0, 0.25);
+      text-align: center;
+      padding: 5vh 0 5vh 0;
+    }
+
+    .demo:last-child {
+      border: 0;
+    }
   }
-  .demo {
-    text-align: center;
-    padding: 5vh 0 5vh 0;
+}
+
+/deep/ .color-display{
+  .palette{
+
+    .color{
+      text-align: center;
+      padding: 5vh 0 5vh 0;
+    }
   }
 }
