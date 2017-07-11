@@ -29,7 +29,6 @@ import { NgaSidebarTestTwoComponent } from './sidebar-test/sidebar-test-two.comp
 import { NgaSidebarTestComponent } from './sidebar-test/sidebar-test.component';
 import { NgaTabsetTestComponent } from './tabset-test/tabset-test.component';
 import { NgaUserTestComponent } from './user-test/user-test.component';
-import { CardComponent } from './card/card.component';
 import { SpinnerTest } from './spinner-test/spinner-test.component';
 
 export const routes: Routes = [
@@ -41,10 +40,6 @@ export const routes: Routes = [
   {
     path: 'styleguide',
     loadChildren: 'app/styleguide/styleguide.module#StyleGuideModule', data: { preload: true },
-  },
-  {
-    path: 'cards',
-    component: CardComponent,
   },
   {
     path: 'layout',
