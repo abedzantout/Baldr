@@ -14,8 +14,15 @@
 
 }
 
+/deep/ .important-text, a{
+  color: #2799a3;
+}
+
 /deep/ p, .section-text, .demo {
   color: #222222;
+}
+/deep/ .section-text{
+  margin: 2% 0 2% 0;
 }
 
 /deep/ .section {

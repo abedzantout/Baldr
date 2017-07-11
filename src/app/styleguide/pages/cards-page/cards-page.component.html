@@ -5,19 +5,134 @@
   <h1>Cards</h1>
 
   <div class="section">
-        <nga-card [size]="'small'" [status]="'primary'">
-          <nga-card-header>
-            <span>Header</span>
-          </nga-card-header>
-          <nga-card-side>
+    <h3>Roles and Sizes</h3>
+    <p class="section-text">
+      Cards are designed to be containers for items that share similar properties but are unique.<br>
+      There are many different types and sizes of cards and are fully customizable.
+    </p>
+    <div class="guide-section">
+      <div class="row">
+        <div class="demo-section col-12">
+          <div class="row">
+            <div class="demo col">
+              <nga-card [size]="'xsmall'" [status]="'primary'">
+                <nga-card-header>
+                  <span>Header</span>
+                </nga-card-header>
+                <nga-card-side>
 
-          </nga-card-side>
-          <nga-card-body>
-            <span>Body</span>
-          </nga-card-body>
-          <nga-card-footer>
-            <span>Footer</span>
-          </nga-card-footer>
-        </nga-card>
+                </nga-card-side>
+                <nga-card-body>
+                  <span>Body</span>
+                </nga-card-body>
+                <nga-card-footer>
+                  <span>Footer</span>
+                </nga-card-footer>
+              </nga-card>
+              <br><br>xSmall Primary card
+            </div>
+            <div class="demo col">
+              <nga-card [size]="'xsmall'" [status]="'danger'">
+                <nga-card-header>
+                  <span>Header</span>
+                </nga-card-header>
+                <nga-card-side>
+
+                </nga-card-side>
+                <nga-card-body>
+                  <span>Body</span>
+                </nga-card-body>
+                <nga-card-footer>
+                  <span>Footer</span>
+                </nga-card-footer>
+              </nga-card>
+              <br><br>xSmall Danger card
+            </div>
+          </div>
+          <div class="row">
+            <div class="demo col">
+              <nga-card [size]="'small'" [status]="'primary'">
+                <nga-card-header>
+                  <span>Header</span>
+                </nga-card-header>
+                <nga-card-side>
+
+                </nga-card-side>
+                <nga-card-body>
+                  <span>Body</span>
+                </nga-card-body>
+                <nga-card-footer>
+                  <span>Footer</span>
+                </nga-card-footer>
+              </nga-card>
+              <br><br>Small Primary card
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="code-section">
+        <code>
+          &lt;nga-card&gt; [size]="'<span class="important-text">small</span>'" [status]="'<span class="important-text">primary</span>'"&gt;
+            &lt;nga-card-header&gt;
+              &lt;span&gt;Header&lt;/span&gt;
+            &lt;/nga-card-header&gt;
+            &lt;nga-card-side&gt;&lt;/nga-card-side&gt;
+            &lt;nga-card-footer&gt;
+              &lt;span&gt;Footer&lt;/span&gt;
+            &lt;/nga-card-footer&gt;
+          &lt;/nga-card&gt;
+        </code>
+      </div>
+    </div>
+    <p class="section-text">
+      You can change the role and size of a card by changing the corresponding class name colored in green.<br>
+      Sizes can be xsmall, small, xmedium, medium, and large.<br>
+      Roles can be primary, active, disabled, danger, info, success, and warning.<br>
+      Note that in xsmall cards the footer will always be omitted.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>Cards in Layouts</h3>
+    <p class="section-text">
+      Cards can be used to hold other components such as charts and lists as well.
+    </p>
+    <div class="guide-section">
+      <div class="row">
+        <div class="demo-section col-12">
+          <div class="demo col">
+            <!-- TODO: create an additional role 'status' for when a card is used as part of the layout -->
+            <nga-card [size]="'small'" [status]="'primary'">
+              <nga-card-header>
+                <span>Header</span>
+              </nga-card-header>
+              <nga-card-body>
+                <span>Body</span>
+              </nga-card-body>
+              <nga-card-footer>
+                <span>Footer</span>
+              </nga-card-footer>
+            </nga-card>
+          </div>
+        </div>
+      </div>
+      <div class="code-section">
+        <code>
+          &lt;nga-card&gt; [size]="'<span class="important-text">small</span>'" [status]="'<span class="important-text">primary</span>'"&gt;
+            &lt;nga-card-header&gt;
+             &lt;span&gt;Header&lt;/span&gt;
+            &lt;/nga-card-header&gt;
+            &lt;nga-card-footer&gt;
+              &lt;span&gt;Footer&lt;/span&gt;
+            &lt;/nga-card-footer&gt;
+          &lt;/nga-card&gt;
+        </code>
+      </div>
+    </div>
+    <p class="section-text">
+      To use a card as a layout container, you just need to remove the side-section whose tag is
+      <span class="important-text">&lt;nga-card-side&gt;</span>. To learn more about layouts
+      <a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['layout-page']}}]">click here</a>.
+    </p>
   </div>
 </div>
