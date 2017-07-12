@@ -5,7 +5,7 @@
  */
 
 @mixin nga-card-theme() {
-  nga-card {
+  nga-card, nga-card-mk {
     font-size: nga-theme(card-font-size);
     line-height: nga-theme(card-line-height);
 
@@ -37,44 +37,44 @@
     }
 
     &.active-card {
-      nga-card-header {
+      nga-card-header,nga-card-side {
         background-color: nga-theme(card-header-active-bg);
         border-bottom-color: nga-theme(card-header-active-bg);
         color: nga-theme(card-header-active-fg);
       }
     }
     &.disabled-card {
-      nga-card-header {
+      nga-card-header,nga-card-side {
         background-color: nga-theme(card-header-disabled-bg);
         border-bottom-color: nga-theme(card-header-disabled-bg);
       }
     }
     &.primary-card {
-      nga-card-header {
+      nga-card-header,nga-card-side {
         background-color: nga-theme(card-header-primary-bg);
         border-bottom-color: nga-theme(card-header-primary-bg);
       }
     }
     &.info-card {
-      nga-card-header {
+      nga-card-header,nga-card-side {
         background-color: nga-theme(card-header-info-bg);
         border-bottom-color: nga-theme(card-header-info-bg);
       }
     }
     &.success-card {
-      nga-card-header {
+      nga-card-header,nga-card-side {
         background-color: nga-theme(card-header-success-bg);
         border-bottom-color: nga-theme(card-header-success-bg);
       }
     }
     &.warning-card {
-      nga-card-header {
+      nga-card-header,nga-card-side {
         background-color: nga-theme(card-header-warning-bg);
         border-bottom-color: nga-theme(card-header-warning-bg);
       }
     }
     &.danger-card {
-      nga-card-header {
+      nga-card-header,nga-card-side {
         background-color: nga-theme(card-header-danger-bg);
         border-bottom-color: nga-theme(card-header-danger-bg);
       }
@@ -102,6 +102,20 @@
       font-weight: nga-theme(card-header-font-weight);
 
       @include nga-headings();
+    }
+
+    nga-card-side{
+      height:inherit;
+      width: 2%;
+      border-bottom-left-radius: nga-theme(card-border-radius);
+      border-top-left-radius: nga-theme(card-border-radius);
+    }
+  }
+
+  nga-card-mk{
+    nga-card-header{
+      background-color: nga-theme(card-bg) !important;
+      border: 0;
     }
   }
 }

@@ -1,0 +1,25 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+:host{
+  display: flex;
+  width: auto;
+
+  nga-card-side{
+    float: left;
+  }
+
+  nga-card-body{
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .card-content{
+    display: flex;
+    flex-direction: column;
+  }
+
+}

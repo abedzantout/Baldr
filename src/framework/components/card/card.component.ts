@@ -150,3 +150,93 @@ export class NgaCardComponent {
     this.status = val;
   }
 }
+
+/**
+ * Below are the classes for the custom MK Cards.
+ * A side component used to define card roles.
+ * And a main container component.
+ */
+
+@Component({
+  selector: 'nga-card-side',
+  styleUrls: ['./cardMK.component.scss'],
+  template: `
+      <ng-content></ng-content>`,
+})
+
+export class NgaCardSideComponent{}
+
+/**
+ * A MonopolyKings content container component for cards.
+ */
+
+@Component({
+  selector: 'nga-card-mk',
+  styleUrls: ['./cardMK.component.scss'],
+  template: `
+      <ng-content></ng-content>
+      <ng-content select="nga-card-side"></ng-content>
+      <div class="card-content">
+            <ng-content select="nga-card-header"></ng-content>
+            <ng-content select="nga-card-body"></ng-content>
+            <ng-content select="nga-card-footer"></ng-content>
+      </div>
+
+  `
+})
+
+export class NgaCardMkComponent{
+  static readonly SIZE_SMALL   = 'small';
+  static readonly SIZE_MEDIUM  = 'medium';
+  static readonly SIZE_LARGE   = 'large';
+
+  static readonly STATUS_ACTIVE   = 'active';
+  static readonly STATUS_DISABLED = 'disabled';
+  static readonly STATUS_PRIMARY  = 'primary';
+
+  size: string;
+  status: string;
+
+  @HostBinding( 'class.small-card' )
+  private get small() {
+    return this.size === NgaCardComponent.SIZE_SMALL;
+  }
+
+
+  @HostBinding( 'class.medium-card' )
+  private get medium() {
+    return this.size === NgaCardComponent.SIZE_MEDIUM;
+  }
+
+
+  @HostBinding( 'class.large-card' )
+  private get large() {
+    return this.size === NgaCardComponent.SIZE_LARGE;
+  }
+
+  @HostBinding( 'class.active-card' )
+  private get active() {
+    return this.status === NgaCardComponent.STATUS_ACTIVE;
+  }
+
+  @HostBinding( 'class.disabled-card' )
+  private get disabled() {
+    return this.status === NgaCardComponent.STATUS_DISABLED;
+  }
+
+  @HostBinding( 'class.primary-card' )
+  private get primary() {
+    return this.status === NgaCardComponent.STATUS_PRIMARY;
+  }
+
+
+  @Input( 'size' )
+  private set setSize( val: string ) {
+    this.size = val;
+  }
+
+  @Input( 'status' )
+  private set setStatus( val: string ) {
+    this.status = val;
+  }
+}
