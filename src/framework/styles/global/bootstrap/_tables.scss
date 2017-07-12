@@ -1,0 +1,26 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+@mixin nga-b-tables-theme(){
+
+  .table{
+    thead{
+     color: nga-theme(color-text-primary);
+    }
+    tbody{
+        color: nga-theme(color-text-value);
+    }
+
+    &.table-inverse{
+      thead{
+        color: nga-theme(color-text-value);
+      }
+      tbody{
+        color: nga-theme(color-white);
+      }
+    }
+  }
+}
