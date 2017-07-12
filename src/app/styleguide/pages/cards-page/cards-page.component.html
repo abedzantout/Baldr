@@ -14,7 +14,7 @@
         <div class="demo-section col-12">
           <div class="row">
             <div class="demo col">
-              <nga-card-mk [size]="'xsmall'" [status]="'primary'">
+              <nga-card-mk [size]="'small'" [status]="'primary'">
                 <nga-card-header>
                   <span>Header</span>
                 </nga-card-header>
@@ -30,7 +30,7 @@
               MonopolyKings Card
             </div>
             <div class="demo col">
-              <nga-card [size]="'xsmall'" [status]="'primary'">
+              <nga-card [size]="'small'" [status]="'primary'">
                 <nga-card-header>
                   <span>Header</span>
                 </nga-card-header>
@@ -84,37 +84,6 @@
         <div class="demo-section col-12">
           <div class="row">
             <div class="demo col">
-              <nga-card [size]="'xsmall'" [status]="'primary'">
-                <nga-card-header>
-                  <span>Header</span>
-                </nga-card-header>
-                <nga-card-body>
-                  <span>Body</span>
-                </nga-card-body>
-                <nga-card-footer>
-                  <span>Footer</span>
-                </nga-card-footer>
-              </nga-card>
-              <br><br>xSmall Primary card
-            </div>
-            <div class="demo col">
-                <nga-card-mk [size]="'xsmall'" [status]="'danger'">
-                  <nga-card-header>
-                    <span>Header</span>
-                  </nga-card-header>
-                  <nga-card-side></nga-card-side>
-                  <nga-card-body>
-                    <span>Body</span>
-                  </nga-card-body>
-                  <nga-card-footer>
-                    <span>Footer</span>
-                  </nga-card-footer>
-                </nga-card-mk>
-              <br><br>xSmall MK Danger card
-            </div>
-          </div>
-          <div class="row">
-            <div class="demo col">
               <nga-card [size]="'small'" [status]="'primary'">
                 <nga-card-header>
                   <span>Header</span>
@@ -128,12 +97,43 @@
               </nga-card>
               <br><br>Small Primary card
             </div>
+            <div class="demo col">
+                <nga-card-mk [size]="'small'" [status]="'danger'">
+                  <nga-card-header>
+                    <span>Header</span>
+                  </nga-card-header>
+                  <nga-card-side></nga-card-side>
+                  <nga-card-body>
+                    <span>Body</span>
+                  </nga-card-body>
+                  <nga-card-footer>
+                    <span>Footer</span>
+                  </nga-card-footer>
+                </nga-card-mk>
+              <br><br>Small MK Danger card
+            </div>
+          </div>
+          <div class="row">
+            <div class="demo col">
+              <nga-card [size]="'medium'" [status]="'primary'">
+                <nga-card-header>
+                  <span>Header</span>
+                </nga-card-header>
+                <nga-card-body>
+                  <span>Body</span>
+                </nga-card-body>
+                <nga-card-footer>
+                  <span>Footer</span>
+                </nga-card-footer>
+              </nga-card>
+              <br><br>Medium Primary card
+            </div>
           </div>
         </div>
       </div>
       <div class="code-section">
         <code>
-          &lt;nga-card [size]="'<span class="important-text">small</span>'" [status]="'<span class="important-text">primary</span>'"&gt;
+          &lt;nga-card [size]="'<span class="important-text">medium</span>'" [status]="'<span class="important-text">primary</span>'"&gt;
             &lt;nga-card-header&gt;
               &lt;span&gt;Header&lt;/span&gt;
             &lt;/nga-card-header&gt;
@@ -147,8 +147,8 @@
     </div>
     <p class="section-text">
       You can change the role and size of a card by changing the corresponding class name colored in green.<br>
-      Sizes can be xsmall, small, xmedium, medium, and large.<br>
-      Roles can be primary, active, disabled, danger, info, success, and warning.<br>
+      Sizes can be <span class="important-text">xsmall, small, medium, large, xlarge, and xxlarge</span>.<br>
+      Roles can be <span class="important-text">primary, active, disabled, danger, info, success, and warning</span>.<br>
       Note that in xsmall cards the footer will always be omitted.
     </p>
   </div>
