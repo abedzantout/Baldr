@@ -48,24 +48,139 @@
         <code>
           &lt;div class="<span class="important-text">dropdown</span>"&gt;
           &lt;button class="btn <span class="important-text">btn-primary</span> dropdown-toggle" id="dropdownMenuButton"
-                    data-toggle="dropdown"&gt;
-                Dropdown Button
-             &lt;/button&gt;
-             &lt;div class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
-                &lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;
-                &lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;
-                &lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;
-             &lt;/div&gt;
+          data-toggle="dropdown"&gt;
+          Dropdown Button
+          &lt;/button&gt;
+          &lt;div class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+          &lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;
+          &lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;
+          &lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;
+          &lt;/div&gt;
           &lt;/div&gt;
         </code>
       </div>
     </div>
     <p class="section-text">
-      We have two types of toggle-lists, Dropdown and Dropup. They can be used interchangeably by changing the container <br>
+      We have two types of toggle-lists, Dropdown and Dropup. They can be used interchangeably by changing the container
+      <br>
       class (labeled in green) from dropdown to dropup and vice-versa.<br>
-      Similarly, we can change the type of button we would like to use for the list by changing the button's class (also labeled in green).
-      To learn more about how you can change between button types <a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['buttons-page']}}]">click here.</a>
+      Similarly, we can change the type of button we would like to use for the list by changing the button's class (also
+      labeled in green).
+      To learn more about how you can change between button types <a
+      [routerLink]="['/styleguide/pages',{outlets: {'pages': ['buttons-page']}}]">click here.</a>
     </p>
 
+  </div>
+
+  <div class="section">
+    <h3>Table Lists</h3>
+    <p class="section-text">
+      At MonopolyKings we aim for simplicity in our UI so we design our tables in order to reflect that; especially
+      when we need to display alot of data.
+    </p>
+
+    <div class="guide-section">
+      <div class="row">
+        <div class="demo-section col-12">
+          <div class="row">
+            <div class="demo col">
+
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Building name</th>
+                  <th>Area</th>
+                  <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <th>Manchester Tower</th>
+                  <th>750,000 AED</th>
+                  <th>553 Sqft</th>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <th>Dream Tower</th>
+                  <th>850,000 AED</th>
+                  <th>731 Sqft</th>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <th>MARINA PINNACLE</th>
+                  <th>880,000 AED</th>
+                  <th>761 Sqft</th>
+                </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="demo col">
+
+              <table class="table table-striped table-inverse">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Building name</th>
+                  <th>Area</th>
+                  <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <th>Manchester Tower</th>
+                  <th>750,000 AED</th>
+                  <th>553 Sqft</th>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <th>Dream Tower</th>
+                  <th>850,000 AED</th>
+                  <th>731 Sqft</th>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <th>MARINA PINNACLE</th>
+                  <th>880,000 AED</th>
+                  <th>761 Sqft</th>
+                </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="code-section">
+        <code>
+          &lt;table class="table <span class="important-text">table-striped table-inverse</span>"&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th&gt;Area&lt;/th&gt;
+                &lt;th&gt;Price&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;th scope="row"&gt;761 Sqft&lt;/th&gt;
+                &lt;th&gt;880,000 AED&lt;/th&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;th scope="row"&gt;731 Sqft&lt;/th&gt;
+                &lt;th&gt;850,000 AED&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        </code>
+      </div>
+    </div>
+    <p class="section-text">
+      We have two types of tables, you can alter the properties by adding/removing the class names colored in green.
+    </p>
   </div>
 </div>
