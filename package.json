@@ -2,6 +2,9 @@
   "name": "baldr",
   "version": "1.0.0-alpha.1",
   "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
