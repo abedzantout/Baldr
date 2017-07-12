@@ -8,43 +8,42 @@
 @mixin nga-tabset-theme() {
 
   nga-tabset {
-	@include nga-scrollbars(nga-theme(scrollbar-width), nga-theme(scrollbar-fg), nga-theme(scrollbar-bg));
+    @include nga-scrollbars(nga-theme(scrollbar-width), nga-theme(scrollbar-fg), nga-theme(scrollbar-bg));
 
-	ul {
-	  border-bottom: 1px solid nga-theme(tabs-separator);
-	  font-size: nga-theme(tabs-font-size);
-	  padding: 0 nga-theme(tabs-padding);
+    ul {
+      border-bottom: 1px solid nga-theme(tabs-separator);
+      font-size: nga-theme(tabs-font-size);
+      padding: 0 nga-theme(tabs-padding);
 
-	  li {
-		background: nga-theme(tabs-header-bg);
-		min-width: nga-theme(tabs-header-min-width);
+      li {
+        background: nga-theme(tabs-header-bg);
 
-		a {
-		  padding: nga-theme(tabs-padding);
-		  color: nga-theme(tabs-fg);
+        a {
+          padding: nga-theme(tabs-padding);
+          color: nga-theme(tabs-fg);
 
-		  &::before {
-			@include btn-hero-success-gradient();
-			box-shadow: 0 0 16px -2px btn-hero-success-middle-color();
-		  }
-		}
+          &::before {
+            @include btn-hero-success-gradient();
+            box-shadow: 0 0 16px -2px btn-hero-success-middle-color();
+          }
+        }
 
-		&.active {
-		  background: nga-theme(tabs-active-bg);
+        &.active {
+          background: nga-theme(tabs-active-bg);
 
-		  a {
-			font-weight: nga-theme(tabs-active-font-weight);
-			color: nga-theme(tabs-fg-heading);
-		  }
-		}
-	  }
-	}
+          a {
+            font-weight: nga-theme(tabs-active-font-weight);
+            color: nga-theme(tabs-fg-heading);
+          }
+        }
+      }
+    }
 
-	nga-tab {
-	  font-size: nga-theme(tabs-content-font-size);
-	  color: nga-theme(tabs-fg);
-	  background-color: nga-theme(tabs-bg);
-	  padding: nga-theme(tabs-padding);
-	}
+    nga-tab {
+      font-size: nga-theme(tabs-content-font-size);
+      color: nga-theme(tabs-fg);
+      background-color: nga-theme(tabs-bg);
+      padding: nga-theme(tabs-content-padding);
+    }
   }
 }

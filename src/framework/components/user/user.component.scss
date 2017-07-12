@@ -15,7 +15,7 @@
   align-items: center;
 
   &.with-menu {
-	cursor: pointer;
+    cursor: pointer;
   }
 }
 
@@ -24,14 +24,14 @@
   flex-shrink: 0;
 
   &.image {
-	background-size: cover;
-	background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &.background {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -54,45 +54,45 @@
   line-height: 1.5rem;
 
   ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-	li {
-	  display: block;
-	  white-space: nowrap;
-	  > a {
-		padding: 0.25rem 3rem;
-		display: block;
-	  }
+    li {
+      display: block;
+      white-space: nowrap;
+      > a {
+        padding: 0.25rem 3rem;
+        display: block;
+      }
 
-	  &:nth-child(2) > a {
-		padding-top: 0.75rem;
-	  }
-	  &:last-child > a {
-		padding-bottom: 0.75rem;
-	  }
+      &:nth-child(2) > a {
+        padding-top: 0.75rem;
+      }
+      &:last-child > a {
+        padding-bottom: 0.75rem;
+      }
 
-	  &.arrow {
-		@include center-horizontal-absolute();
+      &.arrow {
+        @include center-horizontal-absolute();
 
-		top: -22px;
-		width: 0;
-		height: 0;
-		border: 11px solid transparent;
+        top: -22px;
+        width: 0;
+        height: 0;
+        border: 11px solid transparent;
 
-		&::after {
-		  position: absolute;
-		  content: ' ';
-		  width: 0;
-		  height: 0;
-		  top: -9px;
-		  left: 0;
-		  margin-left: -10px;
-		  display: block;
-		  border: 10px solid transparent;
-		}
-	  }
-	}
+        &::after {
+          position: absolute;
+          content: ' ';
+          width: 0;
+          height: 0;
+          top: -9px;
+          left: 0;
+          margin-left: -10px;
+          display: block;
+          border: 10px solid transparent;
+        }
+      }
+    }
   }
 }

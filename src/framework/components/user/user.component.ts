@@ -67,10 +67,10 @@ export class NgaUserComponent {
    LARGE: 'large',
    };
    */
-  static readonly SIZE_SMALL   = 'small';
-  static readonly SIZE_MEDIUM  = 'medium';
-  static readonly SIZE_XMEDIUM = 'xmedium';
-  static readonly SIZE_LARGE   = 'large';
+  static readonly SIZE_SMALL  = 'small';
+  static readonly SIZE_MEDIUM = 'medium';
+  static readonly SIZE_LARGE  = 'large';
+  static readonly SIZE_XLARGE = 'xlarge';
   
   private sizeValue: string;
   
@@ -86,14 +86,14 @@ export class NgaUserComponent {
     return this.sizeValue === NgaUserComponent.SIZE_MEDIUM;
   }
   
-  @HostBinding( 'class.xmedium' )
-  get xmedium() {
-    return this.sizeValue === NgaUserComponent.SIZE_XMEDIUM;
-  }
-  
   @HostBinding( 'class.large' )
   get large() {
     return this.sizeValue === NgaUserComponent.SIZE_LARGE;
+  }
+  
+  @HostBinding( 'class.xlarge' )
+  get xlarge() {
+    return this.sizeValue === NgaUserComponent.SIZE_XLARGE;
   }
   
   /**
@@ -196,7 +196,6 @@ export class NgaUserComponent {
   
   itemClick( event: any, item: NgaUserMenuItem ): boolean {
     this.menuClick.emit( item );
-    
     return false;
   }
   

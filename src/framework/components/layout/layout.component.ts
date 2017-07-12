@@ -5,9 +5,8 @@
  */
 
 import {
-  AfterViewInit, Component, ComponentFactoryResolver, ElementRef, HostBinding,
-  Input, OnDestroy, Renderer2, ViewChild, ViewContainerRef,
-
+  AfterViewInit, Component, ComponentFactoryResolver, ElementRef, HostBinding, Input, OnDestroy, Renderer2, ViewChild,
+  ViewContainerRef,
 } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { Subject } from 'rxjs/Subject';
@@ -26,7 +25,7 @@ import { NgaSpinnerService } from '../../services/spinner.service';
 @Component( {
   selector: 'nga-layout-column',
   template: `
-      <ng-content></ng-content>
+    <ng-content></ng-content>
   `,
 } )
 export class NgaLayoutColumnComponent {
@@ -46,9 +45,9 @@ export class NgaLayoutColumnComponent {
 @Component( {
   selector: 'nga-layout-header',
   template: `
-      <nav [class.fixed]="fixedValue">
-          <ng-content></ng-content>
-      </nav>
+    <nav [class.fixed]="fixedValue">
+      <ng-content></ng-content>
+    </nav>
   `,
 } )
 export class NgaLayoutHeaderComponent {
@@ -69,9 +68,9 @@ export class NgaLayoutHeaderComponent {
 @Component( {
   selector: 'nga-layout-footer',
   template: `
-      <nav [class.fixed]="fixedValue">
-          <ng-content></ng-content>
-      </nav>
+    <nav [class.fixed]="fixedValue">
+      <ng-content></ng-content>
+    </nav>
   `,
 } )
 export class NgaLayoutFooterComponent {
@@ -100,21 +99,21 @@ export class NgaLayoutFooterComponent {
   selector: 'nga-layout',
   styleUrls: ['./layout.component.scss'],
   template: `
-      <ng-template #layoutTopDynamicArea></ng-template>
-      <div class="layout">
-          <ng-content select="nga-layout-header"></ng-content>
-          <div class="layout-container">
-              <ng-content select="nga-sidebar"></ng-content>
-              <ng-content select="nga-sidebar[left]"></ng-content>
-              <div class="content" [class.center]="centerValue">
-                  <div class="columns">
-                      <ng-content select="nga-layout-column"></ng-content>
-                  </div>
-                  <ng-content select="nga-layout-footer"></ng-content>
-              </div>
-              <ng-content select="nga-sidebar[right]"></ng-content>
+    <ng-template #layoutTopDynamicArea></ng-template>
+    <div class="layout">
+      <ng-content select="nga-layout-header"></ng-content>
+      <div class="layout-container">
+        <ng-content select="nga-sidebar"></ng-content>
+        <ng-content select="nga-sidebar[left]"></ng-content>
+        <div class="content" [class.center]="centerValue">
+          <div class="columns">
+            <ng-content select="nga-layout-column"></ng-content>
           </div>
+          <ng-content select="nga-layout-footer"></ng-content>
+        </div>
+        <ng-content select="nga-sidebar[right]"></ng-content>
       </div>
+    </div>
   `,
 } )
 export class NgaLayoutComponent implements OnDestroy, AfterViewInit {

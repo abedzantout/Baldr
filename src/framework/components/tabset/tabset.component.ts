@@ -4,7 +4,9 @@
  * Distribution or making any copies of this software or documentation is prohibited.
  */
 
-import { AfterContentInit, Component, ContentChildren, EventEmitter, HostBinding, Input, Output, QueryList } from '@angular/core';
+import {
+  AfterContentInit, Component, ContentChildren, EventEmitter, HostBinding, Input, Output, QueryList
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { convertToBoolProperty } from '../helpers';
@@ -12,7 +14,9 @@ import { convertToBoolProperty } from '../helpers';
 @Component( {
   selector: 'nga-tab',
   template: `
+    <ng-container *ngIf="init">
       <ng-content></ng-content>
+    </ng-container>
   `,
 } )
 export class NgaTabComponent {
@@ -31,21 +35,27 @@ export class NgaTabComponent {
   
   set active( val: boolean ) {
     this.activeValue = convertToBoolProperty( val );
+    if ( this.activeValue ) {
+      this.init = true;
+    }
   }
+  
+  // TODO: it makes sense to add 'lazyLoad' input to 'nga-tabset' component and make this functionality configurable
+  init: boolean = false;
 }
 
 @Component( {
   selector: 'nga-tabset',
   styleUrls: ['./tabset.component.scss'],
   template: `
-      <ul>
-          <li *ngFor="let tab of tabs"
-              (click)="selectTab(tab)"
-              [class.active]="tab.active">
-              <a href (click)="$event.preventDefault()">{{ tab.tabTitle }}</a>
-          </li>
-      </ul>
-      <ng-content select="nga-tab"></ng-content>
+    <ul>
+      <li *ngFor="let tab of tabs"
+          (click)="selectTab(tab)"
+          [class.active]="tab.active">
+        <a href (click)="$event.preventDefault()">{{ tab.tabTitle }}</a>
+      </li>
+    </ul>
+    <ng-content select="nga-tab"></ng-content>
   `,
 } )
 export class NgaTabsetComponent implements AfterContentInit {
@@ -53,7 +63,7 @@ export class NgaTabsetComponent implements AfterContentInit {
   @ContentChildren( NgaTabComponent ) tabs: QueryList<NgaTabComponent>;
   
   @HostBinding( 'class.full-width' )
-  fullWidthValue: boolean = false;
+  private fullWidthValue: boolean = false;
   
   @Input()
   set fullWidth( val: boolean ) {

@@ -13,16 +13,16 @@ import { convertToBoolProperty } from '../helpers';
   selector: 'nga-route-tabset',
   styleUrls: ['./route-tabset.component.scss'],
   template: `
-      <ul>
-          <li *ngFor="let tab of tabs"
-              (click)="$event.preventDefault(); selectTab(tab)"
-              routerLink="{{tab.route}}"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }">
-              <a href>{{tab.title}}</a>
-          </li>
-      </ul>
-      <router-outlet></router-outlet>
+    <ul>
+      <li *ngFor="let tab of tabs"
+          (click)="$event.preventDefault(); selectTab(tab)"
+          routerLink="{{tab.route}}"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">
+        <a href>{{tab.title}}</a>
+      </li>
+    </ul>
+    <router-outlet></router-outlet>
   `,
 } )
 export class NgaRouteTabsetComponent {

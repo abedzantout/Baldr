@@ -4,20 +4,20 @@
  * Distribution or making any copies of this software or documentation is prohibited.
  */
 
-:host{
+:host {
   display: flex;
   width: auto;
 
-  nga-card-side{
+  nga-card-side {
     float: left;
   }
 
-  nga-card-body{
+  nga-card-body {
 
     width: 100%;
   }
 
-  .card-content{
+  .card-content {
     display: flex;
     flex-direction: column;
     overflow: hidden;

@@ -50,16 +50,16 @@ export class NgaMenuItemComponent {
   selector: 'nga-menu',
   styleUrls: ['./menu.component.scss'],
   template: `
-      <ul>
-          <li ngaMenuItem *ngFor="let item of items"
-              [menuItem]="item"
-              [class.expanded]="item.expanded"
-              [class.collapsed]="!item.expanded"
-              (hoverItem)="onHoverItem($event)"
-              (toggleSubMenu)="onToggleSubMenu($event)"
-              (selectItem)="onSelectItem($event)"
-              (itemClick)="onItemClick($event)"></li>
-      </ul>
+    <ul>
+      <li ngaMenuItem *ngFor="let item of items"
+          [menuItem]="item"
+          [class.expanded]="item.expanded"
+          [class.collapsed]="!item.expanded"
+          (hoverItem)="onHoverItem($event)"
+          (toggleSubMenu)="onToggleSubMenu($event)"
+          (selectItem)="onSelectItem($event)"
+          (itemClick)="onItemClick($event)"></li>
+    </ul>
   `,
 } )
 export class NgaMenuComponent implements OnInit, OnDestroy {

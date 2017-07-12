@@ -5,8 +5,8 @@
  */
 
 import {
-  AfterViewInit, ChangeDetectionStrategy, Component, ComponentFactoryResolver, ComponentRef, ElementRef, EventEmitter, HostBinding, Input, OnDestroy,
-  OnInit, Output, ViewChild, ViewContainerRef,
+  AfterViewInit, ChangeDetectionStrategy, Component, ComponentFactoryResolver, ComponentRef, ElementRef, EventEmitter,
+  HostBinding, Input, OnDestroy, OnInit, Output, ViewChild, ViewContainerRef,
 } from '@angular/core';
 
 import { NgaSuperSearchService } from './search.service';
@@ -34,24 +34,24 @@ import 'rxjs/add/operator/delay';
     'styles/search.component.simple-search.scss',
   ],
   template: `
-      <div class="wrapper">
-          <div class="search" (keyup.esc)="closeSearch()">
-
-              <button (click)="closeSearch()">
-                  <i class="ion-ios-close-outline icon"></i>
-              </button>
-              <div class="form-wrapper">
-                  <form class="form" (keyup.enter)="submitSearch(searchInput.value)">
-                      <div class="form-content">
-                          <input class="search-input" #searchInput autocomplete="off" [attr.placeholder]="placeholder"
-                                 (blur)="onBlur()"/>
-                      </div>
-                      <span class="info">Hit enter to search</span>
-                  </form>
-              </div>
-
-          </div>
+    <div class="wrapper">
+      <div class="search" (keyup.esc)="closeSearch()">
+        
+        <button (click)="closeSearch()">
+          <i class="ion-ios-close-outline icon"></i>
+        </button>
+        <div class="form-wrapper">
+          <form class="form" (keyup.enter)="submitSearch(searchInput.value)">
+            <div class="form-content">
+              <input class="search-input" #searchInput autocomplete="off" [attr.placeholder]="placeholder"
+                     (blur)="onBlur()"/>
+            </div>
+            <span class="info">Hit enter to search</span>
+          </form>
+        </div>
+      
       </div>
+    </div>
   `,
 } )
 export class NgaSearchFieldComponent {
@@ -142,12 +142,12 @@ export class NgaSearchFieldComponent {
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['styles/search.component.scss'],
   template: `
-      <div class="search-wrap">
-          <button (click)="openSearch()">
-              <i class="ion-ios-search icon"></i>
-          </button>
-          <ng-template #attachedSearchContainer></ng-template>
-      </div>
+    <div class="search-wrap">
+      <button (click)="openSearch()">
+        <i class="ion-ios-search icon"></i>
+      </button>
+      <ng-template #attachedSearchContainer></ng-template>
+    </div>
   `,
 } )
 export class NgaSearchComponent implements OnInit, AfterViewInit, OnDestroy {
@@ -253,6 +253,8 @@ export class NgaSearchComponent implements OnInit, AfterViewInit, OnDestroy {
     this.activateSearchSubscription.unsubscribe();
     this.deactivateSearchSubscription.unsubscribe();
     this.createFieldSubscription.unsubscribe();
-    this.searchFieldComponentRef.destroy();
+    if ( this.searchFieldComponentRef ) {
+      this.searchFieldComponentRef.destroy();
+    }
   }
 }

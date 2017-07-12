@@ -4,6 +4,22 @@
  * Distribution or making any copies of this software or documentation is prohibited.
  */
 
+:host {
+  display: block;
+
+  &.full-width ul li {
+    width: 100%;
+  }
+
+  /deep/ nga-tab {
+    display: none;
+
+    &.content-active {
+      display: block;
+    }
+  }
+}
+
 ul {
   display: flex;
   flex-direction: row;
@@ -11,41 +27,29 @@ ul {
   margin: 0;
 
   li {
-	cursor: pointer;
-	margin-bottom: -1px;
-	text-align: center;
+    cursor: pointer;
+    margin-bottom: -1px;
+    text-align: center;
 
-	&.active a::before {
-	  display: block;
-	}
+    &.active a::before {
+      display: block;
+    }
 
-	a {
-	  position: relative;
-	  text-decoration: none;
-	  display: inline-block;
+    a {
+      position: relative;
+      text-decoration: none;
+      display: inline-block;
 
-	  &::before {
-		display: none;
-		position: absolute;
-		content: '';
-		width: 100%;
-		height: 6px;
-		border-radius: 3px;
-		bottom: -2px;
-		left: 0;
-	  }
-	}
-  }
-}
-
-:host.full-width ul li {
-  width: 100%;
-}
-
-:host /deep/ nga-tab {
-  display: none;
-
-  &.content-active {
-	display: block;
+      &::before {
+        display: none;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 6px;
+        border-radius: 3px;
+        bottom: -2px;
+        left: 0;
+      }
+    }
   }
 }

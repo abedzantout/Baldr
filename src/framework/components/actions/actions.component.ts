@@ -14,12 +14,12 @@ import { convertToBoolProperty } from '../helpers';
 @Component( {
   selector: 'nga-action',
   template: `
-      <a href="#" *ngIf="icon; else showContent" (click)="$event.preventDefault()">
-          <i class="control-icon {{ icon }}"></i>
-      </a>
-      <ng-template #showContent>
-          <ng-content></ng-content>
-      </ng-template>
+    <a href="#" *ngIf="icon; else showContent" (click)="$event.preventDefault()">
+      <i class="control-icon {{ icon }}"></i>
+    </a>
+    <ng-template #showContent>
+      <ng-content></ng-content>
+    </ng-template>
   `,
 } )
 export class NgaActionComponent {
@@ -60,7 +60,7 @@ export class NgaActionComponent {
   selector: 'nga-actions',
   styleUrls: ['./actions.component.scss'],
   template: `
-      <ng-content select="nga-action"></ng-content>
+    <ng-content select="nga-action"></ng-content>
   `,
 } )
 export class NgaActionsComponent {

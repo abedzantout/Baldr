@@ -10,27 +10,29 @@
   align-items: center;
 
   /deep/ nga-action {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 
-	&:first-child {
-	  border-left: none !important;
-	}
+    &:first-child {
+      border-left: none !important;
+    }
 
-	i.control-icon {
-	  &:hover {
-		cursor: pointer;
-	  }
-	}
+    i.control-icon {
+      &:hover {
+        cursor: pointer;
+      }
+    }
 
-	&.disabled {
-	  opacity: 0.5;
-	  cursor: not-allowed;
+    &.disabled {
+      & > * {
+        opacity: 0.5;
+      }
+      cursor: not-allowed;
 
-	  a, i {
-		cursor: not-allowed !important;
-	  }
-	}
+      a, i {
+        cursor: not-allowed !important;
+      }
+    }
   }
 }
