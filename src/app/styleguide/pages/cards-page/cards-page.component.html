@@ -5,6 +5,75 @@
   <h1>Cards</h1>
 
   <div class="section">
+    <h3>Card Types</h3>
+    <p class="section-text">
+      We have two card types which share some elements.
+    </p>
+    <div class="guide-section">
+      <div class="row">
+        <div class="demo-section col-12">
+          <div class="row">
+            <div class="demo col">
+              <nga-card-mk [size]="'xsmall'" [status]="'primary'">
+                <nga-card-header>
+                  <span>Header</span>
+                </nga-card-header>
+                <nga-card-side></nga-card-side>
+                <nga-card-body>
+                  <span>Body</span>
+                </nga-card-body>
+                <nga-card-footer>
+                  <span>Footer</span>
+                </nga-card-footer>
+              </nga-card-mk>
+              <br><br>
+              MonopolyKings Card
+            </div>
+            <div class="demo col">
+              <nga-card [size]="'xsmall'" [status]="'primary'">
+                <nga-card-header>
+                  <span>Header</span>
+                </nga-card-header>
+                <nga-card-body>
+                  <span>Body</span>
+                </nga-card-body>
+                <nga-card-footer>
+                  <span>Footer</span>
+                </nga-card-footer>
+              </nga-card>
+              <br><br>
+              Plain Card
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="code-section">
+        <code>
+          &lt;nga-card-mk [size]="'<span class="important-text">small</span>'" [status]="'<span class="important-text">primary</span>'"&gt;
+            &lt;nga-card-header&gt;
+              &lt;span&gt;Header&lt;/span&gt;
+            &lt;/nga-card-header&gt;
+            &lt;nga-card-side&gt;&lt;/nga-card-side&gt;
+            &lt;nga-card-footer&gt;
+              &lt;span&gt;Footer&lt;/span&gt;
+            &lt;/nga-card-footer&gt;
+          &lt;/nga-card&gt;
+
+
+          &lt;nga-card [size]="'<span class="important-text">small</span>'" [status]="'<span class="important-text">primary</span>'"&gt;
+            &lt;nga-card-header&gt;
+              &lt;span&gt;Header&lt;/span&gt;
+            &lt;/nga-card-header&gt;
+            &lt;nga-card-footer&gt;
+              &lt;span&gt;Footer&lt;/span&gt;
+            &lt;/nga-card-footer&gt;
+          &lt;/nga-card&gt;
+        </code>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
     <h3>Roles and Sizes</h3>
     <p class="section-text">
       Cards are designed to be containers for items that share similar properties but are unique.<br>
@@ -29,18 +98,19 @@
               <br><br>xSmall Primary card
             </div>
             <div class="demo col">
-              <nga-card [size]="'xsmall'" [status]="'danger'">
-                <nga-card-header>
-                  <span>Header</span>
-                </nga-card-header>
-                <nga-card-body>
-                  <span>Body</span>
-                </nga-card-body>
-                <nga-card-footer>
-                  <span>Footer</span>
-                </nga-card-footer>
-              </nga-card>
-              <br><br>xSmall Danger card
+                <nga-card-mk [size]="'xsmall'" [status]="'danger'">
+                  <nga-card-header>
+                    <span>Header</span>
+                  </nga-card-header>
+                  <nga-card-side></nga-card-side>
+                  <nga-card-body>
+                    <span>Body</span>
+                  </nga-card-body>
+                  <nga-card-footer>
+                    <span>Footer</span>
+                  </nga-card-footer>
+                </nga-card-mk>
+              <br><br>xSmall MK Danger card
             </div>
           </div>
           <div class="row">
@@ -63,7 +133,7 @@
       </div>
       <div class="code-section">
         <code>
-          &lt;nga-card&gt; [size]="'<span class="important-text">small</span>'" [status]="'<span class="important-text">primary</span>'"&gt;
+          &lt;nga-card [size]="'<span class="important-text">small</span>'" [status]="'<span class="important-text">primary</span>'"&gt;
             &lt;nga-card-header&gt;
               &lt;span&gt;Header&lt;/span&gt;
             &lt;/nga-card-header&gt;
@@ -93,7 +163,7 @@
         <div class="demo-section col-12">
           <div class="demo col">
             <!-- TODO: create an additional role 'status' for when a card is used as part of the layout -->
-            <nga-card [size]="'small'" [status]="'primary'">
+            <nga-card-mk [size]="'small'" [status]="'primary'">
               <nga-card-header>
                 <span>Header</span>
               </nga-card-header>
@@ -103,13 +173,13 @@
               <nga-card-footer>
                 <span>Footer</span>
               </nga-card-footer>
-            </nga-card>
+            </nga-card-mk>
           </div>
         </div>
       </div>
       <div class="code-section">
         <code>
-          &lt;nga-card&gt; [size]="'<span class="important-text">small</span>'" [status]="'<span class="important-text">primary</span>'"&gt;
+          &lt;nga-card [size]="'<span class="important-text">small</span>'" [status]="'<span class="important-text">primary</span>'"&gt;
             &lt;nga-card-header&gt;
              &lt;span&gt;Header&lt;/span&gt;
             &lt;/nga-card-header&gt;
@@ -126,21 +196,4 @@
       <a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['layout-page']}}]">click here</a>.
     </p>
   </div>
-
-
-
-  <nga-card-mk [size]="'xsmall'" [status]="'primary'">
-    <nga-card-header>
-      <span>Header</span>
-    </nga-card-header>
-    <nga-card-side></nga-card-side>
-    <nga-card-body>
-      <span>Body</span>
-    </nga-card-body>
-    <nga-card-footer>
-      <span>Footer</span>
-    </nga-card-footer>
-  </nga-card-mk>
-
-
 </div>
