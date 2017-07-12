@@ -6,24 +6,16 @@
 
 :host {
   display: flex;
-  width:auto;
+  flex-direction: column;
+  // TODO: I'm not sure about it because body is "flex: 1"
   overflow: hidden;
-
 
   nga-card-header {
   }
 
-  nga-card-side{
-    //float:left;
-  }
-  .card-content{
-    display: flex;
-    flex-direction: column;
-
-  }
-
   nga-card-body {
-	overflow: auto;
+    overflow: auto;
+    flex: 1;
   }
 
   nga-card-footer {

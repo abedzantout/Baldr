@@ -43,18 +43,6 @@ export class NgaCardFooterComponent {
 }
 
 /**
- * Component intended to be used within  the `<nga-card>` component.
- * It adds styles for a preset side section.
- */
-@Component( {
-  selector: 'nga-card-side',
-  template: `
-      <ng-content></ng-content>`
-} )
-export class NgaCardSideComponent{
-}
-
-/**
  * A basic content container component
  *
  * While this component can be used alone, it also provides a number
@@ -68,13 +56,9 @@ export class NgaCardSideComponent{
   styleUrls: ['./card.component.scss'],
   template: `
       <ng-content></ng-content>
-        <ng-content select="nga-card-side"></ng-content>
-        <div class="card-content">
-          <ng-content select="nga-card-header"></ng-content>
-          <ng-content select="nga-card-body"></ng-content>
-          <ng-content select="nga-card-footer"></ng-content>
-        </div>
-
+      <ng-content select="nga-card-header"></ng-content>
+      <ng-content select="nga-card-body"></ng-content>
+      <ng-content select="nga-card-footer"></ng-content>
   `,
 } )
 export class NgaCardComponent {
