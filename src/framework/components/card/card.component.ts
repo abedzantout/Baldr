@@ -187,12 +187,18 @@ export class NgaCardSideComponent{}
 
 export class NgaCardMkComponent{
   static readonly SIZE_SMALL   = 'small';
+  static readonly SIZE_XSMALL  = 'xsmall';
   static readonly SIZE_MEDIUM  = 'medium';
+  static readonly SIZE_XMEDIUM = 'xmedium';
   static readonly SIZE_LARGE   = 'large';
 
   static readonly STATUS_ACTIVE   = 'active';
   static readonly STATUS_DISABLED = 'disabled';
   static readonly STATUS_PRIMARY  = 'primary';
+  static readonly STATUS_INFO     = 'info';
+  static readonly STATUS_SUCCESS  = 'success';
+  static readonly STATUS_WARNING  = 'warning';
+  static readonly STATUS_DANGER   = 'danger';
 
   size: string;
   status: string;
@@ -202,12 +208,20 @@ export class NgaCardMkComponent{
     return this.size === NgaCardComponent.SIZE_SMALL;
   }
 
+  @HostBinding( 'class.xsmall-card' )
+  private get xsmall() {
+    return this.size === NgaCardComponent.SIZE_XSMALL;
+  }
 
   @HostBinding( 'class.medium-card' )
   private get medium() {
     return this.size === NgaCardComponent.SIZE_MEDIUM;
   }
 
+  @HostBinding( 'class.xmedium-card' )
+  private get xmedium() {
+    return this.size === NgaCardComponent.SIZE_XMEDIUM;
+  }
 
   @HostBinding( 'class.large-card' )
   private get large() {
@@ -229,6 +243,25 @@ export class NgaCardMkComponent{
     return this.status === NgaCardComponent.STATUS_PRIMARY;
   }
 
+  @HostBinding( 'class.info-card' )
+  private get info() {
+    return this.status === NgaCardComponent.STATUS_INFO;
+  }
+
+  @HostBinding( 'class.success-card' )
+  private get success() {
+    return this.status === NgaCardComponent.STATUS_SUCCESS;
+  }
+
+  @HostBinding( 'class.warning-card' )
+  private get warning() {
+    return this.status === NgaCardComponent.STATUS_WARNING;
+  }
+
+  @HostBinding( 'class.danger-card' )
+  private get danger() {
+    return this.status === NgaCardComponent.STATUS_DANGER;
+  }
 
   @Input( 'size' )
   private set setSize( val: string ) {
