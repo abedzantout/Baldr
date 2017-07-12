@@ -60,4 +60,57 @@
     </p>
   </div>
 
+  <div class="section">
+    <h3>Cards as Layout Containers</h3>
+    <p class="section-text">
+      Cards can be used as floating containers for any other component or element in our interface.<br>
+      Just declare an MK card and include any component in its body.
+    </p>
+    <div class="guide-section">
+      <div class="row">
+        <div class="demo-section col-12">
+          <div class="row">
+            <div class="demo col">
+
+              <nga-card-mk [size]="'medium'" [status]="'primary'">
+                <nga-card-header>
+                  <span>Listings</span>
+                </nga-card-header>
+                <nga-card-body>
+                  <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>Area</th>
+                      <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <th scope="row">761 Sqft</th>
+                      <th>880,000 AED</th>
+                    </tr>
+                    <tr>
+                      <th scope="row">731 Sqft</th>
+                      <th>850,000 AED</th>
+                    </tr>
+                    </tbody>
+                  </table>
+
+                </nga-card-body>
+                <nga-card-footer>
+                  <span>Choose the right Investment!</span>
+                </nga-card-footer>
+              </nga-card-mk>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <P class="section-text">
+      When using a card as a container, you can fully customize it. You can even omit some subsections like
+      <span class="important-text">nga-card-footer</span> and <span class="important-text">nga-card-side.</span>
+    </P>
+  </div>
+
 </div>
