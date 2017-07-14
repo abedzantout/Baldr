@@ -7,8 +7,8 @@
 @import '../core/mixins';
 
 $theme: (
-  font-main: SanFransisco,
-  font-secondary: SanFransisco,
+  font-main: 'SanFranciscoFontLight',
+  font-secondary: 'SanFranciscoFontLight',
   color-primary: #0096A8,
   color-secondary: #2572b5,
   color-danger: #c50400,
@@ -28,6 +28,14 @@ $theme: (
   card-border-radius: radius,
   card-shadow: shadow,
   border-color: color-secondary-gray,
+  form-control-border-width: 0,
+  form-control-border-color: border-color,
+  form-control-primary-border-color: border-color,
+  form-control-text-primary-color: color-text-primary,
+  form-control-border-radius: 0,
+  form-control-bg: color-bg,
+  form-control-focus-bg: color-bg,
+  form-control-shadow: shadow,
   menu-item-padding: 1em 1em,
   btn-primary-bg: color-primary,
   btn-secondary-bg: color-secondary,

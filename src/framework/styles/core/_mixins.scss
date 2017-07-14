@@ -100,3 +100,9 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
+@font-face {
+  font-family: SanFranciscoFontLight !important;
+  font-weight: 300;
+  src: url('/assets/fonts/SF-Pro-Display-Light.otf') format('opentype');
+}

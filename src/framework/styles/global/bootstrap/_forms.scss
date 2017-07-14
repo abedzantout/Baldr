@@ -57,6 +57,11 @@
     font-family: nga-theme(font-main);
   }
 
+
+  .form-control{
+    box-shadow: nga-theme(form-control-shadow);
+  }
+
   @include form-control-size();
   @include form-control-default();
 
