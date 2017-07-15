@@ -1,0 +1,32 @@
+/**
+ * @license
+ * Copyright Protected MonopolyKings. All Rights Reserved.
+ * Distribution or making any copies of this software or documentation is prohibited.
+ */
+
+@mixin nga-b-input-icons-theme(){
+
+  .form-group.search{
+    color: nga-theme(form-control-text-primary-color);
+    background-color: nga-theme(form-control-bg);
+    border: nga-theme(form-control-border-width) nga-theme(form-control-border-type) nga-theme(form-control-border-color);
+    font-family: nga-theme(font-main);
+    border-radius: nga-theme(form-control-border-radius);
+    box-shadow: nga-theme(form-control-shadow);
+
+    input{
+      box-shadow: none;
+      border: 0;
+    }
+
+    button{
+      border: 0;
+      background-color: nga-theme(form-control-bg);
+      width: 10%;
+      cursor: pointer;
+      i{
+        font-size: 2em;
+      }
+    }
+  }
+}
