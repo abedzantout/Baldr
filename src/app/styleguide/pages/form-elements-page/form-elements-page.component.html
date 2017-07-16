@@ -153,7 +153,8 @@
         <code>
           &lt;form&gt;
           &#9;&lt;div class="form-group"&gt;
-          &#9;&#9;&lt;input class="form-control <span class="important-text">form-control-lg"</span> type="text" placeholder=".form-control-lg"&gt;
+          &#9;&#9;&lt;input class="form-control <span class="important-text">form-control-lg"</span> type="text"
+          placeholder=".form-control-lg"&gt;
           &#9;&lt;/div&gt;
           &lt;/form&gt;
 
@@ -165,7 +166,8 @@
 
           &lt;form&gt;
           &#9;&lt;div class="form-group"&gt;
-          &#9;&#9;&lt;input class="form-control <span class="important-text">form-control-sm"</span> type="text" placeholder=".form-control-sm"&gt;
+          &#9;&#9;&lt;input class="form-control <span class="important-text">form-control-sm"</span> type="text"
+          placeholder=".form-control-sm"&gt;
           &#9;&lt;/div&gt;
           &lt;/form&gt;
         </code>
@@ -177,11 +179,82 @@
   </div>
 
   <div class="section">
+    <h3>Number Fields</h3>
+    <p class="section-text">
+      Number input fields can be easily implemented as follows. They are important for when you need to take a number
+      input from the user in a robust way.
+    </p>
+    <div class="guide-section">
+      <div class="row">
+        <div class="demo-section col-12">
+          <div class="row">
+            <div class="demo col-6">
+              <form>
+                <div class="form-group row">
+                  <label for="example-number-input" class="col-2 col-form-label">Number</label>
+                  <div class="col-10">
+                    <input class="form-control" type="number" value="42" id="example-number-input">
+                  </div>
+                </div>
+              </form>
+              <br><br>
+              Number Input Field
+            </div>
+
+            <div class="demo col-6">
+              <form>
+                <fieldset disabled>
+                  <div class="form-group row">
+                    <label for="example-number-input-disabled" class="col-2 col-form-label">Number</label>
+                    <div class="col-10">
+                      <input class="form-control" type="number" value="42" id="example-number-input-disabled">
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+              <br><br>
+              Disabled Number Input Field
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="code-section">
+        <code>
+          &lt;form&gt;
+          &#9;&lt;div class="form-group row"&gt;
+          &#9;&#9;&lt;label for="example-number-input" class="col-2 col-form-label"&gt;Number&lt;/label&gt;
+          &#9;&#9;&lt;div class="col-10"&gt;
+          &#9;&#9;&#9;&lt;input class="form-control" type="<span class="important-text">number</span>" value="42"
+          &#9; &#9; &#9; &#9;id="example-number-input"&gt;
+          &#9;&#9;&lt;/div&gt;
+          &#9;&lt;/div&gt;
+          &lt;/form&gt;
+
+
+          &lt;form&gt;
+          &#9;&lt;fieldset <span class="important-text">disabled</span>&gt;
+          &#9;&#9;&lt;div class="form-group row"&gt;
+          &#9;&#9;&#9;&lt;label for="example-number-input" class="col-2 col-form-label"&gt;Number&lt;/label&gt;
+          &#9;&#9;&#9;&lt;div class="col-10"&gt;
+          &#9;&#9;&#9;&#9;&lt;input class="form-control" type="<span class="important-text">number</span>" value="42"
+          &#9;&#9; &#9; &#9; &#9;id="example-number-input"&gt;
+          &#9;&#9;&#9;&lt;/div&gt;
+          &#9;&#9;&lt;/div&gt;
+          &#9;&lt;/fieldset&gt;
+          &lt;/form&gt;
+
+
+        </code>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
     <h3>Radios and Checkboxes</h3>
     <p class="section-text">
       Here is how to define radio buttons and checkboxes.
     </p>
-
-
   </div>
+
 </div>
