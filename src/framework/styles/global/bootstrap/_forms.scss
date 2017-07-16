@@ -7,7 +7,7 @@
 @import './default-form-control';
 @import '../../core/mixins';
 @import './custom-forms';
-@import './input-icons';
+@import 'input-types';
 
 @mixin nga-b-forms-theme() {
 
@@ -67,5 +67,5 @@
 
   @include custom-forms();
 
-  @include forms-with-icons();
+  @include input-types();
 }
