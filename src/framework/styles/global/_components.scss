@@ -13,6 +13,7 @@
 @import '../../components/actions/actions.component.theme';
 @import '../../components/search/search.component.theme';
 @import '../../components/checkbox/checkbox.component.theme';
+@import '../../components/number-input/number-input.component.theme';
 
 
 @mixin nga-theme-components() {
@@ -27,4 +28,5 @@
   @include nga-actions-theme();
   @include nga-search-theme();
   @include nga-checkbox-theme();
+  @include nga-number-input-theme();
 }
