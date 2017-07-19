@@ -20,6 +20,7 @@ import { NgaSidebarModule } from '../framework/components/sidebar/sidebar.module
 import { NgaTabsetModule } from '../framework/components/tabset/tabset.module';
 import { NgaUserModule } from '../framework/components/user/user.module';
 import { NgaActionsModule } from '../framework/components/actions/actions.module';
+import { NgaNumberInputModule } from '../framework/components/number-input/number-input.module';
 
 import { NgaAppComponent } from './app.component';
 import { NgaLayoutTestComponent } from './layout-test/layout-test.component';
@@ -111,6 +112,7 @@ const NGA_TEST_COMPONENTS = [
     NgaUserModule,
     NgaSearchModule,
     NgaActionsModule,
+    NgaNumberInputModule,
   ],
   declarations: [
     ...NGA_TEST_COMPONENTS,

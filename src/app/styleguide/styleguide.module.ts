@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
 
 import { NgaLayoutModule } from '../../framework/components/layout/layout.module';
 import { NgaCardModule } from '../../framework/components/card/card.module';
+import { NgaSidebarModule } from '../../framework/components/sidebar/sidebar.module';
+import { NgaThemeModule } from '../../framework/theme.module';
 
 import { SideNavComponent } from './side-nav/side-nav.component';
 
@@ -28,8 +30,7 @@ import { FormElementsPageComponent } from './pages/form-elements-page/form-eleme
 import { ListsPageComponent } from './pages/lists-page/lists-page.component';
 import { MapPageComponent } from './pages/map-page/map-page.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
-import { NgaSidebarModule } from '../../framework/components/sidebar/sidebar.module';
-import { NgaThemeModule } from '../../framework/theme.module';
+
 
 @NgModule( {
   imports: [

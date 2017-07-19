@@ -10,7 +10,7 @@ import { NgaSharedModule } from '../shared/shared.module';
 
 import { NgaNumberInputComponent } from './number-input.component';
 
-const NGA_CARD_COMPONENTS = [
+const NGA_NUMBER_INPUT_COMPONENTS = [
   NgaNumberInputComponent
 ];
 
@@ -19,11 +19,11 @@ const NGA_CARD_COMPONENTS = [
     NgaSharedModule,
   ],
   declarations: [
-    ...NGA_CARD_COMPONENTS,
+    ...NGA_NUMBER_INPUT_COMPONENTS,
   ],
   exports: [
-    ...NGA_CARD_COMPONENTS,
+    ...NGA_NUMBER_INPUT_COMPONENTS,
   ],
 } )
-export class NgaCardModule {
+export class NgaNumberInputModule {
 }
