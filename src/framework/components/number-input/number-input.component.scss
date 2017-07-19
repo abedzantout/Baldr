@@ -5,7 +5,13 @@
  */
 
 :host{
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
+}
+
+.buttons-container{
+  float:right;
+  display: flex;
+  flex-direction: column;
 }
 

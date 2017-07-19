@@ -10,9 +10,14 @@ import { Component, HostBinding, Input } from '@angular/core';
   selector:'nga-number-input',
   template: `
     <ng-content></ng-content>
-    <input type="number"><div><span></span><span></span></div>
+          <input type="number" value="15000">
+    <div class="buttons-container">
+      <span><i class="icon ion-android-add"></i></span>
+      <span><i class="icon ion-android-remove"></i></span>
+    </div>
+
   `,
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./number-input.component.scss']
 })
 
 export class NgaNumberInputComponent{

@@ -4,6 +4,42 @@
  * Distribution or making any copies of this software or documentation is prohibited.
  */
 
-@mixin nga-number-input-theme(){
+@mixin nga-number-input-theme() {
+
+  nga-number-input {
+    box-shadow: nga-theme(shadow);
+
+
+
+    span {
+      color: nga-theme(color-white);
+      background-color: nga-theme(color-primary);
+      padding: 0.3em 1em;
+
+      &:hover {
+        background-color: tint(nga-theme(color-primary), 14%);
+      }
+    }
+
+    input {
+      text-align: center;
+      border: none;
+      color: nga-theme(color-text-primary);
+      &:focus,
+      &:active{
+        border:none;
+      }
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+
+    &.disabled{
+
+    }
+
+  }
 
 }

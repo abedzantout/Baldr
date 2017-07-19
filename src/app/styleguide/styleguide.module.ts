@@ -11,6 +11,7 @@ import { NgaLayoutModule } from '../../framework/components/layout/layout.module
 import { NgaCardModule } from '../../framework/components/card/card.module';
 import { NgaSidebarModule } from '../../framework/components/sidebar/sidebar.module';
 import { NgaThemeModule } from '../../framework/theme.module';
+import { NgaNumberInputModule } from '../../framework/components/number-input/number-input.module';
 
 import { SideNavComponent } from './side-nav/side-nav.component';
 
@@ -40,6 +41,7 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
     NgaThemeModule.forRoot( { name: 'hodyr' } ),
     NgaLayoutModule,
     NgaCardModule,
+    NgaNumberInputModule,
   ],
   declarations: [
     SideNavComponent,
