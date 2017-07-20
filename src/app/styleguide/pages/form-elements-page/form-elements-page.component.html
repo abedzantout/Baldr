@@ -189,29 +189,14 @@
         <div class="demo-section col-12">
           <div class="row">
             <div class="demo col-6">
-              <form>
-                <div class="form-group row">
-                  <label for="example-number-input" class="col-2 col-form-label">Number</label>
-                  <div class="col-10">
-                    <input class="form-control" type="number" value="42" id="example-number-input">
-                  </div>
-                </div>
-              </form>
+              <nga-number-input [value]=15000 [weight]=1000 [max]=1000000 [min]=0></nga-number-input>
               <br><br>
               Number Input Field
             </div>
 
             <div class="demo col-6">
-              <form>
-                <fieldset disabled>
-                  <div class="form-group row">
-                    <label for="example-number-input-disabled" class="col-2 col-form-label">Number</label>
-                    <div class="col-10">
-                      <input class="form-control" type="number" value="42" id="example-number-input-disabled">
-                    </div>
-                  </div>
-                </fieldset>
-              </form>
+              <nga-number-input [value]=15000 [weight]=1000 [max]=1000000 [min]=0
+                                [status]="'disabled'"></nga-number-input>
               <br><br>
               Disabled Number Input Field
             </div>
@@ -220,34 +205,35 @@
       </div>
       <div class="code-section">
         <code>
-          &lt;form&gt;
-          &#9;&lt;div class="form-group row"&gt;
-          &#9;&#9;&lt;label for="example-number-input" class="col-2 col-form-label"&gt;Number&lt;/label&gt;
-          &#9;&#9;&lt;div class="col-10"&gt;
-          &#9;&#9;&#9;&lt;input class="form-control" type="<span class="important-text">number</span>" value="42"
-          &#9; &#9; &#9; &#9;id="example-number-input"&gt;
-          &#9;&#9;&lt;/div&gt;
-          &#9;&lt;/div&gt;
-          &lt;/form&gt;
+          &lt;nga-number-input
+          &#9;<span class="important-text">[value]=1500
+          &#9;[weight]=1000
+          &#9;[max]=1000000
+          &#9;[min]=0</span>
+          &gt;&lt;/nga-number-input&gt;
 
 
-          &lt;form&gt;
-          &#9;&lt;fieldset <span class="important-text">disabled</span>&gt;
-          &#9;&#9;&lt;div class="form-group row"&gt;
-          &#9;&#9;&#9;&lt;label for="example-number-input" class="col-2 col-form-label"&gt;Number&lt;/label&gt;
-          &#9;&#9;&#9;&lt;div class="col-10"&gt;
-          &#9;&#9;&#9;&#9;&lt;input class="form-control" type="<span class="important-text">number</span>" value="42"
-          &#9;&#9; &#9; &#9; &#9;id="example-number-input"&gt;
-          &#9;&#9;&#9;&lt;/div&gt;
-          &#9;&#9;&lt;/div&gt;
-          &#9;&lt;/fieldset&gt;
-          &lt;/form&gt;
-
-
+          &lt;nga-number-input
+          &#9;<span class="important-text">[value]=1500
+          &#9;[weight]=1000
+          &#9;[max]=1000000
+          &#9;[min]=0
+          &#9;[status]="'disabled'"</span>
+          &gt;&lt;/nga-number-input&gt;
         </code>
       </div>
     </div>
-
+    <p class="section-text">
+      You can change any of the properties (shown in green) for the number input fields. <br>Any of the properties are
+      optional
+      and have default values.<br><br>
+      <span class="important-text">
+        value: the initial value of the field. Default is 0.<br>
+        weight: the amount by which the value increases/decreases with each click. Default is 1.<br>
+        max and min: the maximum and minimum values obtainable. Defaults are 100 and 0 respectively.<br>
+        status: the activity status of the field. default is 'enabled'.
+      </span>
+    </p>
   </div>
 
   <div class="section">
@@ -256,6 +242,6 @@
       Here is how to define radio buttons and checkboxes.
     </p>
   </div>
-<nga-number-input [value]=15000 [weight]=1000 [max]=1000000></nga-number-input>
-  <nga-number-input [value]=15000 [weight]=1000 [max]=1000000 [status]="'disabled'"></nga-number-input>
+
+
 </div>
