@@ -11,7 +11,7 @@
 
 
 
-    span {
+    .spinner {
       color: nga-theme(color-white);
       background-color: nga-theme(color-primary);
       padding: 0.3em 1em;
@@ -39,6 +39,13 @@
     }
 
     &.disabled{
+      .spinner{
+        background-color: nga-theme(color-text-primary);
+
+        &:hover{
+          background-color: nga-theme(color-text-primary);
+        }
+      }
 
     }
 

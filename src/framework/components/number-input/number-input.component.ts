@@ -10,10 +10,11 @@ import { Component, HostBinding, Input } from '@angular/core';
   selector:'nga-number-input',
   template: `
     <ng-content></ng-content>
-          <input type="number" [(ngModel)]="value">
+          <input type="number" [(ngModel)]="value" disabled *ngIf="status==='disabled'">
+          <input type="number" [(ngModel)]="value" *ngIf="status!=='disabled'">
     <div class="buttons-container">
-      <span (click)='increaseValue()'><i class="icon ion-android-add"></i></span>
-      <span (click)='decreaseValue()'><i class="icon ion-android-remove"></i></span>
+      <span class="spinner" (click)='increaseValue()'><i class="icon ion-android-add"></i></span>
+      <span class="spinner" (click)='decreaseValue()'><i class="icon ion-android-remove"></i></span>
     </div>
 
   `,
@@ -39,19 +40,23 @@ export class NgaNumberInputComponent{
   }
 
   increaseValue(){
-    let temp = this.value + this.weight;
-    if(temp > this.maximum){
-      temp = this.maximum;
+    if(this.status != 'disabled'){
+      let temp = this.value + this.weight;
+      if(temp > this.maximum){
+        temp = this.maximum;
+      }
+      this.value = temp;
     }
-    this.value = temp;
   }
 
   decreaseValue(){
-    let temp = this.value - this.weight;
-    if(temp < this.minimum){
-      temp = this.minimum;
+    if(this.status != 'disabled'){
+      let temp = this.value + this.weight;
+      if(temp < this.minimum){
+        temp = this.minimum;
+      }
+      this.value = temp;
     }
-    this.value = temp;
   }
 
 
