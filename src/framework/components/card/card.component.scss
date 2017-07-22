@@ -8,16 +8,16 @@
   display: flex;
   flex-direction: column;
   // TODO: I'm not sure about it because body is "flex: 1"
-  overflow: hidden;
+  //overflow: hidden;
 
-  nga-card-header {
+  /deep/ nga-card-header {
   }
 
-  nga-card-body {
-    overflow: auto;
-    flex: 1;
+  /deep/ nga-card-body {
+    //overflow: auto;
+    //flex: 1;
   }
 
-  nga-card-footer {
+  /deep/ nga-card-footer {
   }
 }

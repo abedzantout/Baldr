@@ -7,11 +7,14 @@
 :host {
   display: block;
 
-  &.full-width ul li {
-    width: 100%;
+  &.full-width ul {
+    justify-content: space-around;
   }
 
   /deep/ nga-tab {
+    flex: 1;
+    overflow: auto;
+
     display: none;
 
     &.content-active {

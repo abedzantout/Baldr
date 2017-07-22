@@ -3,12 +3,13 @@
  * Copyright Protected MonopolyKings. All Rights Reserved.
  * Distribution or making any copies of this software or documentation is prohibited.
  */
+
 @import '../core/functions';
 @import '../core/mixins';
 
 $theme: (
-  font-main: 'SanFranciscoFontLight',
-  font-secondary: 'SanFranciscoFontLight',
+  font-main: 'Open Sans',
+  font-secondary: Exo,
 
   font-weight-thin: 200,
   font-weight-light: 300,
@@ -17,9 +18,12 @@ $theme: (
   font-weight-bold: 600,
   font-weight-ultra-bold: 800,
 
-  base-font-size: 16,
+  // TODO: use it as a default font-size
+  base-font-size: 16px,
+
+  font-size-xlg: 1.25rem,
+  font-size-lg: 1.125rem,
   font-size: 1rem,
-  font-size-lg: 1.25rem,
   font-size-sm: 0.875rem,
   font-size-xs: 0.75rem,
 
@@ -29,12 +33,13 @@ $theme: (
   line-height: 1.25,
 
   color-bg: #edf1f7,
+  color-bg-active: rgba(white, 0.3),
   color-fg: #555555,
   color-fg-heading: #333333,
   color-fg-text: #666666,
   color-fg-highlight: #00f9a6,
 
-  separator: color-fg-text,
+  separator: #dddddd,
 
   color-gray: rgba(81, 113, 165, 0.15),
   color-neutral: transparent,
@@ -58,16 +63,17 @@ $theme: (
   social-color-behance: #0093fa,
 
   border-color: color-gray,
-  shadow: 0 4px 12px 0 rgba(33, 57, 161, 0.08),
+  shadow: 4px 0 18px 0 rgba(19, 19, 94, 0.4),
 
-  link-color-active: #285eb8,
+  link-color-active: #00f9a6,
 
-  link-color-hover: #2750a0,
+  link-color-hover: #14ffbe,
   link-color-visited: link-color-active,
 
   scrollbar-fg: rgba(0, 0, 0, 0.6),
   scrollbar-bg: rgba(255, 255, 255, 0.7),
-  scrollbar-width: 0.4em,
+  scrollbar-width: 5px,
+  scrollbar-thumb-radius: 2.5px,
 
   radial-gradient: none,
   linear-gradient: none,
@@ -75,11 +81,12 @@ $theme: (
   card-font-size: font-size,
   card-line-height: line-height,
   card-font-weight: font-weight-normal,
-  card-fg: color-fg,
+  card-fg: color-fg-text,
   card-fg-heading: color-fg-heading,
   card-bg: color-bg,
-  card-height-xsmall: 96px,
-  card-height-small: 216px,
+  card-height-xxsmall: 96px,
+  card-height-xsmall: 216px,
+  card-height-small: 336px,
   card-height-medium: 456px,
   card-height-large: 576px,
   card-height-xlarge: 696px,
@@ -88,13 +95,10 @@ $theme: (
   card-border-radius: radius,
   card-padding: padding,
   card-margin: margin,
-  card-scrollbar-width: scrollbar-width,
-  card-scrollbar-fg: scrollbar-fg,
-  card-scrollbar-bg: scrollbar-bg,
   card-header-font-family: font-secondary,
-  card-header-font-size: font-size-lg,
+  card-header-font-size: font-size-xlg,
   card-header-font-weight: font-weight-bolder,
-  card-header-separator: separator,
+  card-separator: separator,
   card-header-fg: color-fg,
   card-header-fg-heading: color-fg-heading,
   card-header-active-bg: color-fg,
@@ -106,6 +110,7 @@ $theme: (
   card-header-warning-bg: color-warning,
   card-header-danger-bg: color-danger,
 
+  layout-font-family: font-main,
   layout-font-size: font-size,
   layout-line-height: line-height,
 
@@ -149,7 +154,7 @@ $theme: (
   menu-fg: color-bg,
   menu-bg: color-fg,
   menu-active-fg: color-fg,
-  menu-active-bg: color-bg,
+  menu-active-bg: color-bg-active,
   menu-submenu-bg: color-bg,
   menu-submenu-fg: color-fg,
   menu-submenu-active-fg: menu-submenu-bg,
@@ -159,21 +164,23 @@ $theme: (
   menu-group-fg: color-fg,
   menu-item-padding: 0.5rem 1rem,
 
-  tabs-font-size: font-size-lg,
+  tabs-font-family: font-secondary,
+  tabs-font-size: font-size-xlg,
+  tabs-content-font-family: font-main,
   tabs-content-font-size: font-size,
   tabs-active-bg: transparent,
   tabs-active-font-weight: font-weight-bolder,
   tabs-padding: padding,
   tabs-content-padding: 0,
-  tabs-header-min-width: 100px,
   tabs-header-bg: transparent,
   tabs-separator: separator,
   tabs-fg: color-fg,
+  tabs-fg-text: color-fg-text,
   tabs-fg-heading: color-fg-heading,
   tabs-bg: transparent,
 
-  route-tabs-font-size: font-size-lg,
-  route-tabs-content-font-size: font-size,
+  route-tabs-font-family: font-secondary,
+  route-tabs-font-size: font-size-xlg,
   route-tabs-active-bg: transparent,
   route-tabs-active-font-weight: font-weight-bolder,
   route-tabs-padding: padding,
@@ -238,6 +245,7 @@ $theme: (
 
   btn-text-color: color-white,
   btn-font-family: font-secondary,
+  btn-line-height: line-height,
 
   btn-primary-bg: color-primary,
   btn-secondary-bg: transparent,
@@ -249,31 +257,24 @@ $theme: (
   btn-secondary-border: #bdbaff,
   btn-secondary-fill: #665ebd,
 
-  btn-padding-y: 0.75rem,
-  btn-padding-x: 1.5rem,
-  btn-font-size: 1rem,
-
-  btn-padding-y-lg: 1.25rem,
+  btn-padding-y-lg: 0.875rem,
   btn-padding-x-lg: 1.75rem,
-  btn-font-size-lg: 1.25rem,
-  btn-line-height-lg: 1.375rem,
+  btn-font-size-lg: font-size-xlg,
 
-  btn-padding-y-md: 1rem,
+  // default size
+  btn-padding-y-md: 0.75rem,
   btn-padding-x-md: 1.5rem,
   btn-font-size-md: 1rem,
-  btn-line-height-md: 1.125rem,
 
-  btn-padding-y-sm: 0.875rem,
+  btn-padding-y-sm: 0.675rem,
   btn-padding-x-sm: 1.5rem,
   btn-font-size-sm: 0.875rem,
-  btn-line-height-sm: 1rem,
 
-  btn-padding-y-tn: 0.625rem,
+  btn-padding-y-tn: 0.5rem,
   btn-padding-x-tn: 1.25rem,
   btn-font-size-tn: 0.75rem,
-  btn-line-height-tn: 0.875rem,
 
-  btn-border-radius: 12px,
+  btn-border-radius: 0.75rem,
   btn-rectangle-border-radius: 4px,
   btn-semi-round-border-radius: 12px,
   btn-round-border-radius: 24px,
@@ -308,7 +309,7 @@ $theme: (
   form-control-line-height-sm: 1rem,
   form-control-border-radius-sm: 12px,
 
-  form-control-font-size-lg: 1.25rem,
+  form-control-font-size-lg: font-size-xlg,
   form-control-line-height-lg: 1.375rem,
   form-control-border-radius-lg: 12px,
 
@@ -317,7 +318,21 @@ $theme: (
   form-control-feedback-font-size: 0.875rem,
   form-control-feedback-font-weight: font-weight-normal,
 
-  checkbox-fg-color: color-fg
+  checkbox-fg-color: color-fg,
+
+  modal-font-size: font-size,
+  modal-line-height: line-height,
+  modal-font-weight: font-weight-normal,
+  modal-fg: color-fg-text,
+  modal-fg-heading: color-fg-heading,
+  modal-bg: color-bg,
+  modal-border: transparent,
+  modal-border-radius: radius,
+  modal-padding: padding,
+  modal-header-font-family: font-secondary,
+  modal-header-font-size: font-size-xlg,
+  modal-header-font-weight: font-weight-bolder,
+  modal-separator: separator,
 );
 
 // register the theme
