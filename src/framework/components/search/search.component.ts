@@ -32,6 +32,7 @@ import 'rxjs/add/operator/delay';
     'styles/search.component.modal-drop.scss',
     'styles/search.component.modal-half.scss',
     'styles/search.component.simple-search.scss',
+    './search.component.scss',
   ],
   template: `
     <div class="wrapper">
@@ -55,7 +56,7 @@ import 'rxjs/add/operator/delay';
   `,
 } )
 export class NgaSearchFieldComponent {
-  
+
   static readonly TYPE_MODAL_ZOOMIN   = 'modal-zoomin';
   static readonly TYPE_ROTATE_LAYOUT  = 'rotate-layout';
   static readonly TYPE_MODAL_MOVE     = 'modal-move';
@@ -64,72 +65,72 @@ export class NgaSearchFieldComponent {
   static readonly TYPE_MODAL_DROP     = 'modal-drop';
   static readonly TYPE_MODAL_HALF     = 'modal-half';
   static readonly TYPE_SIMPLE_SEARCH  = 'simple-search';
-  
+
   @Input() searchType: string;
   @Input() placeholder: string;
-  
+
   @Output() searchClose = new EventEmitter();
   @Output() search      = new EventEmitter();
-  
+
   @ViewChild( 'searchInput' ) inputElement: ElementRef;
-  
+
   @Input() @HostBinding( 'class.show' ) showSearch: boolean = false;
-  
+
   @HostBinding( 'class.modal-zoomin' )
   get modalZoomin() {
     return this.searchType === NgaSearchFieldComponent.TYPE_MODAL_ZOOMIN;
   }
-  
+
   @HostBinding( 'class.rotate-layout' )
   get rotateLayout() {
     return this.searchType === NgaSearchFieldComponent.TYPE_ROTATE_LAYOUT;
   }
-  
+
   @HostBinding( 'class.modal-move' )
   get modalMove() {
     return this.searchType === NgaSearchFieldComponent.TYPE_MODAL_MOVE;
   }
-  
+
   @HostBinding( 'class.curtain' )
   get curtain() {
     return this.searchType === NgaSearchFieldComponent.TYPE_CURTAIN;
   }
-  
+
   @HostBinding( 'class.column-curtain' )
   get columnCurtain() {
     return this.searchType === NgaSearchFieldComponent.TYPE_COLUMN_CURTAIN;
   }
-  
+
   @HostBinding( 'class.modal-drop' )
   get modalDrop() {
     return this.searchType === NgaSearchFieldComponent.TYPE_MODAL_DROP;
   }
-  
+
   @HostBinding( 'class.modal-half' )
   get modalHalf() {
     return this.searchType === NgaSearchFieldComponent.TYPE_MODAL_HALF;
   }
-  
+
   @HostBinding( 'class.simple-search' )
   get simpleSearch() {
     return this.searchType === NgaSearchFieldComponent.TYPE_SIMPLE_SEARCH;
   }
-  
+
   @Input()
   set type( val: any ) {
     this.searchType = val;
   }
-  
+
   closeSearch() {
     this.searchClose.emit( true );
   }
-  
+
   submitSearch( term ) {
     if ( term ) {
       this.search.emit( term );
     }
   }
-  
+
   onBlur() {
     if ( this.searchType === NgaSearchFieldComponent.TYPE_SIMPLE_SEARCH && this.showSearch ) {
       this.closeSearch();
@@ -151,38 +152,38 @@ export class NgaSearchFieldComponent {
   `,
 } )
 export class NgaSearchComponent implements OnInit, AfterViewInit, OnDestroy {
-  
+
   @Input() tag: string;
   @Input() placeholder: string = 'Search...';
-  
+
   @HostBinding( 'class.show' ) showSearch: boolean = false;
-  
+
   @ViewChild( 'attachedSearchContainer', { read: ViewContainerRef } ) attachedSearchContainer: ViewContainerRef;
-  
+
   private searchFieldComponentRef: ComponentRef<any> = null;
   private searchType: string                         = 'rotate-layout';
   private createFieldSubscription: Subscription;
   private activateSearchSubscription: Subscription;
   private deactivateSearchSubscription: Subscription;
-  
+
   constructor( private searchService: NgaSuperSearchService,
                private themeService: NgaThemeService,
                private componentFactoryResolver: ComponentFactoryResolver ) { }
-  
+
   @HostBinding( 'class.simple-search' )
   get simpleSearch() {
     return this.searchType === NgaSearchFieldComponent.TYPE_SIMPLE_SEARCH;
   }
-  
+
   @Input()
   set type( val: any ) {
     this.searchType = val;
   }
-  
+
   openSearch() {
     this.searchService.activateSearch( this.searchType, this.tag );
   }
-  
+
   connectToSearchField( componentRef ) {
     this.searchFieldComponentRef      = componentRef;
     componentRef.instance.searchType  = this.searchType;
@@ -190,21 +191,21 @@ export class NgaSearchComponent implements OnInit, AfterViewInit, OnDestroy {
     componentRef.instance.searchClose.subscribe( () => {
       this.searchService.deactivateSearch( this.searchType, this.tag );
     } );
-    
+
     componentRef.instance.search.subscribe( term => {
       this.searchService.submitSearch( term, this.tag );
       this.searchService.deactivateSearch( this.searchType, this.tag );
     } );
     componentRef.changeDetectorRef.detectChanges();
   }
-  
+
   createAttachedSearch( component ): Observable<any> {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory( component );
     const componentRef     = this.attachedSearchContainer.createComponent( componentFactory );
-    
+
     return Observable.of( componentRef );
   }
-  
+
   ngOnInit() {
     this.activateSearchSubscription = this.searchService.onSearchActivate().subscribe( ( data ) => {
       if ( !this.tag || data.tag === this.tag ) {
@@ -220,7 +221,7 @@ export class NgaSearchComponent implements OnInit, AfterViewInit, OnDestroy {
         this.searchFieldComponentRef.changeDetectorRef.detectChanges();
       }
     } );
-    
+
     this.deactivateSearchSubscription = this.searchService.onSearchDeactivate().subscribe( ( data ) => {
       if ( !this.tag || data.tag === this.tag ) {
         this.showSearch                                                        = false;
@@ -237,7 +238,7 @@ export class NgaSearchComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     } );
   }
-  
+
   ngAfterViewInit() {
     const fieldComponentObservable = this.searchType === NgaSearchFieldComponent.TYPE_SIMPLE_SEARCH ?
       this.createAttachedSearch( NgaSearchFieldComponent )
@@ -248,7 +249,7 @@ export class NgaSearchComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     } );
   }
-  
+
   ngOnDestroy() {
     this.activateSearchSubscription.unsubscribe();
     this.deactivateSearchSubscription.unsubscribe();

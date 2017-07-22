@@ -32,7 +32,6 @@
     }
 
     &.small {
-
       nga-action {
         height: nga-theme(actions-size-small);
         i.control-icon {
@@ -55,6 +54,11 @@
           font-size: nga-theme(actions-size-large);
         }
       }
+    }
+    &.full-width nga-action {
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
   }
 }
