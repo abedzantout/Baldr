@@ -13,6 +13,7 @@
 @import './input-group';
 @import './accordion';
 @import './tables';
+@import './modals';
 
 @mixin nga-bootstrap-theme() {
   @include nga-b-buttons-theme();
@@ -23,4 +24,5 @@
   @include nga-b-forms-theme();
   @include nga-b-accordion-theme();
   @include nga-b-tables-theme();
+  @include nga-b-modals-theme();
 }
