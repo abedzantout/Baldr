@@ -6,6 +6,8 @@
 
 @mixin nga-layout-theme() {
   .layout {
+    // TODO: probably we need to separate this form here and move it to the typography scss module
+    font-family: nga-theme(layout-font-family);
     font-size: nga-theme(layout-font-size);
     line-height: nga-theme(layout-line-height);
     color: nga-theme(layout-fg);
@@ -36,6 +38,11 @@
       &.fixed ~ .layout-container {
         padding-top: nga-theme(header-height);
       }
+    }
+
+    &.fixed ~ .layout-container > nga-sidebar > .scrollable {
+      margin-top: -#{nga-theme(header-height)};
+      padding-top: nga-theme(header-height);
     }
 
     .layout-container {
