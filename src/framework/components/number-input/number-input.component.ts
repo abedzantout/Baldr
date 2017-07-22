@@ -51,7 +51,7 @@ export class NgaNumberInputComponent{
 
   decreaseValue(){
     if(this.status != 'disabled'){
-      let temp = this.value + this.weight;
+      let temp = this.value - this.weight;
       if(temp < this.minimum){
         temp = this.minimum;
       }
