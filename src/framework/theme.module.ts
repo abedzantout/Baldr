@@ -12,6 +12,7 @@ import { NgaThemeOptions, ngaThemeOptionsToken } from './theme.options';
 import { NgaThemeService } from './services/theme.service';
 import { NgaSpinnerService } from './services/spinner.service';
 import { NgaThemeConfig } from './services/themeConfig.service';
+import { NgaThemeBreakpointsService } from './services/breakpoints.service';
 
 @NgModule( {
   imports: [
@@ -37,6 +38,7 @@ export class NgaThemeModule {
         { provide: ngaThemeOptionsToken, useValue: ngaThemeOptions || {} },
         NgaThemeConfig,
         NgaThemeService,
+        NgaThemeBreakpointsService,
         NgaSpinnerService,
       ],
     };
