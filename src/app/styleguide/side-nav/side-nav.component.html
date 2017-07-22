@@ -45,14 +45,10 @@
           class="icons ion-chevron-right"></i>Color Scheme</a></p>
         <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['typography-page']}}]"><i
           class="icons ion-chevron-right"></i>Typography</a>
-        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['border-page']}}]"><i
-          class="icons ion-chevron-right"></i>Border</a></p>
-        <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['box-shadow-page']}}]"><i
-          class="icons ion-chevron-right"></i>Box Shadow</a></p>
         <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['layout-page']}}]"><i
           class="icons ion-chevron-right"></i>Layout</a></p>
         <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['icons-page']}}]"><i
-          class="icons ion-chevron-right"></i>Icons</a></p>
+          class="icons ion-chevron-right"></i>Icons (Soon)</a></p>
       </div>
     </div>
   </div>
@@ -81,26 +77,6 @@
           class="icons ion-chevron-right"></i>Map</a></p>
         <p class="sub-section-link"><a [routerLink]="['/styleguide/pages',{outlets: {'pages': ['lists-page']}}]"><i
           class="icons ion-chevron-right"></i>Lists</a></p>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab" id="headingUtility" (click)='openPanel("collapseUtility")'>
-      <h5>
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false">
-          Utility
-          <i [ngClass]="accordionClasses[3].chevron"></i>
-        </a>
-      </h5>
-    </div>
-    <div id="collapseUtility" [ngClass]="accordionClasses[3].classes" role="tabpanel"
-         aria-labelledby="headingUtility">
-      <div class="card-block">
-        <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Aspect Ratio</a></p>
-        <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Center Elements</a></p>
-        <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Hide Elements</a></p>
-        <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Layout</a></p>
-        <p class="sub-section-link"><a><i class="icons ion-chevron-right"></i>Text Manipulation</a></p>
       </div>
     </div>
   </div>

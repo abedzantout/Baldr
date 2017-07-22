@@ -22,8 +22,6 @@ import { IntroductionPageComponent } from './pages/introduction-page/introductio
 import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.component';
 import { TypographyPageComponent } from './pages/typography-page/typography-page.component';
 import { ColorSchemePageComponent } from './pages/color-scheme-page/color-scheme-page.component';
-import { BorderPageComponent } from './pages/border-page/border-page.component';
-import { BoxShadowPageComponent } from './pages/box-shadow-page/box-shadow-page.component';
 import { IconsPageComponent } from './pages/icons-page/icons-page.component';
 import { CardsPageComponent } from './pages/cards-page/cards-page.component';
 import { ChartsPageComponent } from './pages/charts-page/charts-page.component';
@@ -51,8 +49,6 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
     ButtonsPageComponent,
     TypographyPageComponent,
     ColorSchemePageComponent,
-    BorderPageComponent,
-    BoxShadowPageComponent,
     IconsPageComponent,
     CardsPageComponent,
     ChartsPageComponent,

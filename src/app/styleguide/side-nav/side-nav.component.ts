@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
 
 export class SideNavComponent {
   public accordionClasses: any;
-  
+
   constructor() {
     this.accordionClasses = [
       {
@@ -32,11 +32,6 @@ export class SideNavComponent {
         classes: { 'collapse': true, 'show': false },
         chevron: { 'icon': true, 'ion-chevron-down': true, 'ion-chevron-up': false }
       },
-      {
-        name: 'collapseUtility',
-        classes: { 'collapse': true, 'show': false },
-        chevron: { 'icon': true, 'ion-chevron-down': true, 'ion-chevron-up': false }
-      }
     ]
   }
 
@@ -53,6 +48,6 @@ export class SideNavComponent {
         item.chevron['ion-chevron-up']   = false;
       }
     } )
-    
+
   }
 }
